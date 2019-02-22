@@ -1,0 +1,23 @@
+C:\Users\alexa\RiderProjects\Demo\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\alexa\RiderProjects\Demo\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\alexa\RiderProjects\Demo\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\alexa\RiderProjects\Demo\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\temp\BL\obj\Debug\netstandard2.0\BL.pdb
