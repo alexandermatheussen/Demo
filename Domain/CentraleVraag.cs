@@ -8,7 +8,6 @@ namespace Domain
         public int id { get; set; }
         public String vraag { get; set; }
         public ICollection<Idee> ideeën { get; set; }
-        public String xxx { get; set; }
         
         
     }

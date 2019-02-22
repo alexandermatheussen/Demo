@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Domain
 {
@@ -8,7 +9,7 @@ namespace Domain
         public String naam { get; set; }
         public String beschrijving { get; set; }
         
-        public ICollection<CentraleVraag> vragen { get; set; }
+        public ICollection<Ideation> ideations { get; set; }
         public ICollection<Fase> fases { get; set; }
         
 

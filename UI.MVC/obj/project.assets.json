@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\UI.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
       "projectName": "UI.MVC",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\UI.MVC.csproj",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -201,11 +201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -224,8 +224,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\Domain\\Domain.csproj"
+            "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj"
             }
           }
         }
