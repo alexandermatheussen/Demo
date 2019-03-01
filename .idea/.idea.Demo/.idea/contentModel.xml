@@ -19,7 +19,12 @@
       <e p="DAL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.csproj" t="IncludeRecursive" />
-        <e p="EF" t="Include" />
+        <e p="EF" t="Include">
+          <e p="DemoContext.cs" t="Include" />
+        </e>
+        <e p="HardCoded" t="Include">
+          <e p="ProjectsHC.cs" t="Include" />
+        </e>
         <e p="IProjectRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -28,17 +33,18 @@
             </e>
           </e>
         </e>
+        <e p="Program.cs" t="Include" />
       </e>
       <e p="Demo.sln" t="IncludeFlat" />
       <e p="Domain" t="IncludeRecursive">
-        <e p="Antwoord.cs" t="Include" />
+        <e p="Answer.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="CentraleVraag.cs" t="Include" />
+        <e p="CentralQuestion.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Fase.cs" t="Include" />
-        <e p="Gebruiker.cs" t="Include" />
+        <e p="Field.cs" t="Include" />
+        <e p="Idea.cs" t="Include" />
         <e p="Ideation.cs" t="Include" />
-        <e p="Idee.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -47,13 +53,14 @@
           </e>
         </e>
         <e p="Project.cs" t="Include" />
-        <e p="Veld.cs" t="Include" />
-        <e p="Vraag.cs" t="Include" />
-        <e p="Vragenlijst.cs" t="Include" />
+        <e p="Question.cs" t="Include" />
+        <e p="QuestionList.cs" t="Include" />
+        <e p="User.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="UI.CA" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Demo_EF.db" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">

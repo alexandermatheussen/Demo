@@ -1,6 +1,6 @@
 namespace Domain
 {
-    public class Veld
+    public class Field
     {
         
         

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using DAL.HardCoded;
 
-namespace UI.CA
+namespace DAL
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
