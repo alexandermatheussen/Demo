@@ -26,6 +26,18 @@
   "frameworks": {
     "netstandard2.0": {
       "dependencies": {
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.Extensions.Logging.Debug": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
         "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",

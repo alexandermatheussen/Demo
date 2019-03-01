@@ -6,6 +6,7 @@ namespace Domain
 {
     public class Project
     {
+        public int id { get; set; }
         public String naam { get; set; }
         public String beschrijving { get; set; }
         
