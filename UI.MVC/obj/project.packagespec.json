@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\UI.MVC.csproj",
+    "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
     "projectName": "UI.MVC",
-    "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\UI.MVC.csproj",
-    "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\DemoProject\\UI.MVC\\obj\\",
+    "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
+    "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -36,6 +36,18 @@
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.1.2, )"
+        },
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.Extensions.Logging.Debug": {
+          "target": "Package",
+          "version": "[2.1.1, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
