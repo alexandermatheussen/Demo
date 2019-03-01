@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
+    "projectUniqueName": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.MVC\\UI.MVC.csproj",
     "projectName": "UI.MVC",
-    "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\UI.MVC.csproj",
-    "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.MVC\\obj\\",
+    "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.MVC\\UI.MVC.csproj",
+    "outputPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.MVC\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
