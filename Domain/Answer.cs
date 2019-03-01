@@ -9,5 +9,6 @@ namespace Domain
         [Required]
         public int id { get; set; }
         public String content { get; set; }
+        public int like { get; set; }
     }
 }

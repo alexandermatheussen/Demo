@@ -9,9 +9,8 @@ namespace Domain
         [Required]     
         public int id { get; set; }
         public String question { get; set; }
-        public ICollection<Idea> ideas { get; set; }
+        public IEnumerable<Idea> ideas { get; set; }
         public int like { get; set; }
-        
-        
+        public String link { get; set; }
     }
 }

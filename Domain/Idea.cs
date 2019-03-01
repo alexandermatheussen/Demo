@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,7 +8,9 @@ namespace Domain
     {
         [Required]     
         public int id { get; set; }
-        public ICollection<Answer> answers { get; set; }
-        
+        public IEnumerable<Answer> answers { get; set; }
+        public String name { get; set; }
+        public int like { get; set; }
+        public int share { get; set; }
     }
 }

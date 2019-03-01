@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using Microsoft.Extensions.Primitives;
 
 namespace Domain
 {
@@ -9,19 +10,15 @@ namespace Domain
     {
         [Required]     
         public int id { get; set; }
-        public String naam { get; set; }
-        public String beschrijving { get; set; }
-        
-        public ICollection<Ideation> ideations { get; set; }
-        public ICollection<Fase> fases { get; set; }
-
-
-        public Project(int id, String naam, String beschrijving)
-        {
-            this.id = id;
-            this.naam = naam;
-            this.beschrijving = beschrijving;
-        }
-
+        public String name { get; set; }
+        public String description { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
+        public int confirmedLikes { get; set; }
+        public int unconfirmedLikes { get; set; }
+        public Place place { get; set; }
+        public IEnumerable<Ideation> ideations { get; set; }
+        public IEnumerable<Questionnaire> questionnaires { get; set; }
+        public IEnumerable<Fase> fases { get; set; }
     }
-}
+}    
