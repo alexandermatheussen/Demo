@@ -10,7 +10,7 @@ namespace Domain
         public int id { get; set; }
         public Boolean adminOnly { get; set; }
         public IEnumerable<CentralQuestion> centralQuestions { get; set; }
-        public IEnumerable<IotSetup> IotSetups { get; set; }
+        public IEnumerable<IotSetup> iotSetups { get; set; }
     }
 
 }

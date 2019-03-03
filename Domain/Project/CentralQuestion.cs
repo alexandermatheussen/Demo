@@ -10,7 +10,9 @@ namespace Domain
         public int id { get; set; }
         public String question { get; set; }
         public IEnumerable<Idea> ideas { get; set; }
-        public int like { get; set; }
+        public int likeAmount { get; set; }
+        public int shareAmount { get; set; }
         public String link { get; set; }
+        //public IdeaTemplate ideaTemplate { get; set; }
     }
 }

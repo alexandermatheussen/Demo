@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain
@@ -15,5 +16,8 @@ namespace Domain
         public int age { get; set; }
         public Boolean verified { get; set; }
         public String postalCode { get; set; }
+        //public Questionnaire questionnaire { get; set; }
+        public IEnumerable<Answer> answers { get; set; }
+        public IEnumerable<Idea> ideas { get; set; }
     }
 }

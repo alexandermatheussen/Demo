@@ -10,7 +10,7 @@ namespace Domain
         public int id { get; set; }
         public IEnumerable<Answer> answers { get; set; }
         public String name { get; set; }
-        public int like { get; set; }
-        public int share { get; set; }
+        public int likeAmount { get; set; }
+        public int shareAmount { get; set; }
     }
 }

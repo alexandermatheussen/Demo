@@ -15,10 +15,17 @@ namespace Domain
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public int confirmedLikes { get; set; }
-        public int unconfirmedLikes { get; set; }
+        public int unConfirmedLikes { get; set; }
         public Place place { get; set; }
         public IEnumerable<Ideation> ideations { get; set; }
         public IEnumerable<Questionnaire> questionnaires { get; set; }
         public IEnumerable<Fase> fases { get; set; }
+
+        public Project(int id, string name, string description)
+        {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+        }
     }
 }    

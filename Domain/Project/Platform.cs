@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Question
+    public class Platform
     {
         [Required]
         public int id { get; set; }
-        public QuestionType questionType { get; set; }
-        public String question { get; set; }
-        
+        public String name { get; set; }
+        public IEnumerable<Project> projects { get; set; }
     }
 }

@@ -37,20 +37,15 @@
       </e>
       <e p="Demo.sln" t="IncludeFlat" />
       <e p="Domain" t="IncludeRecursive">
-        <e p="Address.cs" t="Include" />
-        <e p="Answer.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="CentralQuestion.cs" t="Include" />
-        <e p="ClosedTextField.cs" t="Include" />
+        <e p="Common" t="Include">
+          <e p="Address.cs" t="Include" />
+          <e p="FieldType.cs" t="Include" />
+          <e p="Gender.cs" t="Include" />
+          <e p="Place.cs" t="Include" />
+          <e p="QuestionType.cs" t="Include" />
+        </e>
         <e p="Domain.csproj" t="IncludeRecursive" />
-        <e p="Fase.cs" t="Include" />
-        <e p="Field.cs" t="Include" />
-        <e p="FieldType.cs" t="Include" />
-        <e p="Gender.cs" t="Include" />
-        <e p="Idea.cs" t="Include" />
-        <e p="Ideation.cs" t="Include" />
-        <e p="IotSetup.cs" t="Include" />
-        <e p="MapField.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -58,16 +53,28 @@
             </e>
           </e>
         </e>
-        <e p="PictureField.cs" t="Include" />
-        <e p="Place.cs" t="Include" />
-        <e p="Platform.cs" t="Include" />
-        <e p="Project.cs" t="Include" />
-        <e p="Question.cs" t="Include" />
-        <e p="Questionnaire.cs" t="Include" />
-        <e p="QuestionType.cs" t="Include" />
-        <e p="TextField.cs" t="Include" />
-        <e p="User.cs" t="Include" />
-        <e p="VideoField.cs" t="Include" />
+        <e p="Person" t="Include">
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="Project" t="Include">
+          <e p="Answer.cs" t="Include" />
+          <e p="CentralQuestion.cs" t="Include" />
+          <e p="ClosedTextField.cs" t="Include" />
+          <e p="Fase.cs" t="Include" />
+          <e p="Field.cs" t="Include" />
+          <e p="Idea.cs" t="Include" />
+          <e p="IdeaTemplate.cs" t="Include" />
+          <e p="Ideation.cs" t="Include" />
+          <e p="IotSetup.cs" t="Include" />
+          <e p="MapField.cs" t="Include" />
+          <e p="PictureField.cs" t="Include" />
+          <e p="Platform.cs" t="Include" />
+          <e p="Project.cs" t="Include" />
+          <e p="Question.cs" t="Include" />
+          <e p="Questionnaire.cs" t="Include" />
+          <e p="TextField.cs" t="Include" />
+          <e p="VideoField.cs" t="Include" />
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="UI.CA" t="IncludeRecursive">
