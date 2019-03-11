@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
-using Microsoft.Extensions.Primitives;
 
 namespace Domain
 {
@@ -17,15 +15,8 @@ namespace Domain
         public int confirmedLikes { get; set; }
         public int unConfirmedLikes { get; set; }
         public Place place { get; set; }
-        public IEnumerable<Ideation> ideations { get; set; }
-        public IEnumerable<Questionnaire> questionnaires { get; set; }
-        public IEnumerable<Fase> fases { get; set; }
-
-        public Project(int id, string name, string description)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-        }
+        public ICollection<Ideation> ideations { get; set; }
+        public ICollection<Questionnaire> questionnaires { get; set; }
+        public ICollection<Fase> fases { get; set; }
     }
 }    

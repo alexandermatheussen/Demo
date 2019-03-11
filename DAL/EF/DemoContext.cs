@@ -10,13 +10,14 @@ namespace DAL.EF
         {
             Database.EnsureCreated();
         }
+
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                        
+
                     .UseSqlite("Data Source=Demo_EF.db")
                     .UseLoggerFactory(new LoggerFactory(
                         new[]
@@ -30,8 +31,8 @@ namespace DAL.EF
                     );
             }
         }
-        public DbSet<Domain.Project> projects { get; set; }
+        public DbSet<Domain.Question> Questions { get; set; }
+        public DbSet<Domain.Project> Projects { get; set; }
+        public DbSet<Domain.Questionnaire> Questionnaires { get; set; }
     }
-        
-    
 }

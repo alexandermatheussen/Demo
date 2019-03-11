@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using D.UI.MVC.Models;
+using Domain;
 
 namespace D.UI.MVC.Controllers
 {
@@ -29,6 +29,12 @@ namespace D.UI.MVC.Controllers
             ViewData["Message"] = "Your application description page.";
 
             return View();
+        }
+        
+        public IActionResult Questionnaires()
+        {
+           
+            return View(new Question("Test vraag"));
         }
 
         public IActionResult Contact()

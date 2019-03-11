@@ -10,7 +10,7 @@ namespace Domain
         public int id { get; set; }
         public String firstName { get; set; }
         public String lastName { get; set; }
-        public String emailAddress { get; set; }
+        public String eMailAddress { get; set; }
         public String password { get; set; }
         public Gender gender { get; set; }
         public int age { get; set; }

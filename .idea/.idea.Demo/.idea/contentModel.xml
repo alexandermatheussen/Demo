@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\vin-c\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\vin-c\.Rider2018.3\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\vin-c\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\vin-c\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Demo.1909017597.00" t="ExcludeRecursive" />
     <e p="D:\OneDrive\Documenten\GitHub\Demo" t="IncludeFlat">
@@ -124,6 +126,7 @@
             <e p="Input.cshtml" t="Include" />
             <e p="Input.cshtml.cs" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
+            <e p="Questionnaires.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />

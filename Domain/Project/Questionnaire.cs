@@ -10,9 +10,20 @@ namespace Domain
         public int id { get; set; }
         public int questionAmount { get; set; }
         public Boolean confirmed { get; set; }
-        public IEnumerable<Question> questions { get; set; }
-        public IEnumerable<IotSetup> iotSetups { get; set; } // Moet een vraag apart niet verbonden worden met iot opstelling?
+        public Project project { get; set; }
+        public ICollection<Question> questions { get; set; }
+        public ICollection<IotSetup> iotSetups { get; set; } // Moet een vraag apart niet verbonden worden met iot opstelling?
                                                              // anders weet je toch niet aan welke vraag de opstelling hangt
         //public User user { get; set; }
+
+        public Questionnaire()
+        {
+        }
+
+        public Questionnaire(int id, int questionAmount)
+        {
+            this.id = id;
+            this.questionAmount = questionAmount;
+        }
     }
 }

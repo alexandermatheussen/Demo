@@ -14,7 +14,14 @@
     ],
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj"
+          },
+          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
