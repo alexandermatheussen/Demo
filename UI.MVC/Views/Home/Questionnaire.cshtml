@@ -1,0 +1,64 @@
+﻿@using Domain
+@model IEnumerable<Domain.Question>
+
+<h1>Questionnaire</h1>
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+        if (item.questionType == QuestionType.OPEN_QUESTION)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question) <br>
+                    <textarea></textarea>
+                </td>
+            </tr>
+        }
+        if (item.questionType == QuestionType.CHECK_BOX)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question) <br>
+                    <input type="checkbox" name="option1" value="option1">Option 1 <br>
+                    <input type="checkbox" name="option2" value="option2">Option 2 <br>
+                    <input type="checkbox" name="option3" value="option3">Option 3 <br>
+                </td>
+            </tr>
+        }
+        if (item.questionType == QuestionType.RADIO_BUTTON)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question) <br>
+                    <input type="radio" name="option1" value="option1">Option 1 <br>
+                    <input type="radio" name="option2" value="option2">Option 2 <br>
+                    <input type="radio" name="option3" value="option3">Option 3 <br>
+                </td>
+            </tr>
+        }
+        if (item.questionType == QuestionType.MAILADDRESS)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question) <br>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+        }
+        if (item.questionType == QuestionType.DROPDOWN)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question) <br>
+                    <select>
+                        <option value="Option1">Option 1</option>
+                        <option value="Option2">Option 2</option>
+                        <option value="Option3">Option 3</option>
+                    </select>
+                </td>
+            </tr>
+        }
+    }
+</table>
+<input class="btn" type="submit" value="Submit">

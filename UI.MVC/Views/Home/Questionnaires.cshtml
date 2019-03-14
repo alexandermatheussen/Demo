@@ -1,6 +1,30 @@
-﻿@model Domain.Question
+﻿@model IEnumerable<Domain.Questionnaire>
 
 <h1>Questionnaires</h1>
 
-Test
-@Html.DisplayNameFor(model => model.question)
+<table class="table">
+    <tr>
+        <th>
+            <p>id</p>
+        </th>
+        <th>
+            <p>Aantal vragen</p>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.questionAmount)
+                </td>
+                <td>
+                    @Html.ActionLink("Vragenlijst invullen", "Questionnaire", "Home"
+                        , new { id=item.id })
+                </td>
+            </tr>
+        
+    }
+</table>

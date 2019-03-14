@@ -104,3 +104,5 @@ D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\Domain.dll
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\BL.pdb
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\Domain.pdb
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\DAL.pdb
+D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Questionnaire.g.cshtml.cs
+D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Projects.g.cshtml.cs

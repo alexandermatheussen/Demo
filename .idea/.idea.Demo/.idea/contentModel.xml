@@ -9,7 +9,8 @@
       <e p="BL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BL.csproj" t="IncludeRecursive" />
-        <e p="Class1.cs" t="Include" />
+        <e p="IProjectManager.cs" t="Include" />
+        <e p="IQuestionnaireManager.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -17,17 +18,19 @@
             </e>
           </e>
         </e>
+        <e p="ProjectManager.cs" t="Include" />
+        <e p="QuestionnaireManager.cs" t="Include" />
       </e>
       <e p="DAL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.csproj" t="IncludeRecursive" />
         <e p="EF" t="Include">
-          <e p="DemoContext.cs" t="Include" />
+          <e p="DemoDbContext.cs" t="Include" />
+          <e p="DemoDbInitializer.cs" t="Include" />
         </e>
-        <e p="HardCoded" t="Include">
-          <e p="ProjectsHC.cs" t="Include" />
-        </e>
+        <e p="Helper.cs" t="Include" />
         <e p="IProjectRepository.cs" t="Include" />
+        <e p="IQuestionnaireRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -35,7 +38,9 @@
             </e>
           </e>
         </e>
-        <e p="Program.cs" t="Include" />
+        <e p="ProjectRepository.cs" t="Include" />
+        <e p="QuestionnaireRepository.cs" t="Include" />
+        <e p="UnitOfWork.cs" t="Include" />
       </e>
       <e p="Demo.sln" t="IncludeFlat" />
       <e p="Domain" t="IncludeRecursive">
@@ -81,7 +86,6 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="UI.CA" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Demo_EF.db" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -126,6 +130,8 @@
             <e p="Input.cshtml" t="Include" />
             <e p="Input.cshtml.cs" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
+            <e p="Projects.cshtml" t="Include" />
+            <e p="Questionnaire.cshtml" t="Include" />
             <e p="Questionnaires.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">

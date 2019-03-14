@@ -1,5 +1,4 @@
 ﻿using System;
-using DAL.HardCoded;
 
 namespace UI.CA
 {
@@ -7,8 +6,6 @@ namespace UI.CA
     {
         static void Main(string[] args)
         {
-            ProjectsHC.CreateProjects();
-            Console.WriteLine("Done!");
         }
     }
 }
