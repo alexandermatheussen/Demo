@@ -22,6 +22,7 @@ namespace DAL.EF
         public DbSet<Questionnaire> Questionnaires { get; set; }
         public DbSet<IotSetup> IotSetups { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<QuestionUser> QuestionUsers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

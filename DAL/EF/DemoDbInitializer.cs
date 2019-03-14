@@ -42,7 +42,6 @@ namespace DAL.EF
                 password = "test",
                 postalCode = "2450"
             };
-            
             #endregion
             
             #region TestProject 1
@@ -64,8 +63,7 @@ namespace DAL.EF
                 project = p1,
                 confirmed = true,
                 iotSetups = new List<IotSetup>(),
-                questions = new List<Question>(),
-                user = null
+                questions = new List<Question>()
             };
             Questionnaire questionnaire2 = new Questionnaire()
             {
@@ -73,8 +71,7 @@ namespace DAL.EF
                 project = p1,
                 confirmed = false,
                 iotSetups = new List<IotSetup>(),
-                questions = new List<Question>(),
-                user = null
+                questions = new List<Question>()
             };
             p1.questionnaires = new List<Questionnaire>() { questionnaire1, questionnaire2 };
             
@@ -83,31 +80,36 @@ namespace DAL.EF
             {
                 question = "Vraag 1",
                 questionnaire = questionnaire1,
-                questionType = QuestionType.RADIO_BUTTON
+                questionType = QuestionType.RADIO_BUTTON,
+                optionsList = new []{"option1;option2;option3"}
             };
             Question q2 = new Question()
             {
                 question = "E-mail address:",
                 questionnaire = questionnaire1,
-                questionType = QuestionType.MAILADDRESS
+                questionType = QuestionType.MAILADDRESS,
+                optionsList = new []{""}
             };
             Question q3 = new Question()
             {
                 question = "Vraag 2",
                 questionnaire = questionnaire1,
-                questionType = QuestionType.DROPDOWN
+                questionType = QuestionType.DROPDOWN,
+                optionsList = new []{"option1;option2;option3"}
             };
             Question q4 = new Question()
             {
                 question = "Vraag1",
                 questionnaire = questionnaire2,
-                questionType = QuestionType.OPEN_QUESTION
+                questionType = QuestionType.OPEN_QUESTION,
+                optionsList = new []{""}
             };
             Question q5 = new Question()
             {
                 question = "Vraag 2",
                 questionnaire = questionnaire2,
-                questionType = QuestionType.OPEN_QUESTION
+                questionType = QuestionType.OPEN_QUESTION,
+                optionsList = new []{""}
             };
             questionnaire1.questions = new List<Question>() { q1, q2, q3 };
             questionnaire2.questions = new List<Question>() { q4, q5 };
@@ -141,7 +143,6 @@ namespace DAL.EF
                 confirmed = true,
                 iotSetups = new List<IotSetup>(),
                 questions = new List<Question>(),
-                user = null
             };
             p2.questionnaires = new List<Questionnaire>() { questionnaire3 };
             
@@ -150,17 +151,26 @@ namespace DAL.EF
             {
                 question = "Vraag 1",
                 questionnaire = questionnaire3,
-                questionType = QuestionType.OPEN_QUESTION
+                questionType = QuestionType.OPEN_QUESTION,
+                optionsList = new []{""}
             };
             Question q7 = new Question()
             {
                 question = "Vraag 2",
                 questionnaire = questionnaire3,
-                questionType = QuestionType.RADIO_BUTTON
+                questionType = QuestionType.RADIO_BUTTON,
+                optionsList = new []{"option1;option2;option3"}
             };
             questionnaire3.questions = new List<Question>() { q6, q7 };
             #endregion
             
+            QuestionUser qu1 = new QuestionUser()
+            {
+                question = q1,
+                user = u1
+            };
+
+            context.QuestionUsers.Add(qu1);
             context.Projects.AddRange(p1, p2);
             context.Questionnaires.AddRange(questionnaire1, questionnaire2, questionnaire3);
             context.Questions.AddRange(q1, q2, q3, q4, q5, q6, q7);

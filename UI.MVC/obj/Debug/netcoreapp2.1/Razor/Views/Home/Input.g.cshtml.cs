@@ -65,7 +65,7 @@ using D.UI.MVC.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(99, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19389b3d99564285bb0f3f4ff4039e6a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4313b6f335334a3994a1c0f3cf29c843", async() => {
                 BeginContext(105, 23, true);
                 WriteLiteral("\r\n    <title></title>\r\n");
                 EndContext();
@@ -85,12 +85,12 @@ using D.UI.MVC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(137, 185, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a9f4dd5a8d14132bbfd8987c9e165f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "77e1294876ca4172a45c02be6e850c10", async() => {
                 BeginContext(143, 13, true);
                 WriteLiteral("\r\n<div>\r\n    ");
                 EndContext();
                 BeginContext(156, 149, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70c6a553b5124d1ab1dba869acca6f4d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce6eb409dec744fead585f3eb7a7e88e", async() => {
                     BeginContext(162, 136, true);
                     WriteLiteral("\r\n        <input type=\"text\" name=\"beschrijving\" />\r\n        <input type=\"text\" name=\"amount\" />\r\n        <input type=\"submit\" /> \r\n    ");
                     EndContext();

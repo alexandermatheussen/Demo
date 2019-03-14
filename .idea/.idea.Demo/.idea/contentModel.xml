@@ -79,6 +79,7 @@
           <e p="Project.cs" t="Include" />
           <e p="Question.cs" t="Include" />
           <e p="Questionnaire.cs" t="Include" />
+          <e p="QuestionUser.cs" t="Include" />
           <e p="TextField.cs" t="Include" />
           <e p="VideoField.cs" t="Include" />
         </e>
@@ -103,6 +104,7 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
         </e>
+        <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Idee.cs" t="Include" />
