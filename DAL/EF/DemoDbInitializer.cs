@@ -32,33 +32,32 @@ namespace DAL.EF
             #region User
             User u1 = new User()
             {
-                firstName = "Test",
-                lastName = "Persoon",
+                firstName = "Jan",
+                lastName = "Jaap",
                 age = 21,
-                answers = new List<Answer>(),
                 eMailAddress = "test.persoon@gmail.com",
                 gender = Gender.M,
-                ideas = new List<Idea>(),
                 password = "test",
                 postalCode = "2450"
             };
+            User u2 = new User(){ firstName = "Peter", lastName = "Smet"};
+            User u3 = new User(){ firstName = "Dirk", lastName = "Bakker"};
             #endregion
             
             #region TestProject 1
             Project p1 = new Project()
             {
                 confirmedLikes = 0,
-                description = "A project started by the city of antwerp with the intention to adopt street dogs",
+                description = "We are thinking about build a new playground in the middle of central park",
                 endDate = new DateTime(2019, 3,9),
                 startDate = new DateTime(2019,4,10),
-                fases = new List<Fase>(),
-                name = "SAFE THE DOGS!",
-                place = new Place(),
+                name = "Playground"
             };
             
             // Questionnaires
             Questionnaire questionnaire1 = new Questionnaire()
             {
+                name = "Safety",
                 questionAmount = 3,
                 project = p1,
                 confirmed = true,
@@ -67,6 +66,7 @@ namespace DAL.EF
             };
             Questionnaire questionnaire2 = new Questionnaire()
             {
+                name = "Noise",
                 questionAmount = 2,
                 project = p1,
                 confirmed = false,
@@ -115,12 +115,12 @@ namespace DAL.EF
             questionnaire2.questions = new List<Question>() { q4, q5 };
             
             // IoTSetups
-            IotSetup i1 = new IotSetup()
+            IotSetup iot1 = new IotSetup()
             {
                 address = new Address(),
                 questionnaire = questionnaire1
             };
-            questionnaire1.iotSetups = new List<IotSetup>() { i1 };
+            questionnaire1.iotSetups = new List<IotSetup>() { iot1 };
             #endregion
             
             #region TestProject 2
@@ -130,7 +130,7 @@ namespace DAL.EF
                 description = "A project started by the city of antwerp with the intention to adopt street birds",
                 endDate = new DateTime(2019, 3,9),
                 startDate = new DateTime(2019,4,10),
-                fases = new List<Fase>(),
+                phases = new List<Phase>(),
                 name = "SAFE THE BIRDS!",
                 place = new Place(),
             };
@@ -138,6 +138,7 @@ namespace DAL.EF
             // Questionnaires
             Questionnaire questionnaire3 = new Questionnaire()
             {
+                name = "Budget",
                 questionAmount = 2,
                 project = p2,
                 confirmed = true,
@@ -169,12 +170,60 @@ namespace DAL.EF
                 question = q1,
                 user = u1
             };
+            
+            //Phases
+            Phase ph1 = new Phase() { project = p1, name = "Brainstorming",description = "We are starting this project by gathering input from the community"};
+            Phase ph2 = new Phase() { project = p1, name = "Construction",description = "We are building the most suggested constructions in the playground"};
+            
+            p1.phases = new List<Phase>(){ph1,ph2};
 
-            context.QuestionUsers.Add(qu1);
-            context.Projects.AddRange(p1, p2);
-            context.Questionnaires.AddRange(questionnaire1, questionnaire2, questionnaire3);
-            context.Questions.AddRange(q1, q2, q3, q4, q5, q6, q7);
-            context.IotSetups.AddRange(i1);
+            
+            //Ideations 
+            
+            Ideation it1 = new Ideation(){project = p1};
+            
+            p1.ideations = new List<Ideation>(){it1};
+            
+            //IdeationQuestions 
+
+            IdeationQuestion iq1 = new IdeationQuestion(){ideation = it1, question = "What type of constructions do you want on the playground ? "};
+            it1.questions = new List<IdeationQuestion>(){iq1};
+            
+            //Ideas 
+            
+            Idea i1 = new Idea(){ideation = it1 , user = u1 , title = "Swing" , content = "I think a swing would be a great idea for the playground, it's fun for all ages and it's safe!"};
+            Idea i2 = new Idea(){ideation = it1 , user = u2 , title = "Slide" , content = "A slide is very fun! And it doesn't cost much!"};
+            
+            it1.ideas = new List<Idea>(){ i1,i2};
+            
+            //answers 
+            
+            Answer a1 = new Answer(){idea = i1, user = u3,content = " Great Idea !" };
+            Answer a2 = new Answer(){idea = i2, user = u3,content = " Terrible Idea !" };
+            
+            i1.answers = new List<Answer>(){a1};
+            i2.answers = new List<Answer>(){a2};
+            
+            u1.ideas = new List<Idea>(){i1};
+            u2.ideas = new List<Idea>(){i2};
+            u3.answers = new List<Answer>(){a1,a2};
+            
+            
+
+            context.questionUsers.Add(qu1);
+            context.projects.AddRange(p1, p2);
+            context.questionnaires.AddRange(questionnaire1, questionnaire2, questionnaire3);
+            context.questions.AddRange(q1, q2, q3, q4, q5, q6, q7);
+            context.iotSetups.AddRange(iot1);
+            context.phases.AddRange(ph1,ph2);
+            context.users.AddRange(u1,u2,u3);
+            context.ideations.Add(it1);
+            context.ideationQuestions.Add(iq1);
+            context.ideas.AddRange(i1,i2);
+            context.answers.AddRange(a1,a2);
+            
+            
+            
 
             context.SaveChanges();
             

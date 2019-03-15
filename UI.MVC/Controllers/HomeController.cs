@@ -20,10 +20,7 @@ namespace D.UI.MVC.Controllers
             pmgr = new ProjectManager();
         }
         
-        public String ReceiveAndReturn()
-        {
-            return "Hello world";
-        }
+      
 
         public IActionResult Input()
         {
@@ -41,11 +38,7 @@ namespace D.UI.MVC.Controllers
             return View();
         }
 
-        public IActionResult Projects()
-        {
-            IEnumerable<Project> allProjects = pmgr.getProjects();
-            return View(allProjects);
-        }
+       
         
         public IActionResult Questionnaires(int id)
         {

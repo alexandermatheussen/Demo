@@ -15,29 +15,36 @@ namespace DAL
         {
             ctx = new DemoDbContext();
         }
+
+        public ProjectRepository(UnitOfWork unitOfWork)
+        {
+            if(unitOfWork == null)
+                throw new ArgumentNullException("unitOfWork");
+            ctx = unitOfWork.Context;
+        }
         
-        #region Interface implementation
+        #region Projects
         public IEnumerable<Project> readProjects()
         {
-            return ctx.Projects.AsEnumerable();
+            return ctx.projects.AsEnumerable();
         }
 
         public Project readProject(int id)
         {
-            return ctx.Projects
+            return ctx.projects
                 .Include(p => p.questionnaires)
                 .SingleOrDefault(p => p.id == id);
         }
 
         public IEnumerable<Questionnaire> readQuestionnaires()
         {
-            return ctx.Questionnaires.AsEnumerable();
+            return ctx.questionnaires.AsEnumerable();
         }
 
         public void createProject(Project p)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
-            ctx.Projects.Add(p);
+            ctx.projects.Add(p);
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
             ctx.SaveChanges();
         }
@@ -45,7 +52,7 @@ namespace DAL
         public void updateProject(Project p)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
-            ctx.Projects.Update(p);
+            ctx.projects.Update(p);
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
             ctx.SaveChanges();
         }
@@ -53,7 +60,7 @@ namespace DAL
         public void deleteProject(int id)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
-            ctx.Projects.Remove(ctx.Projects.Find(id));
+            ctx.projects.Remove(ctx.projects.Find(id));
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (ProjectRepo.Ctx)");
             ctx.SaveChanges();
         }

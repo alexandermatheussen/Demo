@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\vin-c\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Demo.1909017597.00" t="ExcludeRecursive" />
-    <e p="D:\OneDrive\Documenten\GitHub\Demo" t="IncludeFlat">
+    <e p="C:\Users\alexa\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\alexa\.Rider2018.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\alexa\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\alexa\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Demo.2095513040.00" t="ExcludeRecursive" />
+    <e p="C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo" t="IncludeFlat">
       <e p="BL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BL.csproj" t="IncludeRecursive" />
+        <e p="IdeationManager.cs" t="Include" />
+        <e p="IIdeationManager.cs" t="Include" />
         <e p="IProjectManager.cs" t="Include" />
         <e p="IQuestionnaireManager.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -20,6 +22,7 @@
         </e>
         <e p="ProjectManager.cs" t="Include" />
         <e p="QuestionnaireManager.cs" t="Include" />
+        <e p="UnitOfWorkManager.cs" t="Include" />
       </e>
       <e p="DAL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -29,6 +32,8 @@
           <e p="DemoDbInitializer.cs" t="Include" />
         </e>
         <e p="Helper.cs" t="Include" />
+        <e p="IdeationRepository.cs" t="Include" />
+        <e p="IIdeationRepository.cs" t="Include" />
         <e p="IProjectRepository.cs" t="Include" />
         <e p="IQuestionnaireRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -60,33 +65,30 @@
             </e>
           </e>
         </e>
-        <e p="Person" t="Include">
-          <e p="User.cs" t="Include" />
-        </e>
+        <e p="Person" t="Include" />
         <e p="Project" t="Include">
           <e p="Answer.cs" t="Include" />
-          <e p="CentralQuestion.cs" t="Include" />
           <e p="ClosedTextField.cs" t="Include" />
-          <e p="Fase.cs" t="Include" />
           <e p="Field.cs" t="Include" />
           <e p="Idea.cs" t="Include" />
           <e p="IdeaTemplate.cs" t="Include" />
           <e p="Ideation.cs" t="Include" />
+          <e p="IdeationQuestion.cs" t="Include" />
           <e p="IotSetup.cs" t="Include" />
           <e p="MapField.cs" t="Include" />
-          <e p="PictureField.cs" t="Include" />
+          <e p="Phase.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Project.cs" t="Include" />
           <e p="Question.cs" t="Include" />
           <e p="Questionnaire.cs" t="Include" />
           <e p="QuestionUser.cs" t="Include" />
-          <e p="TextField.cs" t="Include" />
-          <e p="VideoField.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="UI.CA" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Demo_EF.db" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -103,11 +105,13 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
+          <e p="ProjectController.cs" t="Include" />
         </e>
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Idee.cs" t="Include" />
+          <e p="ProjectAndQuestions.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -132,9 +136,13 @@
             <e p="Input.cshtml" t="Include" />
             <e p="Input.cshtml.cs" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
-            <e p="Projects.cshtml" t="Include" />
             <e p="Questionnaire.cshtml" t="Include" />
             <e p="Questionnaires.cshtml" t="Include" />
+          </e>
+          <e p="Project" t="Include">
+            <e p="Ideas.cshtml" t="Include" />
+            <e p="Project.cshtml" t="Include" />
+            <e p="Projects.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />

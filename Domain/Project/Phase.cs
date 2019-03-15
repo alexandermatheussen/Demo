@@ -3,10 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Fase
+    public class Phase
     {
         [Required]     
-        public int id { get; set; }
+        public int phaseId { get; set; }
+        
+        
+        public Project project { get; set; }
         public String name { get; set; }
         public String description { get; set; }
         public DateTime startDate { get; set; }

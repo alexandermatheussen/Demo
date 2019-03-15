@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using BL.Managers;
 using DAL;
 using Domain;
 
@@ -13,6 +14,15 @@ namespace BL
         public QuestionnaireManager()
         {
             repo = new QuestionnaireRepository();
+        }
+
+        public QuestionnaireManager(UnitOfWorkManager unitOfWorkManager)
+        {
+            if (unitOfWorkManager == null)
+            {
+                throw new ArgumentException("unitOfWorkManager");
+            }
+            repo = new QuestionnaireRepository(unitOfWorkManager.UnitOfWork);
         }
 
         public IEnumerable<Questionnaire> getQuestionnaires(int id)

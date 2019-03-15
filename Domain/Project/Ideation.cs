@@ -7,9 +7,12 @@ namespace Domain
     public class Ideation
     {
         [Required]     
-        public int id { get; set; }
+        public int ideationId { get; set; }     
+        public Project project { get; set; }
         public Boolean adminOnly { get; set; }
-        public IEnumerable<CentralQuestion> centralQuestions { get; set; }
+        public ICollection<IdeationQuestion> questions { get; set; }
+        public ICollection<Idea> ideas { get; set; }
+        
         public IEnumerable<IotSetup> iotSetups { get; set; }
     }
 

@@ -17,6 +17,6 @@ namespace Domain
         public Place place { get; set; }
         public ICollection<Ideation> ideations { get; set; }
         public ICollection<Questionnaire> questionnaires { get; set; }
-        public ICollection<Fase> fases { get; set; }
+        public ICollection<Phase> phases { get; set; }
     }
 }    

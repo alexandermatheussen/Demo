@@ -7,10 +7,14 @@ namespace Domain
     public class Idea
     {
         [Required]     
-        public int id { get; set; }
-        public IEnumerable<Answer> answers { get; set; }
-        public String name { get; set; }
-        public int likeAmount { get; set; }
-        public int shareAmount { get; set; }
+        public int ideaId { get; set; }
+        public User user { get; set; }
+        public Ideation ideation { get; set; }
+      
+        public string title { get; set; }
+        public string content { get; set; }
+         
+        public ICollection<Answer> answers { get; set; }
+        
     }
 }

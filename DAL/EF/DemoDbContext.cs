@@ -16,13 +16,27 @@ namespace DAL.EF
             this.ChangeTracker.AutoDetectChangesEnabled = false;
             DemoDbInitializer.Initialize(this, false);
         }
+
+        #region Sets
+        public DbSet<Question> questions { get; set; }
+        public DbSet<Project> projects { get; set; }
+        public DbSet<Questionnaire> questionnaires { get; set; }
+        public DbSet<IotSetup> iotSetups { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<QuestionUser> questionUsers { get; set; }
         
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<Project> Projects { get; set; }
-        public DbSet<Questionnaire> Questionnaires { get; set; }
-        public DbSet<IotSetup> IotSetups { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<QuestionUser> QuestionUsers { get; set; }
+        public DbSet<Phase> phases { get; set; }
+
+        
+        public DbSet<Ideation> ideations { get; set; }
+        public DbSet<IdeationQuestion> ideationQuestions { get; set; }
+        public DbSet<Idea> ideas { get; set; }
+        public DbSet<Answer> answers { get; set; }
+        
+
+        #endregion
+
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -51,6 +65,35 @@ namespace DAL.EF
             modelBuilder.Entity<IotSetup>().Property<int>("QuestionnaireId");
             modelBuilder.Entity<IotSetup>().HasOne<Questionnaire>(q => q.questionnaire)
                 .WithMany(q => q.iotSetups).HasForeignKey("QuestionnaireId");
+            
+            
+            modelBuilder.Entity<Ideation>().Property<int>("projectId"); // shadow FK naar Project
+            modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)
+                .HasForeignKey("projectId");
+
+            modelBuilder.Entity<Phase>().Property<int>("projectId"); // shadow FK naar Project
+            modelBuilder.Entity<Phase>().HasOne<Project>(p => p.project).WithMany(f => f.phases)
+                .HasForeignKey("projectId");
+            
+            modelBuilder.Entity<Idea>().Property<int>("ideationId"); // shaodow FK naar Ideation 
+            modelBuilder.Entity<Idea>().Property<int>("userId"); // shaodow FK naar User
+
+            modelBuilder.Entity<Idea>().HasOne<Ideation>(i => i.ideation).WithMany(i => i.ideas)
+                .HasForeignKey("ideationId");
+            modelBuilder.Entity<Idea>().HasOne<User>(u => u.user).WithMany(i => i.ideas)
+                .HasForeignKey("userId");
+            
+            modelBuilder.Entity<IdeationQuestion>().Property<int>("ideationId"); // shaodow FK naar Ideation 
+            modelBuilder.Entity<IdeationQuestion>().HasOne<Ideation>(i => i.ideation).WithMany(q => q.questions)
+                .HasForeignKey("ideationId");
+            
+            modelBuilder.Entity<Answer>().Property<int>("ideaId"); // shaodow FK naar Idea
+            modelBuilder.Entity<Answer>().Property<int>("userId"); // shaodow FK naar User
+            
+            modelBuilder.Entity<Answer>().HasOne<Idea>(i => i.idea).WithMany(a => a.answers)
+                .HasForeignKey("ideaId");
+            modelBuilder.Entity<Answer>().HasOne<User>(u => u.user).WithMany(a=> a.answers)
+                .HasForeignKey("userId");
         }
 
         private readonly bool delaySave = false;

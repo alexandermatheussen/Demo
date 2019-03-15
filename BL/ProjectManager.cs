@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using BL.Managers;
 using DAL;
 using Domain;
 
@@ -13,6 +14,15 @@ namespace BL
         public ProjectManager() 
         {
             repo = new ProjectRepository();
+        }
+
+        public ProjectManager(UnitOfWorkManager unitOfWorkManager)
+        {
+            if (unitOfWorkManager == null)
+            {
+                throw new ArgumentException("unitOfWorkManager");
+            }
+            repo = new ProjectRepository(unitOfWorkManager.UnitOfWork);
         }
         
         public IEnumerable<Project> getProjects()

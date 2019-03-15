@@ -8,6 +8,8 @@ namespace Domain
     {
         [Required]
         public int id { get; set; }
+        
+        public string name { get; set; }
         public int questionAmount { get; set; }
         public Boolean confirmed { get; set; }
         public Project project { get; set; }

@@ -7,9 +7,11 @@ namespace Domain
     public class Answer
     {
         [Required]
-        public int id { get; set; }
-        public String content { get; set; }
-        public int likeAmount { get; set; }
-        public int shareAmount { get; set; }
+        public  int answerId { get; set; }
+        [Required]
+        public Idea idea { get; set; }
+        public User user { get; set; }
+        public string content { get; set; }
+        public DateTime date { get; set; }
     }
 }

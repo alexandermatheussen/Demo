@@ -17,7 +17,7 @@ namespace Domain
         public Boolean verified { get; set; }
         public String postalCode { get; set; }
         //public Questionnaire questionnaire { get; set; }
-        public IEnumerable<Answer> answers { get; set; }
-        public IEnumerable<Idea> ideas { get; set; }
+        public ICollection<Idea> ideas { get; set; }
+        public ICollection<Answer> answers { get; set; }
     }
 }

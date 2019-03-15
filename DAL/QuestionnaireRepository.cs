@@ -16,22 +16,30 @@ namespace DAL
             ctx = new DemoDbContext();
         }
 
+        public QuestionnaireRepository(UnitOfWork unitOfWork)
+        {
+            if(unitOfWork == null)
+                throw new ArgumentNullException("unitOfWork");
+            ctx = unitOfWork.Context;
+        }
+        
+
         #region Interface Implementation
         public IEnumerable<Questionnaire> readQuestionnaires(int id)
         {
-            return ctx.Questionnaires
+            return ctx.questionnaires
                 .Include(q => q.project)
                 .Where(q => q.project.id == id);
         }
 
         public IEnumerable<IotSetup> readIotSetups()
         {
-            return ctx.IotSetups.AsEnumerable();
+            return ctx.iotSetups.AsEnumerable();
         }
 
         public IEnumerable<Question> readQuestions(int id)
         {
-            return ctx.Questions
+            return ctx.questions
                 .Include(q => q.questionnaire)
                 .Where(q => q.questionnaire.id == id);
         }
@@ -39,20 +47,20 @@ namespace DAL
         public void createQuestionnaire(Questionnaire q)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
-            ctx.Questionnaires.Add(q);
+            ctx.questionnaires.Add(q);
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
             ctx.SaveChanges();
         }
 
         public Questionnaire readQuestionnaire(int id)
         {
-            return ctx.Questionnaires.Find(id);
+            return ctx.questionnaires.Find(id);
         }
 
         public void updateQuestionnaire(Questionnaire q)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
-            ctx.Questionnaires.Update(q);
+            ctx.questionnaires.Update(q);
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
             ctx.SaveChanges();
         }
@@ -60,7 +68,7 @@ namespace DAL
         public void deleteQuestionnaire(int id)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
-            ctx.Questionnaires.Remove(ctx.Questionnaires.Find(id));
+            ctx.questionnaires.Remove(ctx.questionnaires.Find(id));
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
             ctx.SaveChanges();
         }
