@@ -39,5 +39,18 @@ namespace D.UI.MVC.Controllers
             IEnumerable <Idea>  ideas = ideationMgr.getIdeas(id);
             return View(ideas);
         }
+
+        public IActionResult Idea(int ideaId)
+        {
+            Idea idea = ideationMgr.getIdea(ideaId);
+            Ideation ideation = ideationMgr.getIdeation(idea.ideation.ideationId);
+            IEnumerable<IdeationQuestion> questions = ideationMgr.getIdeationQuestions(ideation.ideationId);
+            IEnumerable<Answer> answers = ideationMgr.getAnswers(ideaId);
+            
+            
+            
+            var model = new IdeaAndAnswers(){answers = answers,idea = idea,ideationQuestions = questions};
+            return View(model);
+        }
     }
 }

@@ -110,6 +110,7 @@
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="IdeaAndAnswers.cs" t="Include" />
           <e p="Idee.cs" t="Include" />
           <e p="ProjectAndQuestions.cs" t="Include" />
         </e>
@@ -140,6 +141,7 @@
             <e p="Questionnaires.cshtml" t="Include" />
           </e>
           <e p="Project" t="Include">
+            <e p="Idea.cshtml" t="Include" />
             <e p="Ideas.cshtml" t="Include" />
             <e p="Project.cshtml" t="Include" />
             <e p="Projects.cshtml" t="Include" />

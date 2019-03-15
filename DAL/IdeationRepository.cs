@@ -32,9 +32,9 @@ namespace DAL
             throw new System.NotImplementedException();
         }
 
-        public Ideation readIdeation(int id)
+        public Ideation readIdeation(int ideationId)
         {
-            throw new System.NotImplementedException();
+            return ctx.ideations.Include(i => i.ideas).SingleOrDefault(i => i.ideationId == ideationId);
         }
 
         public void updateIdeation(Ideation i)
@@ -47,9 +47,14 @@ namespace DAL
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<IdeationQuestion> readIdeationsQuestions(int ProjectId)
+        public IEnumerable<IdeationQuestion> readIdeationsQuestionsForProject(int ProjectId)
         {
             return ctx.ideationQuestions.Include(i => i.ideation).Where(i => i.ideation.project.id == ProjectId);
+
+        }
+        public IEnumerable<IdeationQuestion> readIdeationsQuestions(int ideationId)
+        {
+            return ctx.ideationQuestions.Include(i => i.ideation).Where(i => i.ideation.ideationId== ideationId);
 
         }
 
@@ -83,9 +88,9 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public Ideation readIdea(int ideaId)
+        public Idea readIdea(int ideaId)
         {
-            throw new NotImplementedException();
+            return ctx.ideas.Include(i => i.ideation).SingleOrDefault(i => i.ideaId == ideaId);
         }
 
         public void updateIdea(Idea i)
@@ -94,6 +99,31 @@ namespace DAL
         }
 
         public void deleteIdea(int ideaId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Answer> readAnswers(int ideaId)
+        {
+            return ctx.answers.Include(a => a.user).Where(a => a.idea.ideaId == ideaId);
+        }
+
+        public void createAnswer(Answer a)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Ideation readAnswer(int answerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void updateAnswer(Answer a)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void deleteAnswer(int answerId)
         {
             throw new NotImplementedException();
         }

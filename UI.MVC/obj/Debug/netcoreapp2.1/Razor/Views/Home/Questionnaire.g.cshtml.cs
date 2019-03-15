@@ -172,7 +172,7 @@ using Domain;
             WriteLiteral(" <br>\r\n                    <select>\r\n                        ");
             EndContext();
             BeginContext(1940, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19711564228f4b5c92bb28b7c2a01845", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4019ee8382084f4cb47482a328d6df2f", async() => {
                 BeginContext(1963, 8, true);
                 WriteLiteral("Option 1");
                 EndContext();
@@ -194,7 +194,7 @@ using Domain;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(2006, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f9e0cd3397046cda9f9df83e2a28c56", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3350bef29fb4722964b21ea1545e7f1", async() => {
                 BeginContext(2029, 8, true);
                 WriteLiteral("Option 2");
                 EndContext();
@@ -216,7 +216,7 @@ using Domain;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(2072, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "164a85372f19418e88d817a806467453", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f5f37c831cb45bea0f454e1fc2f8780", async() => {
                 BeginContext(2095, 8, true);
                 WriteLiteral("Option 3");
                 EndContext();

@@ -1,0 +1,81 @@
+@using Domain
+@model IdeaAndAnswers
+
+@foreach (var item in @Model.ideationQuestions)
+{
+    @Html.DisplayFor(modelItem => item.question)
+}
+<h1>Your Idea !</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Title</p>
+        </th>
+
+        <th>
+            <p>Content</p>
+        </th>
+        
+        <th>User</th>
+
+
+    </tr>
+   
+    
+        
+    <tr>
+        <td>
+            @Model.idea.title
+        </td>
+            
+        <td>
+            @Model.idea.title
+        </td>
+        <td>
+            @Model.idea.user.firstName   
+        </td>
+
+    </tr>
+    
+</table>
+
+<h1> Answers</h1>
+
+<table class="table">
+    
+    <tr>
+        <td>
+            User
+        </td>
+        
+        <td>
+            Date
+        </td>
+        
+        <td>
+            content
+        </td>
+    </tr>
+
+    @foreach (var item in @Model.answers)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.user)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.content)
+            </td>
+
+        </tr>
+
+
+    }
+
+</table>

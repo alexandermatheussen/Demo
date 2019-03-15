@@ -18,7 +18,11 @@ namespace DAL
          #endregion
 
          #region IdeationQuestions
+         IEnumerable<IdeationQuestion> readIdeationsQuestionsForProject(int projectId);
+         
          IEnumerable<IdeationQuestion> readIdeationsQuestions(int ideationId);
+
+         
          void createIdeationQuestion(IdeationQuestion i);
          IdeationQuestion readIdeationQuestion(int id);
          void updateIdeationQuestion(IdeationQuestion i);
@@ -30,26 +34,26 @@ namespace DAL
          #region Ideas
          IEnumerable<Idea> readIdeas(int ideationId);
          void createIdea(Idea i);
-         Ideation readIdea(int ideaId);
+         Idea readIdea(int ideaId);
          void updateIdea(Idea i);
          void deleteIdea(int ideaId);
 
          
 
          #endregion
-/*
+
          #region Answers
-         IEnumerable<Ideation> readIdeations(int id);
-         void createIdeation(Ideation i);
-         Ideation readIdeation(int id);
-         void updateIdeation(Ideation i);
-         void deleteIdeation(int id);
+         IEnumerable<Answer> readAnswers(int ideaId);
+         void createAnswer(Answer a);
+         Ideation readAnswer(int answerId);
+         void updateAnswer(Answer a);
+         void deleteAnswer(int answerId);
 
          
 
          #endregion
         
         
-        */
+        
     }
 }

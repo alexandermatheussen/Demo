@@ -31,12 +31,27 @@ namespace BL
         
         public IEnumerable<IdeationQuestion> getIdeationQuestions(int projectId)
         {
-            return  ideationRepo.readIdeationsQuestions(projectId);
+            return  ideationRepo.readIdeationsQuestionsForProject(projectId);
         }
 
         public IEnumerable<Idea> getIdeas(int ideationId)
         {
             return ideationRepo.readIdeas(ideationId);
+        }
+
+        public Ideation getIdeation(int ideationId)
+        {
+            return ideationRepo.readIdeation(ideationId);
+        }
+
+        public Idea getIdea(int ideaId)
+        {
+            return ideationRepo.readIdea(ideaId);
+        }
+
+        public IEnumerable<Answer> getAnswers(int ideaId)
+        {
+            return ideationRepo.readAnswers(ideaId);
         }
     }
 }

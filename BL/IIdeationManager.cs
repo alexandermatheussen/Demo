@@ -10,10 +10,19 @@ namespace BL
         
         IEnumerable<Idea> getIdeas(int ideationId);
 
-        
-        
+        Ideation getIdeation(int ideationId);
 
-        
-        
+        Idea getIdea(int ideaId);
+
+        IEnumerable<Answer> getAnswers(int ideaId);
+
+
+
+
+
+
+
+
+
     }
 }

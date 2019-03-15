@@ -10,6 +10,8 @@
         <th>
             <p>Title</p>
         </th>
+        
+        <th> id </th>
     </tr>
     @foreach (var item in Model)
     {
@@ -23,6 +25,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.title)
             </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.ideation.ideationId)
+            </td>
+            
+            <td>
+                @Html.ActionLink("Details", "Idea", "Project"
+                    , new { id=item.ideaId })
+            </td>
+            
+            
             
         </tr>
     }
