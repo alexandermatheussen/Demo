@@ -105,7 +105,6 @@ D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\BL.pdb
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\Domain.pdb
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\DAL.pdb
 D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Questionnaire.g.cshtml.cs
-D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Projects.g.cshtml.cs
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.deps.json
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.runtimeconfig.json
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.runtimeconfig.dev.json
@@ -150,3 +149,6 @@ C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\obj\De
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Projects.g.cshtml.cs
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Project.g.cshtml.cs
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Ideas.g.cshtml.cs
+D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Ideas.g.cshtml.cs
+D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Project.g.cshtml.cs
+D:\OneDrive\Documenten\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Project\Projects.g.cshtml.cs

@@ -78,38 +78,45 @@ namespace DAL.EF
             // Questions
             Question q1 = new Question()
             {
-                question = "Vraag 1",
+                question = "Do we need to build a fence around the playground?",
                 questionnaire = questionnaire1,
                 questionType = QuestionType.RADIO_BUTTON,
-                optionsList = new []{"option1;option2;option3"}
+                options = new List<Option>()
             };
+            Option o1 = new Option() {option = "Yes", question = q1};
+            Option o2 = new Option() {option = "No", question = q1};
+            q1.options = new List<Option>() { o1, o2 };
             Question q2 = new Question()
             {
-                question = "E-mail address:",
-                questionnaire = questionnaire1,
-                questionType = QuestionType.MAILADDRESS,
-                optionsList = new []{""}
-            };
-            Question q3 = new Question()
-            {
-                question = "Vraag 2",
+                question = "Where should we build the playground",
                 questionnaire = questionnaire1,
                 questionType = QuestionType.DROPDOWN,
-                optionsList = new []{"option1;option2;option3"}
+                options = new List<Option>()
+            };
+            Option o3 = new Option() {option = "Brooklyn Street", question = q2};
+            Option o4 = new Option() {option = "Second street", question = q2};
+            Option o5 = new Option() {option = "New road", question = q2};
+            q2.options = new List<Option>() { o3, o4, o5 };
+            Question q3 = new Question()
+            {
+                question = "Fill in your e-mail address:",
+                questionnaire = questionnaire1,
+                questionType = QuestionType.MAILADDRESS,
+                options = new List<Option>()
             };
             Question q4 = new Question()
             {
-                question = "Vraag1",
+                question = "What should we do about the noise polution of the playground?",
                 questionnaire = questionnaire2,
                 questionType = QuestionType.OPEN_QUESTION,
-                optionsList = new []{""}
+                options = new List<Option>()
             };
             Question q5 = new Question()
             {
-                question = "Vraag 2",
+                question = "Do you think a playground would be anoying if it was near your home?",
                 questionnaire = questionnaire2,
                 questionType = QuestionType.OPEN_QUESTION,
-                optionsList = new []{""}
+                options = new List<Option>()
             };
             questionnaire1.questions = new List<Question>() { q1, q2, q3 };
             questionnaire2.questions = new List<Question>() { q4, q5 };
@@ -150,18 +157,23 @@ namespace DAL.EF
             // Questions
             Question q6 = new Question()
             {
-                question = "Vraag 1",
+                question = "What should we do to save the birds?",
                 questionnaire = questionnaire3,
                 questionType = QuestionType.OPEN_QUESTION,
-                optionsList = new []{""}
+                options = new List<Option>()
             };
             Question q7 = new Question()
             {
-                question = "Vraag 2",
+                question = "What do you think should be our first priority?",
                 questionnaire = questionnaire3,
                 questionType = QuestionType.RADIO_BUTTON,
-                optionsList = new []{"option1;option2;option3"}
+                options = new List<Option>()
             };
+            Option o6 = new Option() {option = "Build birds more houses", question = q7};
+            Option o7 = new Option() {option = "Give more options for birds to eat", question = q7};
+            Option o8 = new Option() {option = "Give more options for birds to drink", question = q7};
+            Option o9 = new Option() {option = "Plant more trees", question = q7};
+            q7.options = new List<Option>() { o6, o7, o8, o9 };
             questionnaire3.questions = new List<Question>() { q6, q7 };
             #endregion
             
@@ -221,8 +233,7 @@ namespace DAL.EF
             context.ideationQuestions.Add(iq1);
             context.ideas.AddRange(i1,i2);
             context.answers.AddRange(a1,a2);
-            
-            
+            context.options.AddRange(o1, o2, o3, o4, o5, o6, o7, o8, o9);
             
 
             context.SaveChanges();

@@ -22,7 +22,6 @@ namespace DAL
                 throw new ArgumentNullException("unitOfWork");
             ctx = unitOfWork.Context;
         }
-        
 
         #region Interface Implementation
         public IEnumerable<Questionnaire> readQuestionnaires(int id)
@@ -41,6 +40,7 @@ namespace DAL
         {
             return ctx.questions
                 .Include(q => q.questionnaire)
+                .Include(q => q.options)
                 .Where(q => q.questionnaire.id == id);
         }
 

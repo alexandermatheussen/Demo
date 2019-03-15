@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\BL\\BL.csproj",
+    "projectUniqueName": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj",
     "projectName": "BL",
-    "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\BL\\BL.csproj",
-    "outputPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\BL\\obj\\",
+    "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj",
+    "outputPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\DAL\\DAL.csproj": {
-            "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\DAL\\DAL.csproj"
+          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\DAL\\DAL.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\DAL\\DAL.csproj"
           },
-          "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\alexa\\Desktop\\stack\\‌IntegratieProject 2019\\GitHub\\Demo\\Domain\\Domain.csproj"
+          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj"
           }
         }
       }

@@ -20,9 +20,10 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.question) <br>
-                    <input type="checkbox" name="option1" value="option1">Option 1 <br>
-                    <input type="checkbox" name="option2" value="option2">Option 2 <br>
-                    <input type="checkbox" name="option3" value="option3">Option 3 <br>
+                    @foreach (var option in item.options)
+                    {
+                        <input type="radio" name="optionCheckBox" value="optionCheckBox">@Html.DisplayFor(modelItem => option.option)<br>
+                    }
                 </td>
             </tr>
         }
@@ -31,9 +32,10 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.question) <br>
-                    <input type="radio" name="option1" value="option1">Option 1 <br>
-                    <input type="radio" name="option2" value="option2">Option 2 <br>
-                    <input type="radio" name="option3" value="option3">Option 3 <br>
+                    @foreach (var option in item.options)
+                    {
+                        <input type="radio" name="optionCheckRadio" value="optionRadio">@Html.DisplayFor(modelItem => option.option)<br>
+                    }
                 </td>
             </tr>
         }
@@ -52,10 +54,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.question) <br>
                     <select>
-                        <option value="Option">Option 1</option>
-                        <option value="Option">Option 2</option>
-                        <option value="Option">Option 3</option>
-                    </select>
+                        @foreach (var option in item.options)
+                        {
+                            <option value="OptionDropDown" name="optionDropDown">@Html.DisplayFor(modelItem => option.option)</option>
+                        }
+                        </select>
                 </td>
             </tr>
         }

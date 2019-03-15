@@ -13,15 +13,7 @@ namespace Domain
         public QuestionType questionType { get; set; }
         public String question { get; set; }
         public Questionnaire questionnaire { get; set; }
-        private char delimeter = ';';
-        private string options;
-            
-        [NotMapped]
-        public string[] optionsList
-        {
-            get { return options.Split(delimeter); }
-            set { options = string.Join($"{delimeter}", value); }
-        }
+        public IEnumerable<Option> options { get; set; }
 
         public Question()
         {

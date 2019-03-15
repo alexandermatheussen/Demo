@@ -24,10 +24,10 @@ namespace DAL.EF
         public DbSet<IotSetup> iotSetups { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<QuestionUser> questionUsers { get; set; }
+        public DbSet<Option> options { get; set; }
         
         public DbSet<Phase> phases { get; set; }
 
-        
         public DbSet<Ideation> ideations { get; set; }
         public DbSet<IdeationQuestion> ideationQuestions { get; set; }
         public DbSet<Idea> ideas { get; set; }
