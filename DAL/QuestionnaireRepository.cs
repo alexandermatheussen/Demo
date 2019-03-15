@@ -24,6 +24,16 @@ namespace DAL
         }
 
         #region Interface Implementation
+
+        public void createQuestionUser(int userId, int questionId, String answer)
+        {
+            QuestionUser qu = new QuestionUser();
+            qu.User = ctx.users.Find(userId);
+            qu.Question = ctx.questions.Find(questionId);
+            qu.Answer = answer;
+            ctx.questionUsers.Add(qu);
+            ctx.SaveChanges();
+        }
         public IEnumerable<Questionnaire> readQuestionnaires(int id)
         {
             return ctx.questionnaires

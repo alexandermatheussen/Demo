@@ -1,67 +1,81 @@
 ﻿@using Domain
-@model IEnumerable<Domain.Question>
+@model CombinedModel
 
 <h1>Questionnaire</h1>
-
-<table class="table">
-    @foreach (var item in Model)
-    {
-        if (item.questionType == QuestionType.OPEN_QUESTION)
+<form method="post">
+    <table class="table">
+        @foreach (var item in Model.questions)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.question) <br>
-                    <textarea></textarea>
-                </td>
-            </tr>
-        }
-        if (item.questionType == QuestionType.CHECK_BOX)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.question) <br>
-                    @foreach (var option in item.options)
-                    {
-                        <input type="radio" name="optionCheckBox" value="optionCheckBox">@Html.DisplayFor(modelItem => option.option)<br>
-                    }
-                </td>
-            </tr>
-        }
-        if (item.questionType == QuestionType.RADIO_BUTTON)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.question) <br>
-                    @foreach (var option in item.options)
-                    {
-                        <input type="radio" name="optionCheckRadio" value="optionRadio">@Html.DisplayFor(modelItem => option.option)<br>
-                    }
-                </td>
-            </tr>
-        }
-        if (item.questionType == QuestionType.MAILADDRESS)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.question) <br>
-                    <input type="text" name="email">
-                </td>
-            </tr>
-        }
-        if (item.questionType == QuestionType.DROPDOWN)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.question) <br>
-                    <select>
+            if (item.questionType == QuestionType.OPEN_QUESTION)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
+                        <textarea asp-for="questionUser.Answer" type="text" name="answer"></textarea>
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.CHECK_BOX)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
                         @foreach (var option in item.options)
                         {
-                            <option value="OptionDropDown" name="optionDropDown">@Html.DisplayFor(modelItem => option.option)</option>
+                            <input type="checkbox" asp-for="questionUser.Answer" name="answer" value="optionCheckBox">@Html.DisplayFor(modelItem => option.option)<br>
                         }
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.RADIO_BUTTON)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
+                        @foreach (var option in item.options)
+                        {
+                            <input type="radio" asp-for="questionUser.Answer" name="answer" >@Html.DisplayFor(modelItem => option.option)<br>
+                         }
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.MAILADDRESS)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
+                        <input asp-for="questionUser.Answer" type="text" name="answer">
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.DROPDOWN)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
+                        <select>
+                            @foreach (var option in item.options)
+                            {
+                                <option value="OptionDropDown" name="optionDropDown">@Html.DisplayFor(modelItem => option.option)</option>
+                            }
                         </select>
-                </td>
-            </tr>
+                    </td>
+                </tr>
+            }
         }
-    }
-</table>
-<input class="btn" type="submit" value="Submit">
+    </table>
+
+
+    <div class="form-group">
+        <label asp-for="questionUser.questionId" name="questionId" class="control-label col-md-2"></label>
+        <div class="col-md-10">
+            <input asp-for="questionUser.questionId" name="questionId" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input asp-action="CreateUserQuestion" type="submit" value="CreateUserQuestion" class="btn btn-default"/>
+        </div>
+    </div>
+</form>

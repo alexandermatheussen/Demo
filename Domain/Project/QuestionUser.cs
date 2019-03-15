@@ -1,12 +1,12 @@
-using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace Domain
 {
     public class QuestionUser
     {
-        [Required]
         public int id { get; set; }
-        public Question question { get; set; }
-        public User user { get; set; }
+        public Question Question { get; set; }
+        public User User { get; set; }
+        public String Answer { get; set; }
     }
 }

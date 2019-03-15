@@ -16,6 +16,7 @@ namespace Domain
         public int age { get; set; }
         public Boolean verified { get; set; }
         public String postalCode { get; set; }
+        public IEnumerable<QuestionUser> questionnaireAnswer { get; set; }
         //public Questionnaire questionnaire { get; set; }
         public ICollection<Idea> ideas { get; set; }
         public ICollection<Answer> answers { get; set; }

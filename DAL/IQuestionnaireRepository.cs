@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Domain;
 
@@ -12,5 +13,6 @@ namespace DAL
         IEnumerable<Question> readQuestions(int id);
         void updateQuestionnaire(Questionnaire q);
         void deleteQuestionnaire(int id);
+        void createQuestionUser(int userId, int questionId, String answer);
     }
 }

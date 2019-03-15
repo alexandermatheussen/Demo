@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using BL;
 using Microsoft.AspNetCore.Mvc;
@@ -20,8 +21,6 @@ namespace D.UI.MVC.Controllers
             pmgr = new ProjectManager();
         }
         
-      
-
         public IActionResult Input()
         {
             return View();
@@ -37,8 +36,6 @@ namespace D.UI.MVC.Controllers
 
             return View();
         }
-
-       
         
         public IActionResult Questionnaires(int id)
         {
@@ -48,7 +45,9 @@ namespace D.UI.MVC.Controllers
         
         public IActionResult Questionnaire(int id)
         {
-            return View(qmgr.getQuestions(id));
+            CombinedModel combinedModel = new CombinedModel();
+            combinedModel.questions = qmgr.getQuestions(id);
+            return View(combinedModel);
         }
 
         public IActionResult Contact()
@@ -61,6 +60,14 @@ namespace D.UI.MVC.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public IActionResult CreateUserQuestion(int userId, int questionId, String answer)
+        {
+            userId = 1;
+            qmgr.addQuestionUser(userId, questionId, answer);
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -57,6 +57,11 @@ namespace BL
             repo.createQuestionnaire(newQuestionnaire);
         }
 
+        public void addQuestionUser(int userId, int questionId, String answer)
+        {
+            repo.createQuestionUser(userId, questionId, answer);
+        }
+
         public void addQuestionnaire(Questionnaire q)
         {
             repo.createQuestionnaire(q);

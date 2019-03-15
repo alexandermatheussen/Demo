@@ -38,7 +38,8 @@ namespace DAL.EF
                 eMailAddress = "test.persoon@gmail.com",
                 gender = Gender.M,
                 password = "test",
-                postalCode = "2450"
+                postalCode = "2450",
+                questionnaireAnswer = new List<QuestionUser>()
             };
             User u2 = new User(){ firstName = "Peter", lastName = "Smet"};
             User u3 = new User(){ firstName = "Dirk", lastName = "Bakker"};
@@ -177,12 +178,6 @@ namespace DAL.EF
             questionnaire3.questions = new List<Question>() { q6, q7 };
             #endregion
             
-            QuestionUser qu1 = new QuestionUser()
-            {
-                question = q1,
-                user = u1
-            };
-            
             //Phases
             Phase ph1 = new Phase() { project = p1, name = "Brainstorming",description = "We are starting this project by gathering input from the community"};
             Phase ph2 = new Phase() { project = p1, name = "Construction",description = "We are building the most suggested constructions in the playground"};
@@ -219,10 +214,12 @@ namespace DAL.EF
             u1.ideas = new List<Idea>(){i1};
             u2.ideas = new List<Idea>(){i2};
             u3.answers = new List<Answer>(){a1,a2};
-            
-            
 
-            context.questionUsers.Add(qu1);
+            QuestionUser qu = new QuestionUser() { Question = q1, User = u1, Answer = "Yes"};
+            u1.questionnaireAnswer = new List<QuestionUser>() {qu};
+            q1.questionnaireAnswers = new List<QuestionUser>(){qu};
+
+            context.questionUsers.Add(qu);
             context.projects.AddRange(p1, p2);
             context.questionnaires.AddRange(questionnaire1, questionnaire2, questionnaire3);
             context.questions.AddRange(q1, q2, q3, q4, q5, q6, q7);

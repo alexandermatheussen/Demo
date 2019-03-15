@@ -15,5 +15,6 @@ namespace BL
         void addQuestionnaire(Questionnaire q);
         void changeQuestionnaire(Questionnaire q);
         void removeQuestionnaire(int id);
+        void addQuestionUser(int userId, int questionId, String answer);
     }
 }
