@@ -34,6 +34,13 @@ namespace D.UI.MVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult CreateAnswer(int userId, int questionId, String answer)
+        {
+            qmgr.AddUserQuestion(userId, questionId, answer);
+            return RedirectToAction("Index");
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

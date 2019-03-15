@@ -14,6 +14,11 @@ namespace BL
         {
             repo = new QuestionnaireRepository();
         }
+        
+        public void AddUserQuestion(int userId, int questionId, String answer)
+        {
+            repo.CreateUserQuestion(userId, questionId, answer);
+        }
 
         public IEnumerable<Questionnaire> getQuestionnaires(int id)
         {

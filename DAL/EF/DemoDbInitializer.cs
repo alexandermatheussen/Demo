@@ -166,8 +166,9 @@ namespace DAL.EF
             
             QuestionUser qu1 = new QuestionUser()
             {
-                question = q1,
-                user = u1
+                question = q2,
+                user = u1,
+                antwoord = "test.user@gmail.com"
             };
 
             context.QuestionUsers.Add(qu1);

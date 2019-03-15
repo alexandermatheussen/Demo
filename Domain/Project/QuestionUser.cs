@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain
@@ -8,5 +9,6 @@ namespace Domain
         public int id { get; set; }
         public Question question { get; set; }
         public User user { get; set; }
+        public String antwoord { get; set; }
     }
 }
