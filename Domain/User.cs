@@ -6,6 +6,6 @@ namespace Domain
     {
         [Required]     
         public int id { get; set; }
-        
+        public string FirstName { get; set; }
     }
 }
