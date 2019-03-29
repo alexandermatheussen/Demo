@@ -15,6 +15,7 @@ namespace Domain
         public Questionnaire questionnaire { get; set; }
         public IEnumerable<Option> options { get; set; }
         public IEnumerable<QuestionUser> questionnaireAnswers { get; set; }
+        public IotSetup IotSetup { get; set; }
 
         public Question()
         {

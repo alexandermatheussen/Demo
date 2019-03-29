@@ -65,7 +65,6 @@
             </e>
           </e>
         </e>
-        <e p="Person" t="Include" />
         <e p="Project" t="Include">
           <e p="Answer.cs" t="Include" />
           <e p="ClosedTextField.cs" t="Include" />

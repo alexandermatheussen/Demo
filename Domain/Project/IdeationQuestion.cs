@@ -13,7 +13,5 @@ namespace Domain
         public Ideation ideation { get; set; }
         public string question { get; set; }
         public int like { get; set; }
-        
-        
     }
 }

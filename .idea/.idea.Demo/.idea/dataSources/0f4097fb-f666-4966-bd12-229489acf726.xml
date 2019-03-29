@@ -260,7 +260,7 @@
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="68" parent="12" name="QuestionnaireId">
+    <column id="68" parent="12" name="QuestionId">
       <Position>3</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
@@ -269,12 +269,13 @@
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <index id="70" parent="12" name="IX_iotSetups_addressid">
-      <ColNames>addressid</ColNames>
+    <index id="70" parent="12" name="IX_iotSetups_QuestionId">
+      <ColNames>QuestionId</ColNames>
       <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
     </index>
-    <index id="71" parent="12" name="IX_iotSetups_QuestionnaireId">
-      <ColNames>QuestionnaireId</ColNames>
+    <index id="71" parent="12" name="IX_iotSetups_addressid">
+      <ColNames>addressid</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
     <index id="72" parent="12" name="IX_iotSetups_ideationId">
@@ -292,10 +293,10 @@
       <RefColNames>id</RefColNames>
       <OnDelete>restrict</OnDelete>
     </foreign-key>
-    <foreign-key id="75" parent="12" name="FK_iotSetups_questionnaires_QuestionnaireId">
-      <ColNames>QuestionnaireId</ColNames>
-      <RefTableName>questionnaires</RefTableName>
-      <RefKeyName>PK_questionnaires</RefKeyName>
+    <foreign-key id="75" parent="12" name="FK_iotSetups_questions_QuestionId">
+      <ColNames>QuestionId</ColNames>
+      <RefTableName>questions</RefTableName>
+      <RefKeyName>PK_questions</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>

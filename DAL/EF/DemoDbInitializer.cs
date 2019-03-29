@@ -49,7 +49,7 @@ namespace DAL.EF
             Project p1 = new Project()
             {
                 confirmedLikes = 0,
-                description = "We are thinking about build a new playground in the middle of central park",
+                description = "We are thinking about building a new playground in the middle of central park",
                 endDate = new DateTime(2019, 3,9),
                 startDate = new DateTime(2019,4,10),
                 name = "Playground"
@@ -62,7 +62,6 @@ namespace DAL.EF
                 questionAmount = 3,
                 project = p1,
                 confirmed = true,
-                iotSetups = new List<IotSetup>(),
                 questions = new List<Question>()
             };
             Questionnaire questionnaire2 = new Questionnaire()
@@ -71,7 +70,6 @@ namespace DAL.EF
                 questionAmount = 2,
                 project = p1,
                 confirmed = false,
-                iotSetups = new List<IotSetup>(),
                 questions = new List<Question>()
             };
             p1.questionnaires = new List<Questionnaire>() { questionnaire1, questionnaire2 };
@@ -82,6 +80,7 @@ namespace DAL.EF
                 question = "Do we need to build a fence around the playground?",
                 questionnaire = questionnaire1,
                 questionType = QuestionType.RADIO_BUTTON,
+                IotSetup = null,
                 options = new List<Option>()
             };
             Option o1 = new Option() {option = "Yes", question = q1};
@@ -92,6 +91,7 @@ namespace DAL.EF
                 question = "Where should we build the playground",
                 questionnaire = questionnaire1,
                 questionType = QuestionType.DROPDOWN,
+                IotSetup = null,
                 options = new List<Option>()
             };
             Option o3 = new Option() {option = "Brooklyn Street", question = q2};
@@ -103,6 +103,7 @@ namespace DAL.EF
                 question = "Fill in your e-mail address:",
                 questionnaire = questionnaire1,
                 questionType = QuestionType.MAILADDRESS,
+                IotSetup = null,
                 options = new List<Option>()
             };
             Question q4 = new Question()
@@ -110,6 +111,7 @@ namespace DAL.EF
                 question = "What should we do about the noise polution of the playground?",
                 questionnaire = questionnaire2,
                 questionType = QuestionType.OPEN_QUESTION,
+                IotSetup = new IotSetup(),
                 options = new List<Option>()
             };
             Question q5 = new Question()
@@ -117,18 +119,19 @@ namespace DAL.EF
                 question = "Do you think a playground would be anoying if it was near your home?",
                 questionnaire = questionnaire2,
                 questionType = QuestionType.OPEN_QUESTION,
+                IotSetup = null,
                 options = new List<Option>()
             };
-            questionnaire1.questions = new List<Question>() { q1, q2, q3 };
-            questionnaire2.questions = new List<Question>() { q4, q5 };
-            
             // IoTSetups
             IotSetup iot1 = new IotSetup()
             {
                 address = new Address(),
-                questionnaire = questionnaire1
+                question = q4
             };
-            questionnaire1.iotSetups = new List<IotSetup>() { iot1 };
+            q4.IotSetup = iot1;
+            
+            questionnaire1.questions = new List<Question>() { q1, q2, q3 };
+            questionnaire2.questions = new List<Question>() { q4, q5 };
             #endregion
             
             #region TestProject 2
@@ -150,7 +153,6 @@ namespace DAL.EF
                 questionAmount = 2,
                 project = p2,
                 confirmed = true,
-                iotSetups = new List<IotSetup>(),
                 questions = new List<Question>(),
             };
             p2.questionnaires = new List<Questionnaire>() { questionnaire3 };
@@ -161,6 +163,7 @@ namespace DAL.EF
                 question = "What should we do to save the birds?",
                 questionnaire = questionnaire3,
                 questionType = QuestionType.OPEN_QUESTION,
+                IotSetup = null,
                 options = new List<Option>()
             };
             Question q7 = new Question()
@@ -168,6 +171,7 @@ namespace DAL.EF
                 question = "What do you think should be our first priority?",
                 questionnaire = questionnaire3,
                 questionType = QuestionType.RADIO_BUTTON,
+                IotSetup = null,
                 options = new List<Option>()
             };
             Option o6 = new Option() {option = "Build birds more houses", question = q7};

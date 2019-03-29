@@ -62,10 +62,9 @@ namespace DAL.EF
             modelBuilder.Entity<Question>().HasOne<Questionnaire>(q => q.questionnaire)
                 .WithMany(q => q.questions).HasForeignKey("QuestionnaireId");
             
-            modelBuilder.Entity<IotSetup>().Property<int>("QuestionnaireId");
-            modelBuilder.Entity<IotSetup>().HasOne<Questionnaire>(q => q.questionnaire)
-                .WithMany(q => q.iotSetups).HasForeignKey("QuestionnaireId");
-            
+            modelBuilder.Entity<IotSetup>().Property<int>("QuestionId");
+            modelBuilder.Entity<IotSetup>().HasOne(i => i.question)
+                .WithOne(q => q.IotSetup).HasForeignKey<IotSetup>("QuestionId"); 
             
             modelBuilder.Entity<Ideation>().Property<int>("projectId"); // shadow FK naar Project
             modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)

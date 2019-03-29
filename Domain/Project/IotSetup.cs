@@ -8,6 +8,8 @@ namespace Domain
         [Required]
         public int id { get; set; }
         public Address address { get; set; }
-        public Questionnaire questionnaire { get; set; }
+        
+        [Required]
+        public Question question { get; set; }
     }
 }

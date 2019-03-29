@@ -66,6 +66,7 @@ namespace D.UI.MVC.Controllers
         public IActionResult CreateUserQuestion(int userId, int questionId, String answer)
         {
             userId = 1;
+            questionId = 3;
             qmgr.addQuestionUser(userId, questionId, answer);
             return RedirectToAction("Index");
         }
