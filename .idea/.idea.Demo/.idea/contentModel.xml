@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\alexa\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\alexa\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Demo.-808403931.00" t="ExcludeRecursive" />
-    <e p="C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitRepo\Demo" t="IncludeFlat">
+    <e p="C:\Users\Lukas\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Demo.-1486918404.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Lukas\Documents\GitHub\Demo" t="IncludeFlat">
       <e p="BL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BL.csproj" t="IncludeRecursive" />

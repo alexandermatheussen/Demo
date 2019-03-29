@@ -280,8 +280,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="969" />
+    <option name="x" value="-9" />
+    <option name="width" value="970" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -384,6 +384,9 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.UI.CA" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.UI.CA" />
