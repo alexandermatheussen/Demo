@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Dynamic;
@@ -7,6 +8,7 @@ using BL;
 using Microsoft.AspNetCore.Mvc;
 using D.UI.MVC.Models;
 using Domain;
+using Microsoft.AspNetCore.Http;
 
 namespace D.UI.MVC.Controllers
 {
@@ -63,13 +65,42 @@ namespace D.UI.MVC.Controllers
         }
         
         [HttpPost]
-        public IActionResult CreateUserQuestion(int userId, int questionId, String answer)
+        public IActionResult CreateUserQuestion(IFormCollection form)
         {
-            userId = 1;
-            questionId = 3;
-            qmgr.addQuestionUser(userId, questionId, answer);
+            List<int> currentQuestionIds = new List<int>();
+            var currentQuestion = 0;
+            foreach (var key in form.Keys)
+            {
+                if (key == "questionId")
+                {
+                    foreach (var answer in form[key])
+                    {
+                        currentQuestionIds.Add(Convert.ToInt32(answer));
+                    }
+                }
+                if (key != "__RequestVerificationToken" && key != "questionId" && !key.StartsWith("CheckBox"))
+                {
+                    foreach (var answer in form[key])
+                    {
+                        qmgr.addQuestionUser(1, currentQuestionIds[currentQuestion], answer);
+                        currentQuestion++;
+                    }
+                }
+                if (key.StartsWith("CheckBox"))
+                {
+                    qmgr.addQuestionUser(1, currentQuestionIds[currentQuestion], form[key]);
+                    currentQuestion++;
+                }
+            }
             return RedirectToAction("Index");
         }
+        
+        /*[HttpPost]
+        public IActionResult CreateUserQuestion(int userId, int questionId, String answer)
+        {
+            qmgr.addQuestionUser(userId, questionId, answer);
+            return RedirectToAction("Index");
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -2,49 +2,18 @@
 @model CombinedModel
 
 <h1>Questionnaire</h1>
-<form method="post">
+@using (Html.BeginForm("CreateUserQuestion", "Home", FormMethod.Post))
+{
     <table class="table">
         @foreach (var item in Model.questions)
         {
-            if (item.questionType == QuestionType.OPEN_QUESTION)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.question) <br>
-                        <textarea asp-for="questionUser.Answer" type="text" name="answer"></textarea>
-                    </td>
-                </tr>
-            }
-            if (item.questionType == QuestionType.CHECK_BOX)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.question) <br>
-                        @foreach (var option in item.options)
-                        {
-                            <input type="checkbox" asp-for="questionUser.Answer" name="answer" value="optionCheckBox">@Html.DisplayFor(modelItem => option.option)<br>
-                        }
-                    </td>
-                </tr>
-            }
-            if (item.questionType == QuestionType.RADIO_BUTTON)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.question) <br>
-                        @foreach (var option in item.options)
-                        {
-                            <input type="radio" asp-for="questionUser.Answer" name="answer" value="optionCheckBox">@Html.DisplayFor(modelItem => option.option)<br>
-                        }
-                    </td>
-                </tr>
-            }
+            <input type="hidden" name="questionId" value="@item.id" />
             if (item.questionType == QuestionType.MAILADDRESS)
             {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.question) <br>
-                        <input asp-for="questionUser.Answer" type="text" name="answer">
+                        <input asp-for="questionUser.Answer" type="text">
                     </td>
                 </tr>
             }
@@ -53,21 +22,60 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.question) <br>
-                        <select>
+                        <select id="ddlOptions" asp-for="questionUser.Answer">
+                            <option value="0">Please select</option>
                             @foreach (var option in item.options)
                             {
-                                <option value="OptionDropDown" name="optionDropDown">@Html.DisplayFor(modelItem => option.option)</option>
+                                <option value="@option.option">@option.option</option>
                             }
                         </select>
                     </td>
                 </tr>
             }
+            if (item.questionType == QuestionType.OPEN_QUESTION)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question) <br>
+                        <textarea asp-for="questionUser.Answer" type="text"></textarea>
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.RADIO_BUTTON)
+            {
+                <tr>
+                    <td>
+                        <fieldset id="@item.id">
+                            @Html.DisplayFor(modelItem => item.question) <br>
+                            @foreach (var option in item.options)
+                            {
+                                <input asp-for="questionUser.Answer" type="radio" value="@option.option" name="@item.id"/>
+                                @Html.DisplayFor(modelItem => option.option)<br>
+                            }
+                        </fieldset>
+                    </td>
+                </tr>
+            }
+            if (item.questionType == QuestionType.CHECK_BOX)
+            {
+                <tr>
+                    <td>
+                        <fieldset id="@item.id">
+                            @Html.DisplayFor(modelItem => item.question) <br>
+                            @foreach (var option in item.options)
+                            {
+                                <input type="checkbox" value="@option.option" name="CheckBox @item.id"/>
+                                @Html.DisplayFor(modelItem => option.option)<br>
+                            }
+                        </fieldset>
+                    </td>
+                </tr>
+            }
         }
     </table>
-
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input asp-action="CreateUserQuestion" type="submit" value="Submit answers" class="btn btn-default"/>
+            <input type="submit" value="Submit answers" class="btn btn-default"/>
         </div>
     </div>
-</form>
+}
