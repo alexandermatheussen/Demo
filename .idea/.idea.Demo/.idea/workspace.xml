@@ -2,87 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="436b18fe-d71c-4547-8b3a-6493280094c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/UI.MVC/Controllers/QuestionnaireController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Questionnaire/Questionnaire.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources/0f4097fb-f666-4966-bd12-229489acf726.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/dataSources/0f4097fb-f666-4966-bd12-229489acf726.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/QuestionnaireManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BL/QuestionnaireManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/BL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/BL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/BL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/BL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BL/bin/Debug/netstandard2.0/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BL/obj/Debug/netstandard2.0/BL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/EF/DemoDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/EF/DemoDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/IQuestionnaireRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/IQuestionnaireRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/QuestionnaireRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/QuestionnaireRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/bin/Debug/netstandard2.0/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/obj/Debug/netstandard2.0/DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Like/IotVote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Like/IotVote.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/Answer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/Idea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/Idea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/IdeationQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/IdeationQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/IotSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/IotSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Project/Questionnaire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Project/Questionnaire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/BL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/BL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/BL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/BL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/bin/Debug/netcoreapp2.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.CA/obj/Debug/netcoreapp2.1/UI.CA.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UI.CA/obj/Debug/netcoreapp2.1/UI.CA.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Controllers/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Controllers/ProjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Demo_EF.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Views/Home/Questionnaire.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Views/Questionnaire/Questionnaire.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Views/Home/Questionnaires.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Views/Questionnaire/Questionnaires.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Views/Project/Ideas.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Views/Project/Ideas.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/Views/Project/Projects.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/Views/Project/Projects.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/BL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/BL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/BL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/BL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/DAL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/DAL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/bin/Debug/netcoreapp2.1/UI.MVC.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Input.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Input.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Questionnaire.g.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Home/Questionnaires.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Questionnaire/Questionnaires.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Project/Ideas.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Project/Ideas.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Project/Projects.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Project/Projects.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UI.MVC/obj/Debug/netcoreapp2.1/UI.MVC.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://1a071596-8130-4190-8feb-fba06a891d0b/schema/main/table/questionnaires">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -204,35 +124,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-end-line="64" />
+            <state relative-caret-position="120">
+              <caret line="251" column="60" selection-start-line="251" selection-start-column="60" selection-end-line="251" selection-end-column="60" />
               <folding>
-                <marker date="1554202001428" expanded="false" signature="6:117" ph="..." />
-                <marker date="1554202001428" expanded="true" signature="135:9969" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="172:9967" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="340:686" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="401:676" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="743:9961" ph="{...}" />
-                <marker date="1554202001428" expanded="false" signature="950:1521" ph="User" />
-                <marker date="1554202001428" expanded="true" signature="1008:1346" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="1547:5146" ph="TestProject 1" />
-                <marker date="1554202001428" expanded="true" signature="1620:1883" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="2003:2252" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="2329:2578" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="2765:3012" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="3262:3491" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="3843:4067" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="4122:4381" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="4436:4702" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="4945:5050" ph="{...}" />
-                <marker date="1554202001428" expanded="false" signature="5172:7213" ph="TestProject 2" />
-                <marker date="1554202001428" expanded="true" signature="5245:5602" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="5722:5972" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="6143:6377" ph="{...}" />
-                <marker date="1554202001428" expanded="true" signature="6432:6676" ph="{...}" />
+                <marker date="1554203114050" expanded="false" signature="6:117" ph="..." />
+                <marker date="1554203114050" expanded="true" signature="135:12497" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="172:12495" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="340:686" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="401:676" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="743:12489" ph="{...}" />
+                <marker date="1554203114050" expanded="false" signature="950:1521" ph="User" />
+                <marker date="1554203114050" expanded="true" signature="1008:1346" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="1547:6574" ph="TestProject 1" />
+                <marker date="1554203114050" expanded="true" signature="1620:1886" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="2006:2203" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="2280:2477" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="2664:2944" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="3201:3464" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="3943:4205" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="4557:4814" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="4869:5171" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="5226:5525" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="5587:5851" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="6279:6335" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="6600:9879" ph="TestProject 2" />
+                <marker date="1554203114050" expanded="true" signature="6673:7030" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="7150:7348" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="7519:7786" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="7841:8118" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="8614:8871" ph="{...}" />
+                <marker date="1554203114050" expanded="true" signature="9212:9467" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -369,7 +293,6 @@
         <option value="$PROJECT_DIR$/Domain/Ideation/Ideation.cs" />
         <option value="$PROJECT_DIR$/Domain/Field/ImageField.cs" />
         <option value="$PROJECT_DIR$/UI.MVC/Views/Project/Ideas.cshtml" />
-        <option value="$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs" />
         <option value="$PROJECT_DIR$/Domain/Ideation/Reaction.cs" />
         <option value="$PROJECT_DIR$/Domain/Ideation/Idea.cs" />
         <option value="$PROJECT_DIR$/Domain/Field/Field.cs" />
@@ -382,6 +305,7 @@
         <option value="$PROJECT_DIR$/Domain/Project/User.cs" />
         <option value="$PROJECT_DIR$/DAL/EF/DemoDbContext.cs" />
         <option value="$PROJECT_DIR$/Domain/Project/IotSetup.cs" />
+        <option value="$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs" />
       </list>
     </option>
   </component>
@@ -568,7 +492,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178201000" />
+    <option name="totallyTimeSpent" value="178751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,7 +507,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -612,7 +536,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="right" id="Errors In Solution" order="4" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.27919462" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1375839" />
       <window_info anchor="right" id="Unit Tests Coverage" order="6" />
     </layout>
     <layout-to-restore>
@@ -1099,42 +1023,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-end-line="64" />
-          <folding>
-            <marker date="1554202001428" expanded="false" signature="6:117" ph="..." />
-            <marker date="1554202001428" expanded="true" signature="135:9969" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="172:9967" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="340:686" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="401:676" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="743:9961" ph="{...}" />
-            <marker date="1554202001428" expanded="false" signature="950:1521" ph="User" />
-            <marker date="1554202001428" expanded="true" signature="1008:1346" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="1547:5146" ph="TestProject 1" />
-            <marker date="1554202001428" expanded="true" signature="1620:1883" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="2003:2252" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="2329:2578" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="2765:3012" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="3262:3491" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="3843:4067" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="4122:4381" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="4436:4702" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="4945:5050" ph="{...}" />
-            <marker date="1554202001428" expanded="false" signature="5172:7213" ph="TestProject 2" />
-            <marker date="1554202001428" expanded="true" signature="5245:5602" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="5722:5972" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="6143:6377" ph="{...}" />
-            <marker date="1554202001428" expanded="true" signature="6432:6676" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1a071596-8130-4190-8feb-fba06a891d0b/schema/main/table/questionnaires">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/EF/DemoDbInitializer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="251" column="60" selection-start-line="251" selection-start-column="60" selection-end-line="251" selection-end-column="60" />
+          <folding>
+            <marker date="1554203114050" expanded="false" signature="6:117" ph="..." />
+            <marker date="1554203114050" expanded="true" signature="135:12497" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="172:12495" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="340:686" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="401:676" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="743:12489" ph="{...}" />
+            <marker date="1554203114050" expanded="false" signature="950:1521" ph="User" />
+            <marker date="1554203114050" expanded="true" signature="1008:1346" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="1547:6574" ph="TestProject 1" />
+            <marker date="1554203114050" expanded="true" signature="1620:1886" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="2006:2203" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="2280:2477" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="2664:2944" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="3201:3464" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="3943:4205" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="4557:4814" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="4869:5171" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="5226:5525" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="5587:5851" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="6279:6335" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="6600:9879" ph="TestProject 2" />
+            <marker date="1554203114050" expanded="true" signature="6673:7030" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="7150:7348" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="7519:7786" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="7841:8118" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="8614:8871" ph="{...}" />
+            <marker date="1554203114050" expanded="true" signature="9212:9467" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
