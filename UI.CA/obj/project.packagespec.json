@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
+    "projectUniqueName": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
     "projectName": "UI.CA",
-    "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
-    "outputPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\UI.CA\\obj\\",
+    "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
+    "outputPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj": {
-            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\BL\\BL.csproj"
+          "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\BL\\BL.csproj": {
+            "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\BL\\BL.csproj"
           },
-          "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj": {
-            "projectPath": "D:\\OneDrive\\Documenten\\GitHub\\Demo\\Domain\\Domain.csproj"
+          "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\Domain\\Domain.csproj"
           }
         }
       }

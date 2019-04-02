@@ -30,6 +30,33 @@ namespace DAL.EF
             context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.TrackAll;
             
             #region User
+            
+            Place place1 = new Place()
+            {
+                name = "Brasschaat",
+                postalCode = 2930
+            };
+            
+            Address address1 = new Address()
+            {
+                number = 15,
+                place = place1,
+                street = "Annadreef"
+            };
+            
+            Place place2 = new Place()
+            {
+                name = "Antwerpen",
+                postalCode = 2000
+            };
+            
+            Address addres2 = new Address()
+            {
+                number = 51,
+                place = place2,
+                street = "Kievitlei"
+            };
+            
             User u1 = new User()
             {
                 firstName = "Jan",
@@ -38,11 +65,11 @@ namespace DAL.EF
                 eMailAddress = "test.persoon@gmail.com",
                 gender = Gender.M,
                 password = "test",
-                postalCode = "2450",
+                address = address1,
                 questionnaireAnswer = new List<QuestionUser>()
             };
-            User u2 = new User(){ firstName = "Peter", lastName = "Smet"};
-            User u3 = new User(){ firstName = "Dirk", lastName = "Bakker"};
+            User u2 = new User(){ firstName = "Peter", lastName = "Smet", address = addres2};
+            User u3 = new User(){ firstName = "Dirk", lastName = "Bakker", address = address1};
             #endregion
             
             #region TestProject 1
@@ -125,7 +152,7 @@ namespace DAL.EF
             // IoTSetups
             IotSetup iot1 = new IotSetup()
             {
-                address = new Address(),
+                address = addres2,
                 question = q4
             };
             q4.IotSetup = iot1;
@@ -235,6 +262,8 @@ namespace DAL.EF
             context.ideas.AddRange(i1,i2);
             context.answers.AddRange(a1,a2);
             context.options.AddRange(o1, o2, o3, o4, o5, o6, o7, o8, o9);
+            context.addresses.AddRange(address1,addres2);
+            context.places.AddRange(place1,place2);
             
 
             context.SaveChanges();

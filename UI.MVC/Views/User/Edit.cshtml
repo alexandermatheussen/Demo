@@ -1,0 +1,60 @@
+@using Domain
+@model Domain.User
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Account wijzigen</h2>
+
+@*<p>@ViewBag.Address</p>*@
+
+<form asp-controller="User" asp-action="Edit" asp-route-id="@Model.id" method="post">
+    <div class="form-group">
+        <label asp-for="firstName">Firstname</label><input asp-for="firstName" class="form-control"/>
+        <span asp-validation-for="firstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lastName">Lastname</label><input asp-for="lastName" class="form-control"/>
+        <span asp-validation-for="lastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="eMailAddress">Email address</label><input asp-for="eMailAddress" class="form-control"/>
+        <span asp-validation-for="eMailAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="password">Password</label><input asp-for="password" class="form-control"/>
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="gender">Gender</label>
+        <select asp-for="gender" asp-items="@(new SelectList(Enum.GetValues(typeof(Gender))))" class="form-control"></select>
+        <span asp-validation-for="gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="age">Age</label><input asp-for="age" class="form-control"/>
+        <span asp-validation-for="age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="address.street">Street</label><input asp-for="address.street" class="form-control"/>
+        <span asp-validation-for="address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="address.number">House number</label><input asp-for="address.number" class="form-control"/>
+        <span asp-validation-for="address.number" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="address.place.name">City</label><input asp-for="address.place.name" class="form-control"/>
+        <span asp-validation-for="address.place.name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="address.place.postalCode">Postal code</label><input asp-for="address.place.postalCode" class="form-control"/>
+        <span asp-validation-for="address.place.postalCode" class="text-danger"></span>
+    </div>
+    
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="submit" value="Save"/> | <a asp-action="Index">Cancel</a>
+</form>
+
+@*@((Address)ViewBag.address).street*@

@@ -25,7 +25,8 @@ namespace DAL.EF
         public DbSet<User> users { get; set; }
         public DbSet<QuestionUser> questionUsers { get; set; }
         public DbSet<Option> options { get; set; }
-        
+        public DbSet<Address> addresses { get; set; }
+        public DbSet<Place> places { get; set; }
         public DbSet<Phase> phases { get; set; }
 
         public DbSet<Ideation> ideations { get; set; }
@@ -64,7 +65,7 @@ namespace DAL.EF
             
             modelBuilder.Entity<IotSetup>().Property<int>("QuestionId");
             modelBuilder.Entity<IotSetup>().HasOne(i => i.question)
-                .WithOne(q => q.IotSetup).HasForeignKey<IotSetup>("QuestionId"); 
+                .WithOne(q => q.IotSetup).HasForeignKey<IotSetup>("QuestionId");
             
             modelBuilder.Entity<Ideation>().Property<int>("projectId"); // shadow FK naar Project
             modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)
@@ -74,20 +75,20 @@ namespace DAL.EF
             modelBuilder.Entity<Phase>().HasOne<Project>(p => p.project).WithMany(f => f.phases)
                 .HasForeignKey("projectId");
             
-            modelBuilder.Entity<Idea>().Property<int>("ideationId"); // shaodow FK naar Ideation 
-            modelBuilder.Entity<Idea>().Property<int>("userId"); // shaodow FK naar User
+            modelBuilder.Entity<Idea>().Property<int>("ideationId"); // shadow FK naar Ideation 
+            modelBuilder.Entity<Idea>().Property<int>("userId"); // shadow FK naar User
 
             modelBuilder.Entity<Idea>().HasOne<Ideation>(i => i.ideation).WithMany(i => i.ideas)
                 .HasForeignKey("ideationId");
             modelBuilder.Entity<Idea>().HasOne<User>(u => u.user).WithMany(i => i.ideas)
                 .HasForeignKey("userId");
             
-            modelBuilder.Entity<IdeationQuestion>().Property<int>("ideationId"); // shaodow FK naar Ideation 
+            modelBuilder.Entity<IdeationQuestion>().Property<int>("ideationId"); // shadow FK naar Ideation 
             modelBuilder.Entity<IdeationQuestion>().HasOne<Ideation>(i => i.ideation).WithMany(q => q.questions)
                 .HasForeignKey("ideationId");
             
-            modelBuilder.Entity<Answer>().Property<int>("ideaId"); // shaodow FK naar Idea
-            modelBuilder.Entity<Answer>().Property<int>("userId"); // shaodow FK naar User
+            modelBuilder.Entity<Answer>().Property<int>("ideaId"); // shadow FK naar Idea
+            modelBuilder.Entity<Answer>().Property<int>("userId"); // shadow FK naar User
             
             modelBuilder.Entity<Answer>().HasOne<Idea>(i => i.idea).WithMany(a => a.answers)
                 .HasForeignKey("ideaId");

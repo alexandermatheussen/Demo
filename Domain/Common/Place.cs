@@ -8,6 +8,6 @@ namespace Domain
         [Required]
         public int id { get; set; }
         public String name { get; set; }
-        public String postalCode { get; set; }
+        public int postalCode { get; set; }
     }
 }

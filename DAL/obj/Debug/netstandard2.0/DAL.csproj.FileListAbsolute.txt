@@ -55,3 +55,15 @@ C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\DAL\obj\Debug
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\Lukas\Documents\GitHub\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb

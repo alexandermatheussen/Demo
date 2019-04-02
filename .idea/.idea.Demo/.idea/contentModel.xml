@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\vin-c\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\vin-c\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Demo.1909017597.00" t="ExcludeRecursive" />
-    <e p="D:\OneDrive\Documenten\GitHub\Demo" t="IncludeFlat">
+    <e p="C:\Users\Lukas\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lukas\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Demo.-1486918404.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Lukas\Documents\GitHub\Demo" t="IncludeFlat">
       <e p="BL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BL.csproj" t="IncludeRecursive" />
@@ -13,6 +13,7 @@
         <e p="IIdeationManager.cs" t="Include" />
         <e p="IProjectManager.cs" t="Include" />
         <e p="IQuestionnaireManager.cs" t="Include" />
+        <e p="IUserManager.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -23,6 +24,7 @@
         <e p="ProjectManager.cs" t="Include" />
         <e p="QuestionnaireManager.cs" t="Include" />
         <e p="UnitOfWorkManager.cs" t="Include" />
+        <e p="UserManager.cs" t="Include" />
       </e>
       <e p="DAL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -36,6 +38,7 @@
         <e p="IIdeationRepository.cs" t="Include" />
         <e p="IProjectRepository.cs" t="Include" />
         <e p="IQuestionnaireRepository.cs" t="Include" />
+        <e p="IUserRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -46,6 +49,7 @@
         <e p="ProjectRepository.cs" t="Include" />
         <e p="QuestionnaireRepository.cs" t="Include" />
         <e p="UnitOfWork.cs" t="Include" />
+        <e p="UserRepository.cs" t="Include" />
       </e>
       <e p="Demo.sln" t="IncludeFlat" />
       <e p="Domain" t="IncludeRecursive">
@@ -106,6 +110,7 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
           <e p="ProjectController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
         </e>
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
@@ -151,6 +156,10 @@
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">
