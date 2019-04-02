@@ -17,8 +17,7 @@ namespace D.UI.MVC.Controllers
             projectMgr = new ProjectManager();
             ideationMgr = new IdeationManager();
         }
-        
-      
+       
         public IActionResult Projects()
         {
             IEnumerable<Project> allProjects = projectMgr.getProjects();

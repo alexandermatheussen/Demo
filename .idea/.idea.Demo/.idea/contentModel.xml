@@ -106,6 +106,7 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
           <e p="ProjectController.cs" t="Include" />
+          <e p="QuestionnaireController.cs" t="Include" />
         </e>
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
@@ -138,13 +139,15 @@
             <e p="Input.cshtml" t="Include" />
             <e p="Input.cshtml.cs" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
-            <e p="Questionnaire.cshtml" t="Include" />
-            <e p="Questionnaires.cshtml" t="Include" />
           </e>
           <e p="Project" t="Include">
             <e p="Ideas.cshtml" t="Include" />
             <e p="Project.cshtml" t="Include" />
             <e p="Projects.cshtml" t="Include" />
+          </e>
+          <e p="Questionnaire" t="Include">
+            <e p="Questionnaire.cshtml" t="Include" />
+            <e p="Questionnaires.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />

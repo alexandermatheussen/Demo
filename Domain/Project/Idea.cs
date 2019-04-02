@@ -15,6 +15,5 @@ namespace Domain
         public string content { get; set; }
          
         public ICollection<Answer> answers { get; set; }
-        
     }
 }

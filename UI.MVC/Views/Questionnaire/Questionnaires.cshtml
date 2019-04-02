@@ -21,8 +21,8 @@
                     @Html.DisplayFor(modelItem => item.questionAmount)
                 </td>
                 <td>
-                    @Html.ActionLink("Complete Questionnaire", "Questionnaire", "Home"
-                        , new { id=item.id })
+                    @Html.ActionLink("Complete Questionnaire", "Questionnaire", "Questionnaire"
+                        , new { questionnaireId=item.id })
                 </td>
             </tr>
         

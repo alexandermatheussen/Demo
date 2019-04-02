@@ -175,7 +175,7 @@ namespace DAL.EF
             Questionnaire questionnaire3 = new Questionnaire()
             {
                 name = "Budget",
-                questionAmount = 2,
+                questionAmount = 4,
                 project = p2,
                 confirmed = true,
                 questions = new List<Question>(),

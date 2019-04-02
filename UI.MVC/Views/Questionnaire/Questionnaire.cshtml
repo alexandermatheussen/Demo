@@ -2,12 +2,14 @@
 @model CombinedModel
 
 <h1>Questionnaire</h1>
-@using (Html.BeginForm("CreateUserQuestion", "Home", FormMethod.Post))
+@using (Html.BeginForm("CreateUserQuestion", "Questionnaire",
+    new { userId=1 }, FormMethod.Post))
 {
     <table class="table">
         @foreach (var item in Model.questions)
         {
-            <input type="hidden" name="questionId" value="@item.id" />
+            //Is het oke om de id zo mee te geven?
+            <input type="hidden" name="questionId" value="@item.id"/>
             if (item.questionType == QuestionType.MAILADDRESS)
             {
                 <tr>
