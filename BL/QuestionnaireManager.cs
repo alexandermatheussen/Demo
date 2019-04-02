@@ -52,7 +52,6 @@ namespace BL
             newQuestionnaire.project = project;
             newQuestionnaire.confirmed = confirmed;
             newQuestionnaire.questions = questions;
-            newQuestionnaire.iotSetups = iotSetups;
             newQuestionnaire.questionAmount = questionAmount;
             repo.createQuestionnaire(newQuestionnaire);
         }

@@ -34,11 +34,11 @@ namespace DAL
             ctx.questionUsers.Add(qu);
             ctx.SaveChanges();
         }
-        public IEnumerable<Questionnaire> readQuestionnaires(int id)
+        public IEnumerable<Questionnaire> readQuestionnaires(int projectId)
         {
             return ctx.questionnaires
                 .Include(q => q.project)
-                .Where(q => q.project.projectId == id);
+                .Where(q => q.project.projectId == projectId);
         }
 
         public IEnumerable<IotSetup> readIotSetups()
@@ -46,12 +46,13 @@ namespace DAL
             return ctx.iotSetups.AsEnumerable();
         }
 
-        public IEnumerable<Question> readQuestions(int id)
+        public IEnumerable<Question> readQuestions(int questionnaireId)
         {
             return ctx.questions
                 .Include(q => q.questionnaire)
                 .Include(q => q.options)
-                .Where(q => q.questionnaire.id == id);
+                .Include(q => q.IotSetup)
+                .Where(q => q.questionnaire.id == questionnaireId);
         }
 
         public void createQuestionnaire(Questionnaire q)
@@ -62,9 +63,9 @@ namespace DAL
             ctx.SaveChanges();
         }
 
-        public Questionnaire readQuestionnaire(int id)
+        public Questionnaire readQuestionnaire(int questionnaireId)
         {
-            return ctx.questionnaires.Find(id);
+            return ctx.questionnaires.Find(questionnaireId);
         }
 
         public void updateQuestionnaire(Questionnaire q)
@@ -75,10 +76,10 @@ namespace DAL
             ctx.SaveChanges();
         }
 
-        public void deleteQuestionnaire(int id)
+        public void deleteQuestionnaire(int questionnaireId)
         {
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
-            ctx.questionnaires.Remove(ctx.questionnaires.Find(id));
+            ctx.questionnaires.Remove(ctx.questionnaires.Find(questionnaireId));
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
             ctx.SaveChanges();
         }

@@ -9,6 +9,7 @@ namespace Domain
         [Required]
         public int iotId { get; set; }
         public Address address { get; set; }
-        public Questionnaire questionnaire { get; set; }
+        
+       
     }
 }

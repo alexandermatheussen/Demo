@@ -100,9 +100,7 @@ namespace DAL.EF
             modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)
                 .HasForeignKey("projectId");
             
-            modelBuilder.Entity<IotSetup>().Property<int>("QuestionnaireId");
-            modelBuilder.Entity<IotSetup>().HasOne<Questionnaire>(q => q.questionnaire)
-                .WithMany(q => q.iotSetups).HasForeignKey("QuestionnaireId");
+          
             
             // Fields
             modelBuilder.Entity<Field>().Property<int>("ideaId"); // shadow FK naar Idea
@@ -133,7 +131,7 @@ namespace DAL.EF
             modelBuilder.Entity<ReactionLike>().HasOne<User>(u => u.user).WithMany(i => i.reactionLikes)
                 .HasForeignKey("userId");
            // IotLikes
-           modelBuilder.Entity<IotVote>().Property<int>("questionId"); // shadow FK naar User
+           modelBuilder.Entity<IotVote>().Property<int>("questioneId"); // shadow FK naar User
            modelBuilder.Entity<IotVote>().HasOne<Question>(q => q.question).WithMany(i => i.iotVotes)
                .HasForeignKey("questionId");
             

@@ -6,13 +6,13 @@ namespace DAL
 {
     public interface IQuestionnaireRepository
     {
-        IEnumerable<Questionnaire> readQuestionnaires(int id);
+        IEnumerable<Questionnaire> readQuestionnaires(int projectId);
         void createQuestionnaire(Questionnaire q);
-        Questionnaire readQuestionnaire(int id);
+        Questionnaire readQuestionnaire(int questionnaireId);
         IEnumerable<IotSetup> readIotSetups();
-        IEnumerable<Question> readQuestions(int id);
+        IEnumerable<Question> readQuestions(int questionnaireId);
         void updateQuestionnaire(Questionnaire q);
-        void deleteQuestionnaire(int id);
+        void deleteQuestionnaire(int questionnaireId);
         void createQuestionUser(int userId, int questionId, String answer);
     }
 }

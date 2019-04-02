@@ -61,7 +61,7 @@ namespace DAL.EF
                 questionAmount = 3,
                 project = p1,
                 confirmed = true,
-                iotSetups = new List<IotSetup>(),
+                //iotSetups = new List<IotSetup>(),
                 questions = new List<Question>()
             };
             Questionnaire questionnaire2 = new Questionnaire()
@@ -70,7 +70,7 @@ namespace DAL.EF
                 questionAmount = 2,
                 project = p1,
                 confirmed = false,
-                iotSetups = new List<IotSetup>(),
+               // iotSetups = new List<IotSetup>(),
                 questions = new List<Question>()
             };
             p1.questionnaires = new List<Questionnaire>() { questionnaire1, questionnaire2 };
@@ -125,9 +125,9 @@ namespace DAL.EF
             IotSetup iot1 = new IotSetup()
             {
                 address = new Address(),
-                questionnaire = questionnaire1
+                //questionnaire = questionnaire1
             };
-            questionnaire1.iotSetups = new List<IotSetup>() { iot1 };
+          //  questionnaire1.iotSetups = new List<IotSetup>() { iot1 };
             #endregion
             
             #region TestProject 2
@@ -148,7 +148,7 @@ namespace DAL.EF
                 questionAmount = 2,
                 project = p2,
                 confirmed = true,
-                iotSetups = new List<IotSetup>(),
+                //iotSetups = new List<IotSetup>(),
                 questions = new List<Question>(),
             };
             p2.questionnaires = new List<Questionnaire>() { questionnaire3 };

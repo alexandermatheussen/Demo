@@ -14,8 +14,6 @@ namespace Domain
         public Boolean confirmed { get; set; }
         public Project project { get; set; }
         public ICollection<Question> questions { get; set; }
-        public ICollection<IotSetup> iotSetups { get; set; } // Moet een vraag apart niet verbonden worden met iot opstelling?
-                                                             // anders weet je toch niet aan welke vraag de opstelling hangt
         //public User user { get; set; }
 
         public Questionnaire()
