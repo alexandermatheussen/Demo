@@ -39,5 +39,15 @@ namespace D.UI.MVC.Controllers
             IEnumerable <Idea>  ideas = ideationMgr.getIdeas(id);
             return View(ideas);
         }
+
+        public IActionResult MapTest()
+        {
+            return View();
+        }
+        public IActionResult ImageTest()
+        {
+            ImageField x = new ImageField();
+            return View(x);
+        }
     }
 }

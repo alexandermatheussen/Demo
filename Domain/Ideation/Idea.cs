@@ -4,17 +4,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Idea
+    public class Idea 
     {
+    //
         [Required]     
         public int ideaId { get; set; }
         public User user { get; set; }
+        
+       
         public Ideation ideation { get; set; }
       
-        public string title { get; set; }
-        public string content { get; set; }
+        
          
-        public ICollection<Answer> answers { get; set; }
+        public ICollection<Reaction> reactions { get; set; }
+        public ICollection<IdeaLike> ideaLikes { get; set; }
+        public ICollection<Field> fields { get; set; }
         
     }
 }

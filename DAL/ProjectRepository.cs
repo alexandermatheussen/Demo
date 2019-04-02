@@ -33,7 +33,7 @@ namespace DAL
         {
             return ctx.projects
                 .Include(p => p.questionnaires)
-                .SingleOrDefault(p => p.id == id);
+                .SingleOrDefault(p => p.projectId == id);
         }
 
         public IEnumerable<Questionnaire> readQuestionnaires()

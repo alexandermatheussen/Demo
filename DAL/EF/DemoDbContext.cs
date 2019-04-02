@@ -18,20 +18,45 @@ namespace DAL.EF
         }
 
         #region Sets
-        public DbSet<Question> questions { get; set; }
-        public DbSet<Project> projects { get; set; }
-        public DbSet<Questionnaire> questionnaires { get; set; }
-        public DbSet<IotSetup> iotSetups { get; set; }
-        public DbSet<User> users { get; set; }
-        public DbSet<QuestionUser> questionUsers { get; set; }
-        public DbSet<Option> options { get; set; }
-        
-        public DbSet<Phase> phases { get; set; }
+        // Fields 
+        public DbSet<Field> fields { get; set; }
+        public DbSet<TextField> textFields { get; set; }
+        public DbSet<ImageField> imageFields { get; set; }
+        public DbSet<MapField> mapFields { get; set; }
+        public DbSet<QuestionField> questionFields { get; set; }
+        public DbSet<VideoField> videoFields { get; set; }
+        // Likes
+        public DbSet<Like> likes { get; set; }
+        public DbSet<IdeaLike> ideaLikes { get; set; }
+        public DbSet<ProjectLike> projectLikes { get; set; }
+        public DbSet<ReactionLike> answerLikes { get; set; }
+        public DbSet<IotVote> iotLikes { get; set; }
 
+        //Project
+        public DbSet<Project> projects { get; set; }
+        public DbSet<Phase> phases { get; set; }
+        
+        //Ideation
         public DbSet<Ideation> ideations { get; set; }
         public DbSet<IdeationQuestion> ideationQuestions { get; set; }
         public DbSet<Idea> ideas { get; set; }
-        public DbSet<Answer> answers { get; set; }
+        public DbSet<Reaction> answers { get; set; }
+        
+        //Questionnaire 
+        public DbSet<Questionnaire> questionnaires { get; set; }
+        public DbSet<Question> questions { get; set; }
+        public DbSet<Option> options { get; set; }
+        public DbSet<QuestionUser> questionUsers { get; set; }
+
+
+         //Iotset
+        public DbSet<IotSetup> iotSetups { get; set; }
+        
+        //User
+        public DbSet<User> users { get; set; }
+
+
+       
         
 
         #endregion
@@ -55,25 +80,68 @@ namespace DAL.EF
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Questionnaire>().Property<int>("ProjectId");
-            modelBuilder.Entity<Questionnaire>().HasOne<Project>(q => q.project)
-                .WithMany(p => p.questionnaires).HasForeignKey("ProjectId");
+            modelBuilder.Entity<Questionnaire>().HasOne<Project>(q => q.project).WithMany(p => p.questionnaires)
+                .HasForeignKey("ProjectId");
             
-            modelBuilder.Entity<Question>().Property<int>("QuestionnaireId");
-            modelBuilder.Entity<Question>().HasOne<Questionnaire>(q => q.questionnaire)
-                .WithMany(q => q.questions).HasForeignKey("QuestionnaireId");
-            
-            modelBuilder.Entity<IotSetup>().Property<int>("QuestionnaireId");
-            modelBuilder.Entity<IotSetup>().HasOne<Questionnaire>(q => q.questionnaire)
-                .WithMany(q => q.iotSetups).HasForeignKey("QuestionnaireId");
-            
+            modelBuilder.Entity<Phase>().Property<int>("projectId"); // shadow FK naar Project
+            modelBuilder.Entity<Phase>().HasOne<Project>(p => p.project).WithMany(f => f.phases)
+                .HasForeignKey("projectId");
             
             modelBuilder.Entity<Ideation>().Property<int>("projectId"); // shadow FK naar Project
             modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)
                 .HasForeignKey("projectId");
 
-            modelBuilder.Entity<Phase>().Property<int>("projectId"); // shadow FK naar Project
-            modelBuilder.Entity<Phase>().HasOne<Project>(p => p.project).WithMany(f => f.phases)
+            
+            modelBuilder.Entity<Question>().Property<int>("QuestionnaireId");
+            modelBuilder.Entity<Question>().HasOne<Questionnaire>(q => q.questionnaire)
+                .WithMany(q => q.questions).HasForeignKey("QuestionnaireId");
+            
+            modelBuilder.Entity<Ideation>().Property<int>("projectId"); // shadow FK naar Project
+            modelBuilder.Entity<Ideation>().HasOne<Project>(p => p.project).WithMany(i => i.ideations)
                 .HasForeignKey("projectId");
+            
+            modelBuilder.Entity<IotSetup>().Property<int>("QuestionnaireId");
+            modelBuilder.Entity<IotSetup>().HasOne<Questionnaire>(q => q.questionnaire)
+                .WithMany(q => q.iotSetups).HasForeignKey("QuestionnaireId");
+            
+            // Fields
+            modelBuilder.Entity<Field>().Property<int>("ideaId"); // shadow FK naar Idea
+            modelBuilder.Entity<Field>().HasOne<Idea>(i => i.Idea).WithMany(f => f.fields)
+                .HasForeignKey("ideaId");
+            
+            modelBuilder.Entity<Field>().Property<int>("ideationId"); // shadow FK naar Ideation
+            modelBuilder.Entity<Field>().HasOne<Ideation>(i => i.ideation).WithMany(f => f.fields)
+                .HasForeignKey("ideationId");
+            // Likes 
+            modelBuilder.Entity<IdeaLike>().Property<int>("ideaId"); // shadow FK naar Idea
+            modelBuilder.Entity<IdeaLike>().HasOne<Idea>(i => i.Idea).WithMany(f => f.ideaLikes)
+                .HasForeignKey("ideaId");
+            modelBuilder.Entity<IdeaLike>().Property<int>("userId"); // shadow FK naar User
+            modelBuilder.Entity<IdeaLike>().HasOne<User>(u => u.user).WithMany(i => i.ideaLikes)
+                .HasForeignKey("userId");
+            modelBuilder.Entity<ProjectLike>().Property<int>("projectId"); // shadow FK naar Idea
+            modelBuilder.Entity<ProjectLike>().HasOne<Project>(p => p.Project).WithMany(i => i.projectLikes)
+                .HasForeignKey("projectId");
+            modelBuilder.Entity<ProjectLike>().Property<int>("userId"); // shadow FK naar User
+            modelBuilder.Entity<ProjectLike>().HasOne<User>(u => u.user).WithMany(i => i.projectLikes)
+                .HasForeignKey("userId"); modelBuilder.Entity<IdeaLike>().Property<int>("ideaId"); // shadow FK naar Idea
+            modelBuilder.Entity<ReactionLike>().Property<int>("reactionId"); // shadow FK naar User
+            modelBuilder.Entity<ReactionLike>().HasOne<Reaction>(r => r.reaction).WithMany(i => i.reactionLikes)
+                .HasForeignKey("reactionId");
+            
+            modelBuilder.Entity<ReactionLike>().Property<int>("userId"); // shadow FK naar User
+            modelBuilder.Entity<ReactionLike>().HasOne<User>(u => u.user).WithMany(i => i.reactionLikes)
+                .HasForeignKey("userId");
+           // IotLikes
+           modelBuilder.Entity<IotVote>().Property<int>("questionId"); // shadow FK naar User
+           modelBuilder.Entity<IotVote>().HasOne<Question>(q => q.question).WithMany(i => i.iotVotes)
+               .HasForeignKey("questionId");
+            
+           modelBuilder.Entity<IotVote>().Property<int>("userId"); // shadow FK naar User
+           modelBuilder.Entity<IotVote>().HasOne<User>(u => u.user).WithMany(i => i.iotVotes)
+               .HasForeignKey("userId");
+
+           
             
             modelBuilder.Entity<Idea>().Property<int>("ideationId"); // shaodow FK naar Ideation 
             modelBuilder.Entity<Idea>().Property<int>("userId"); // shaodow FK naar User
@@ -87,12 +155,12 @@ namespace DAL.EF
             modelBuilder.Entity<IdeationQuestion>().HasOne<Ideation>(i => i.ideation).WithMany(q => q.questions)
                 .HasForeignKey("ideationId");
             
-            modelBuilder.Entity<Answer>().Property<int>("ideaId"); // shaodow FK naar Idea
-            modelBuilder.Entity<Answer>().Property<int>("userId"); // shaodow FK naar User
+            modelBuilder.Entity<Reaction>().Property<int>("ideaId"); // shaodow FK naar Idea
+            modelBuilder.Entity<Reaction>().Property<int>("userId"); // shaodow FK naar User
             
-            modelBuilder.Entity<Answer>().HasOne<Idea>(i => i.idea).WithMany(a => a.answers)
+            modelBuilder.Entity<Reaction>().HasOne<Idea>(i => i.idea).WithMany(a => a.reactions)
                 .HasForeignKey("ideaId");
-            modelBuilder.Entity<Answer>().HasOne<User>(u => u.user).WithMany(a=> a.answers)
+            modelBuilder.Entity<Reaction>().HasOne<User>(u => u.user).WithMany(a=> a.reactions)
                 .HasForeignKey("userId");
         }
 

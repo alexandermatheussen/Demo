@@ -19,6 +19,15 @@ namespace Domain
         public IEnumerable<QuestionUser> questionnaireAnswer { get; set; }
         //public Questionnaire questionnaire { get; set; }
         public ICollection<Idea> ideas { get; set; }
-        public ICollection<Answer> answers { get; set; }
+        public ICollection<Reaction> reactions { get; set; }
+        public ICollection<IdeaLike> ideaLikes { get; set; }
+        public ICollection<ProjectLike> projectLikes { get; set; }
+        public ICollection<ReactionLike> reactionLikes { get; set; }
+        
+        public ICollection<IotVote> iotVotes { get; set; }
+
+        
+        
+
     }
 }

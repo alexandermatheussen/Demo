@@ -63,3 +63,17 @@ C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\BL\obj\Debug\
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\BL\obj\Debug\netstandard2.0\BL.dll
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitHub\Demo\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\BL\obj\Debug\netstandard2.0\BL.pdb

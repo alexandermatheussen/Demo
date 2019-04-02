@@ -9,12 +9,17 @@ namespace Domain
     public class Question
     {
         [Required]
-        public int id { get; set; }
+        public int questionId { get; set; }
         public QuestionType questionType { get; set; }
         public String question { get; set; }
         public Questionnaire questionnaire { get; set; }
-        public IEnumerable<Option> options { get; set; }
-        public IEnumerable<QuestionUser> questionnaireAnswers { get; set; }
+        public ICollection<Option> options { get; set; }
+        public ICollection<QuestionUser> questionnaireAnswers { get; set; }
+        public ICollection<IotVote> iotVotes { get; set; }
+         
+        
+            
+        
 
         public Question()
         {

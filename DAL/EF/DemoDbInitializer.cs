@@ -48,7 +48,6 @@ namespace DAL.EF
             #region TestProject 1
             Project p1 = new Project()
             {
-                confirmedLikes = 0,
                 description = "We are thinking about build a new playground in the middle of central park",
                 endDate = new DateTime(2019, 3,9),
                 startDate = new DateTime(2019,4,10),
@@ -134,7 +133,6 @@ namespace DAL.EF
             #region TestProject 2
             Project p2 = new Project()
             {
-                confirmedLikes = 0,
                 description = "A project started by the city of antwerp with the intention to adopt street birds",
                 endDate = new DateTime(2019, 3,9),
                 startDate = new DateTime(2019,4,10),
@@ -197,23 +195,23 @@ namespace DAL.EF
             it1.questions = new List<IdeationQuestion>(){iq1};
             
             //Ideas 
-            
-            Idea i1 = new Idea(){ideation = it1 , user = u1 , title = "Swing" , content = "I think a swing would be a great idea for the playground, it's fun for all ages and it's safe!"};
-            Idea i2 = new Idea(){ideation = it1 , user = u2 , title = "Slide" , content = "A slide is very fun! And it doesn't cost much!"};
+
+            Idea i1 = new Idea() {ideation = it1, user = u1};
+            Idea i2 = new Idea() {ideation = it1, user = u2};
             
             it1.ideas = new List<Idea>(){ i1,i2};
             
             //answers 
             
-            Answer a1 = new Answer(){idea = i1, user = u3,content = " Great Idea !" };
-            Answer a2 = new Answer(){idea = i2, user = u3,content = " Terrible Idea !" };
+            Reaction a1 = new Reaction(){idea = i1, user = u3,content = " Great Idea !" };
+            Reaction a2 = new Reaction(){idea = i2, user = u3,content = " Terrible Idea !" };
             
-            i1.answers = new List<Answer>(){a1};
-            i2.answers = new List<Answer>(){a2};
+            i1.reactions = new List<Reaction>(){a1};
+            i2.reactions = new List<Reaction>(){a2};
             
             u1.ideas = new List<Idea>(){i1};
             u2.ideas = new List<Idea>(){i2};
-            u3.answers = new List<Answer>(){a1,a2};
+            u3.reactions = new List<Reaction>(){a1,a2};
 
             QuestionUser qu = new QuestionUser() { Question = q1, User = u1, Answer = "Yes"};
             u1.questionnaireAnswer = new List<QuestionUser>() {qu};

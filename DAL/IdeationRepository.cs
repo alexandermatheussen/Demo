@@ -24,7 +24,7 @@ namespace DAL
         
         public IEnumerable<Ideation> readIdeations(int projectId)
         {
-            return ctx.ideations.Include(p => p.project).Where(p => p.project.id == projectId);
+            return ctx.ideations.Include(p => p.project).Where(p => p.project.projectId == projectId);
         }
 
         public void createIdeation(Ideation i)
@@ -49,7 +49,7 @@ namespace DAL
 
         public IEnumerable<IdeationQuestion> readIdeationsQuestions(int ProjectId)
         {
-            return ctx.ideationQuestions.Include(i => i.ideation).Where(i => i.ideation.project.id == ProjectId);
+            return ctx.ideationQuestions.Include(i => i.ideation).Where(i => i.ideation.project.projectId == ProjectId);
 
         }
 

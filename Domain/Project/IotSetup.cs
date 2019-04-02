@@ -5,8 +5,9 @@ namespace Domain
 {
     public class IotSetup
     {
+        [Key]
         [Required]
-        public int id { get; set; }
+        public int iotId { get; set; }
         public Address address { get; set; }
         public Questionnaire questionnaire { get; set; }
     }

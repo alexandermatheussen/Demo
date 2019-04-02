@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Demo_EF.db" uuid="0f4097fb-f666-4966-bd12-229489acf726">
+    <data-source source="LOCAL" name="Demo_EF.db" uuid="05c5b82a-1dcc-47cd-b963-6955a9c7d872">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/UI.MVC/Demo_EF.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\UI.MVC\Demo_EF.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
