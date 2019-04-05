@@ -11,5 +11,6 @@ namespace BL
         void changeUser(User user);
         void removeUser(int id);
         Place getPlace(int postalcode, string name);
+        Address getAddress(int number, string street, int postalcode, string name);
     }
 }

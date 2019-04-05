@@ -170,7 +170,7 @@ namespace DAL.EF
                 startDate = new DateTime(2019,4,10),
                 phases = new List<Phase>(),
                 name = "SAFE THE BIRDS!",
-                place = new Place(),
+                place = place2,
             };
             
             // Questionnaires

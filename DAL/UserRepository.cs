@@ -55,20 +55,43 @@ namespace DAL
             ctx.SaveChanges();
         }
 
-        /*public Address getAddress(int postalCode)
+        public Address getAddress(int number, string street, int postalcode, string name)
         {
-            Place place1 = ctx.places.First(p => p.postalCode == postalCode);
-            return ctx.addresses.First(address => address.place == place1);
-        }*/
+            try
+            {
+                Place place = getPlace(postalcode, name);
+                Address address = ctx.addresses.First(a => a.street.Equals(street) && a.number == number && a.place.Equals(place));
+                
+                return address;
+            }
+            catch (InvalidOperationException e)
+            {
+                return createAddress(number, street, postalcode, name);
+            }
+        }
+
+        public Address createAddress(int number, string street, int postalcode, string name)
+        {
+            Place place = getPlace(postalcode, name);
+            Address newAddress = new Address()
+            {
+                number = number,
+                street = street,
+                place = place
+            };
+            ctx.addresses.Add(newAddress);
+            ctx.SaveChanges();
+            return newAddress;
+        }
 
         public Place getPlace(int postalcode, string name)
         {
-            Place place = ctx.places.First(p => p.postalCode == postalcode);
-            if (place != null)
+            try
             {
+                Place place = ctx.places.First(p => p.postalCode == postalcode);
                 return place;
             }
-            else
+            catch (InvalidOperationException e)
             {
                 return createPlace(postalcode, name);
             }

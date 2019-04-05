@@ -5,7 +5,6 @@ namespace Domain
 {
     public class Address
     {
-        
         public int id { get; set; }
         public String street { get; set; }
         public int number { get; set; }

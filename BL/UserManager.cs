@@ -57,5 +57,10 @@ namespace BL
         {
             return repo.getPlace(postalcode, name);
         }
+
+        public Address getAddress(int number, string street, int postalcode, string name)
+        {
+            return repo.getAddress(number, street, postalcode, name);
+        }
     }
 }

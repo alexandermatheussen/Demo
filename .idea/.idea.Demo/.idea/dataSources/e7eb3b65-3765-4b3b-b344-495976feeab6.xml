@@ -374,7 +374,8 @@
     </column>
     <column id="90" parent="14" name="postalCode">
       <Position>3</Position>
-      <DataType>TEXT|0s</DataType>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <key id="91" parent="14" name="PK_places">
       <ColNames>id</ColNames>

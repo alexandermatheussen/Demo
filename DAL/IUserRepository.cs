@@ -12,5 +12,7 @@ namespace DAL.EF
         void deleteUser(int id);
         Place getPlace(int postalcode, string name);
         Place createPlace(int postalcode, string name);
+        Address getAddress(int number, string street, int postalcode, string name);
+        Address createAddress(int number, string street, int postalcode, string name);
     }
 }

@@ -26,6 +26,7 @@ namespace D.UI.MVC.Controllers
         public IActionResult Edit(int id)
         {
             User user = mgr.getUser(id);
+            Console.WriteLine(user.address);
             //ViewBag.Address = user.address;
             return View(user);
         }
@@ -33,14 +34,9 @@ namespace D.UI.MVC.Controllers
         [HttpPost]
         public IActionResult Edit(User user)
         {
-            Place newPlace = mgr.getPlace(user.address.place.postalCode, user.address.place.name);
-            Address newAddress = new Address()
-            {
-                number = user.address.number,
-                place = newPlace,
-                street = user.address.street
-            };
+            Address newAddress = mgr.getAddress(user.address.number, user.address.street, user.address.place.postalCode, user.address.place.name);
             user.address = newAddress;
+            
             
             if (!ModelState.IsValid)
             {
