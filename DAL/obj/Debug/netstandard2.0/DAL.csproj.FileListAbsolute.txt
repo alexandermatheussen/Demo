@@ -67,3 +67,15 @@ C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\DAL\obj\Debug
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb

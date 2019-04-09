@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\DAL.csproj",
+    "projectUniqueName": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\DAL\\DAL.csproj",
     "projectName": "DAL",
-    "projectPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\DAL.csproj",
-    "outputPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\DAL\\obj\\",
+    "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\DAL\\DAL.csproj",
+    "outputPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\DAL\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj"
+          "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj"
           }
         }
       }

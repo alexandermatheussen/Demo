@@ -45,15 +45,14 @@ namespace BL
             return repo.readQuestionnaire(id);
         }
         
-        public void addQuestionnaire(int id, List<Question> questions, List<IotSetup> iotSetups, int questionAmount, bool confirmed,
-            Project project)
+        public void addQuestionnaire(List<Question> questions, String name, int questionAmount, bool confirmed, int projectId)
         {
             Questionnaire newQuestionnaire = new Questionnaire();
-            newQuestionnaire.project = project;
-            newQuestionnaire.confirmed = confirmed;
             newQuestionnaire.questions = questions;
+            newQuestionnaire.name = name;
             newQuestionnaire.questionAmount = questionAmount;
-            repo.createQuestionnaire(newQuestionnaire);
+            newQuestionnaire.confirmed = confirmed;
+            repo.createQuestionnaire(newQuestionnaire, projectId);
         }
 
         public void addQuestionUser(int userId, int questionId, String answer)
@@ -61,9 +60,12 @@ namespace BL
             repo.createQuestionUser(userId, questionId, answer);
         }
 
-        public void addQuestionnaire(Questionnaire q)
+        public void addQuestion(String question, QuestionType questionType)
         {
-            repo.createQuestionnaire(q);
+            Question newQuestion = new Question();
+            newQuestion.question = question;
+            newQuestion.questionType = questionType;
+            repo.createQuestion(newQuestion);
         }
 
         public void changeQuestionnaire(Questionnaire q)

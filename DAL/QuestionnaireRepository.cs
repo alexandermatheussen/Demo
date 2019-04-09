@@ -55,11 +55,21 @@ namespace DAL
                 .Where(q => q.questionnaire.id == questionnaireId);
         }
 
-        public void createQuestionnaire(Questionnaire q)
+        public void createQuestionnaire(Questionnaire q, int projectId)
         {
-            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
+            q.project = ctx.projects.Find(projectId);
             ctx.questionnaires.Add(q);
-            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
+            foreach (Question question in q.questions)
+            {
+                question.questionnaire = ctx.questionnaires.Find(q.id);
+                ctx.questions.Add(question);
+            }
+            ctx.SaveChanges();
+        }
+
+        public void createQuestion(Question q)
+        {
+            ctx.questions.Add(q);
             ctx.SaveChanges();
         }
 

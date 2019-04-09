@@ -20,9 +20,8 @@ namespace Domain
         {
         }
 
-        public Questionnaire(int id, int questionAmount, ICollection<Question> questions)
+        public Questionnaire(int questionAmount, ICollection<Question> questions)
         {
-            this.id = id;
             this.questionAmount = questionAmount;
             this.questions = questions;
         }

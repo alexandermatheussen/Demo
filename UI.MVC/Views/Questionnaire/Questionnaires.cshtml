@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<Domain.Questionnaire>
 
-<h1>Questionnaires</h1>
+<h1>Questionnaires</h1> 
+<p>
+    @Html.ActionLink("Create a new questionnaire", "CreateQuestionnairePage", 
+        "Questionnaire", new { projectId=Model.ToList()[0].project.projectId })
+</p>
 
 <table class="table">
     <tr>
@@ -12,7 +16,7 @@
         </th>
     </tr>
     @foreach (var item in Model)
-    {
+    {    
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.name)
