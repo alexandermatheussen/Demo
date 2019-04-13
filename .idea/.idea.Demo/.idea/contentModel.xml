@@ -120,7 +120,6 @@
           <e p="ProjectController.cs" t="Include" />
           <e p="QuestionnaireController.cs" t="Include" />
         </e>
-        <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
           <e p="CombinedModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
@@ -162,6 +161,7 @@
           </e>
           <e p="Questionnaire" t="Include">
             <e p="CreateQuestionnairePage.cshtml" t="Include" />
+            <e p="DeleteQuestionnairePage.cshtml" t="Include" />
             <e p="EditQuestionnairePage.cshtml" t="Include" />
             <e p="Questionnaire.cshtml" t="Include" />
             <e p="Questionnaires.cshtml" t="Include" />

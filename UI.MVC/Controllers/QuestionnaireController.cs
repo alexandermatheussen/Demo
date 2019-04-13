@@ -49,6 +49,12 @@ namespace D.UI.MVC.Controllers
             return View(combinedModel);
         }
 
+        public IActionResult DeleteQuestionnairePage(int questionnaireId)
+        {
+            Questionnaire questionnaire = qmgr.getQuestionnaire(questionnaireId);
+            return View(questionnaire);
+        }
+
         [HttpPost]
         public IActionResult EditQuestionnaire(IFormCollection form)
         {
@@ -229,6 +235,30 @@ namespace D.UI.MVC.Controllers
             }
             oldQuestionnaire.questionAmount = qmgr.getQuestions(oldQuestionnaire.id).Count();
             qmgr.changeQuestionnaire(oldQuestionnaire);
+            return RedirectToAction("Projects","Project");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteQuestionnaire(IFormCollection form)
+        {
+            foreach (var key in form.Keys)
+            {
+                if (key == "id")
+                {
+                    int questionnaireId = Convert.ToInt32(form[key]);
+                    IList<Question> questions = qmgr.getQuestions(questionnaireId).ToList();
+                    foreach (var q in questions)
+                    {
+                        IList<Option> options = qmgr.getOptions(q.id).ToList();
+                        foreach (var o in options)
+                        {
+                            qmgr.removeOption(o.id);
+                        }
+                        qmgr.removeQuestion(q.id);
+                    }
+                    qmgr.removeQuestionnaire(questionnaireId);
+                }
+            }
             return RedirectToAction("Projects","Project");
         }
         

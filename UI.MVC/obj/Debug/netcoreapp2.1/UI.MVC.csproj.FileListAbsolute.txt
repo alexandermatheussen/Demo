@@ -246,3 +246,4 @@ D:\OneDrive\Documenten\Nieuwe map\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.dll
 D:\OneDrive\Documenten\Nieuwe map\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.pdb
 D:\OneDrive\Documenten\Nieuwe map\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Questionnaire\CreateQuestionnairePage.g.cshtml.cs
 D:\OneDrive\Documenten\Nieuwe map\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Questionnaire\EditQuestionnairePage.g.cshtml.cs
+D:\OneDrive\Documenten\Nieuwe map\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Questionnaire\DeleteQuestionnairePage.g.cshtml.cs
