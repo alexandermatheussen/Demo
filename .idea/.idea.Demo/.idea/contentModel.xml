@@ -162,6 +162,7 @@
           </e>
           <e p="Questionnaire" t="Include">
             <e p="CreateQuestionnairePage.cshtml" t="Include" />
+            <e p="EditQuestionnairePage.cshtml" t="Include" />
             <e p="Questionnaire.cshtml" t="Include" />
             <e p="Questionnaires.cshtml" t="Include" />
           </e>

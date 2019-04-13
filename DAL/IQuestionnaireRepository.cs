@@ -9,11 +9,18 @@ namespace DAL
         IEnumerable<Questionnaire> readQuestionnaires(int projectId);
         void createQuestionnaire(Questionnaire q, int projectId);
         Questionnaire readQuestionnaire(int questionnaireId);
+        Question readQuestion(int questionId);
         IEnumerable<IotSetup> readIotSetups();
         IEnumerable<Question> readQuestions(int questionnaireId);
+        IEnumerable<Option> readOptions(int questionId);
         void createQuestion(Question q);
+        void createOption(Option o);
         void updateQuestionnaire(Questionnaire q);
         void deleteQuestionnaire(int questionnaireId);
+        void updateQuestion(Question q);
+        void deleteQuestion(int questionId);
+        void updateOption(Option o);
+        void deleteOption(int optionId);
         void createQuestionUser(int userId, int questionId, String answer);
     }
 }

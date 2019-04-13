@@ -55,6 +55,12 @@ namespace DAL
                 .Where(q => q.questionnaire.id == questionnaireId);
         }
 
+        public IEnumerable<Option> readOptions(int questionId)
+        {
+            return ctx.options
+                .Where(o => o.question.id == questionId);
+        }
+
         public void createQuestionnaire(Questionnaire q, int projectId)
         {
             q.project = ctx.projects.Find(projectId);
@@ -73,9 +79,20 @@ namespace DAL
             ctx.SaveChanges();
         }
 
+        public void createOption(Option o)
+        {
+            ctx.options.Add(o);
+            ctx.SaveChanges();
+        }
+
         public Questionnaire readQuestionnaire(int questionnaireId)
         {
             return ctx.questionnaires.Find(questionnaireId);
+        }
+
+        public Question readQuestion(int questionId)
+        {
+            return ctx.questions.Find(questionId);
         }
 
         public void updateQuestionnaire(Questionnaire q)
@@ -91,6 +108,38 @@ namespace DAL
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
             ctx.questionnaires.Remove(ctx.questionnaires.Find(questionnaireId));
             Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionnaireRepo.Ctx)");
+            ctx.SaveChanges();
+        }
+
+        public void updateQuestion(Question q)
+        {
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionRepo.Ctx)");
+            ctx.questions.Update(q);
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionRepo.Ctx)");
+            ctx.SaveChanges();
+        }
+
+        public void deleteQuestion(int questionId)
+        {
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionRepo.Ctx)");
+            ctx.questions.Remove(ctx.questions.Find(questionId));
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (QuestionRepo.Ctx)");
+            ctx.SaveChanges();
+        }
+
+        public void updateOption(Option o)
+        {
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (OptionRepo.Ctx)");
+            ctx.options.Update(o);
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (OptionRepo.Ctx)");
+            ctx.SaveChanges();
+        }
+
+        public void deleteOption(int optionId)
+        {
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (OptionRepo.Ctx)");
+            ctx.options.Remove(ctx.options.Find(optionId));
+            Helper.PrintDbContextTrackedEntitiesStates(ctx, "STATES (OptionRepo.Ctx)");
             ctx.SaveChanges();
         }
         #endregion

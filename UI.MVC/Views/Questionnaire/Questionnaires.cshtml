@@ -28,6 +28,10 @@
                     @Html.ActionLink("Complete Questionnaire", "Questionnaire", "Questionnaire"
                         , new { questionnaireId=item.id })
                 </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditQuestionnairePage", "Questionnaire"
+                        , new { questionnaireId=item.id })
+                </td>
             </tr>
         
     }

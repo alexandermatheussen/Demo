@@ -40,6 +40,197 @@ namespace D.UI.MVC.Controllers
             combinedModel.projectId = projectId;
             return View(combinedModel);
         }
+
+        public IActionResult EditQuestionnairePage(int questionnaireId)
+        {
+            QuestionnaireQuestion combinedModel = new QuestionnaireQuestion();
+            combinedModel.questionnaire = qmgr.getQuestionnaire(questionnaireId);
+            combinedModel.questions = qmgr.getQuestions(questionnaireId);
+            return View(combinedModel);
+        }
+
+        [HttpPost]
+        public IActionResult EditQuestionnaire(IFormCollection form)
+        {
+            var oldQuestionnaireId = 0;
+            var oldQuestionnaireName = "";
+            var oldQuestionnaireConfirmed = true;
+            ICollection<String> questionOptionKey = new List<string>();
+            ICollection<String> questionOptionValue = new List<string>();
+            
+            foreach (var key in form.Keys)
+            {
+                if (key == "questionnaire.id")
+                {
+                    oldQuestionnaireId = Convert.ToInt32(form[key]);
+                }
+            }
+            
+            ICollection<int> notRemovedQuestionIds = new List<int>();
+            Questionnaire oldQuestionnaire = qmgr.getQuestionnaire(oldQuestionnaireId);
+            ICollection<Question> oldQuestions = qmgr.getQuestions(oldQuestionnaireId).ToList();
+
+            foreach (var key in form.Keys)
+            {
+                if (key.StartsWith("question.question"))
+                {
+                    Question q = new Question()                    
+                    {                                              
+                        question = "",                      
+                        questionnaire = oldQuestionnaire,          
+                        questionType = QuestionType.OPEN_QUESTION, 
+                        IotSetup = null,                           
+                        options = new List<Option>()               
+                    };
+                    IList<Option> newOptions = new List<Option>();
+                    string[] parts = key.Split("-");
+                    int optionAmount = 1;
+                    foreach (var subKey in form.Keys)
+                    {
+                        if (subKey == "dynamicFieldset" + parts[1])                                             
+                        {        
+                            if (form[subKey] == "email") { q.questionType = QuestionType.MAILADDRESS; }       
+                            if (form[subKey] == "dropdown") { q.questionType = QuestionType.DROPDOWN; }         
+                            if (form[subKey] == "radiobutton") { q.questionType = QuestionType.RADIO_BUTTON; }  
+                            if (form[subKey] == "checkbox") { q.questionType = QuestionType.CHECK_BOX; }        
+                            if (form[subKey] == "textarea") { q.questionType = QuestionType.OPEN_QUESTION; } 
+                        }
+                        if (subKey == "question.options-" + optionAmount + "-" + parts[1] + "-0")
+                        {
+                            Option o = new Option()
+                            {
+                                option = form[subKey],
+                                question = q
+                            };
+                            newOptions.Add(o);
+                            optionAmount++;
+                        }
+                    }
+                    q.question = form[key];
+                    qmgr.addQuestion(q);                           
+                    qmgr.changeQuestionnaire(oldQuestionnaire);    
+                    foreach (var o in newOptions)
+                    {
+                        qmgr.addOption(o.option, o.question);
+                    }
+                    q.options = newOptions;
+                    qmgr.changeQuestion(q);
+                }    
+                if (key.StartsWith("question.options-"))         
+                {
+                    questionOptionKey.Add(key);                  
+                    questionOptionValue.Add(form[key]);          
+                }
+            }
+            foreach (var key in form.Keys)
+            {
+                if (key == "questionnaire.name")
+                {
+                    oldQuestionnaireName = form[key];
+                }
+                if (key == "confirmed")
+                {
+                    if (form[key] == "No")
+                    {
+                        oldQuestionnaireConfirmed = false;
+                    }
+                }
+                if (key.StartsWith("question-"))
+                {
+                    string[] parts = key.Split("-");
+                    notRemovedQuestionIds.Add(Convert.ToInt32(parts[1]));
+                    int testt = 1;
+                    for (var i = 0; i < oldQuestions.Count; i++)
+                    {
+                        if (Convert.ToInt32(parts[1]) == oldQuestions.ToList()[i].id)
+                        {
+                            Question q = oldQuestions.ToList()[i];
+                            q.question = form[key];
+                            qmgr.changeQuestion(q);
+
+                            ICollection<Option> options = qmgr.getOptions(q.id).ToList();
+
+                            foreach (var o in options)
+                            {
+                                qmgr.removeOption(o.id);
+                            }
+
+                            for (var a = 0; a < questionOptionKey.Count(); a++)
+                            {
+                                string[] partsKey = questionOptionKey.ToList()[a].Split("-");
+                                if (Convert.ToInt32(partsKey[3]) == q.id)
+                                {
+                                    Option o = new Option()
+                                    {
+                                        option = questionOptionValue.ToList()[a],
+                                        question = q
+                                    };
+                                    q.options.ToList().Add(o);
+                                    qmgr.changeQuestion(q);
+                                    qmgr.addOption(o.option, o.question);
+                                }
+                                if (Convert.ToInt32(partsKey[2]) == testt && Convert.ToInt32(partsKey[3]) == 0)
+                                {
+                                    Option o = new Option()
+                                    {
+                                        option = questionOptionValue.ToList()[a],
+                                        question = q
+                                    };
+                                    q.options.ToList().Add(o);
+                                    qmgr.addOption(o.option, q);
+                                    qmgr.changeQuestion(q);
+                                }
+                            }
+                        }
+                        testt++;
+                    }
+                }
+                if (key.StartsWith("dynamicFieldset"))
+                {
+                    string[] parts = key.Split("t");
+                    for (var i = 0; i < oldQuestions.Count; i++)
+                    {
+                        if (Convert.ToInt32(parts[1]) == i+1)
+                        {
+                            Question q = oldQuestions.ToList()[i];
+                            if (form[key] == "email") { q.questionType = QuestionType.MAILADDRESS; }
+                            if (form[key] == "dropdown") { q.questionType = QuestionType.DROPDOWN; }
+                            if (form[key] == "radiobutton") { q.questionType = QuestionType.RADIO_BUTTON; }
+                            if (form[key] == "checkbox") { q.questionType = QuestionType.CHECK_BOX; }
+                            if (form[key] == "textarea") { q.questionType = QuestionType.OPEN_QUESTION; }
+                            qmgr.changeQuestion(q);
+                        }
+                    }
+                }
+            }
+            oldQuestionnaire.name = oldQuestionnaireName;
+            oldQuestionnaire.confirmed = oldQuestionnaireConfirmed;
+            oldQuestionnaire.questionAmount = oldQuestions.Count;
+            qmgr.changeQuestionnaire(oldQuestionnaire);
+            foreach (var q in oldQuestions)
+            {
+                var removeThis = true;
+                foreach (var id in notRemovedQuestionIds)
+                {
+                    if (q.id == id)
+                    {
+                        removeThis = false;
+                    }
+                }
+                if (removeThis)
+                {
+                    IList<Option> remOptions = qmgr.getOptions(q.id).ToList();
+                    foreach (var o in remOptions)
+                    {
+                        qmgr.removeOption(o.id);
+                    }
+                    qmgr.removeQuestion(q.id);
+                }
+            }
+            oldQuestionnaire.questionAmount = qmgr.getQuestions(oldQuestionnaire.id).Count();
+            qmgr.changeQuestionnaire(oldQuestionnaire);
+            return RedirectToAction("Projects","Project");
+        }
         
         [HttpPost]
         public IActionResult CreateQuestionnaire(IFormCollection form)
@@ -131,7 +322,6 @@ namespace D.UI.MVC.Controllers
                         {
                             if (currentQuestion[i] == currentOption)
                             {
-                                Console.WriteLine("ja" + options[i-1].option + " fieldset: " + currentOption);
                                 finalOptions.Add(options[i-1]);
                             }
                         }

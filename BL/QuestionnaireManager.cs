@@ -44,6 +44,16 @@ namespace BL
         {
             return repo.readQuestionnaire(id);
         }
+
+        public Question getQuestion(int id)
+        {
+            return repo.readQuestion(id);
+        }
+
+        public IEnumerable<Option> getOptions(int questionId)
+        {
+            return repo.readOptions(questionId);
+        }
         
         public void addQuestionnaire(List<Question> questions, String name, int questionAmount, bool confirmed, int projectId)
         {
@@ -68,6 +78,19 @@ namespace BL
             repo.createQuestion(newQuestion);
         }
 
+        public void addQuestion(Question question)
+        {
+            repo.createQuestion(question);
+        }
+
+        public void addOption(String option, Question question)
+        {
+            Option o = new Option();
+            o.question = question;
+            o.option = option;
+            repo.createOption(o);
+        }
+
         public void changeQuestionnaire(Questionnaire q)
         {
             Validator.ValidateObject(q, new ValidationContext(q));
@@ -77,6 +100,28 @@ namespace BL
         public void removeQuestionnaire(int id)
         {
             repo.deleteQuestionnaire(id);
+        }
+
+        public void removeOption(int optionId)
+        {
+            repo.deleteOption(optionId);
+        }
+
+        public void changeQuestion(Question q)
+        {
+            Validator.ValidateObject(q, new ValidationContext(q));
+            repo.updateQuestion(q);
+        }
+
+        public void removeQuestion(int id)
+        {
+            repo.deleteQuestion(id);
+        }
+
+        public void changeOption(Option o)
+        {
+            Validator.ValidateObject(o, new ValidationContext(o));
+            repo.updateOption(o);
         }
     }
 }
