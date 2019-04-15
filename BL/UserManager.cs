@@ -62,5 +62,10 @@ namespace BL
         {
             return repo.getAddress(number, street, postalcode, name);
         }
+
+        public string changePassword(string oldpassword, string newPassword, string newConfirmedpassword)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

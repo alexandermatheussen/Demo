@@ -115,6 +115,7 @@
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
           <e p="CombinedModel.cs" t="Include" />
+          <e p="EditPasswordViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Idee.cs" t="Include" />
           <e p="ProjectAndQuestions.cs" t="Include" />
@@ -160,6 +161,7 @@
           <e p="User" t="Include">
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="Password.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">

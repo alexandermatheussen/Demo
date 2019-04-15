@@ -88,7 +88,7 @@ namespace DAL
         {
             try
             {
-                Place place = ctx.places.First(p => p.postalCode == postalcode);
+                Place place = ctx.places.First(p => p.postalCode == postalcode && p.name.Equals(name));
                 return place;
             }
             catch (InvalidOperationException e)

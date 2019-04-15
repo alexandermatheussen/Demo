@@ -12,5 +12,6 @@ namespace BL
         void removeUser(int id);
         Place getPlace(int postalcode, string name);
         Address getAddress(int number, string street, int postalcode, string name);
+        string changePassword(string oldpassword, string newPassword, string newConfirmedpassword);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using BL;
+using D.UI.MVC.Models;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +27,6 @@ namespace D.UI.MVC.Controllers
         public IActionResult Edit(int id)
         {
             User user = mgr.getUser(id);
-            Console.WriteLine(user.address);
             //ViewBag.Address = user.address;
             return View(user);
         }
@@ -44,6 +44,19 @@ namespace D.UI.MVC.Controllers
             }
       
             mgr.changeUser(user);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Password(int id)
+        {
+            
+            return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Password(EditPasswordViewModel model)
+        {
+            
             return RedirectToAction("Index");
         }
     }

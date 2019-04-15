@@ -16,6 +16,8 @@
         <th>Email address</th>
         <th>Password</th>
         <th>Gender</th>
+        <th></th>
+        <th></th>
     </tr>
 
     @foreach (User user in Model)
@@ -26,6 +28,8 @@
             <td>@user.eMailAddress</td>
             <td>@user.password</td>
             <td>@user.gender</td>
+            <td><a asp-action="Edit" asp-route-id="@user.id">Edit</a></td>
+            <td><a asp-action="Password" asp-route-id="@user.id">Change password</a></td>
         </tr>
     }
 </table>
