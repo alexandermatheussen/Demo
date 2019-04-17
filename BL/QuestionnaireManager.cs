@@ -54,14 +54,22 @@ namespace BL
         {
             return repo.readOptions(questionId);
         }
-        
-        public void addQuestionnaire(List<Question> questions, String name, int questionAmount, bool confirmed, int projectId)
+
+        public IEnumerable<QuestionUser> getQuestionUsers(int questionnaireId)
         {
+            return repo.readQuestionUsers(questionnaireId);
+        }
+        
+        public void addQuestionnaire(List<Question> questions, String name, int questionAmount, int projectId)
+        {
+            foreach (var q in questions)
+            {
+                Console.WriteLine(q.question);
+            }
             Questionnaire newQuestionnaire = new Questionnaire();
             newQuestionnaire.questions = questions;
             newQuestionnaire.name = name;
             newQuestionnaire.questionAmount = questionAmount;
-            newQuestionnaire.confirmed = confirmed;
             repo.createQuestionnaire(newQuestionnaire, projectId);
         }
 
@@ -100,6 +108,11 @@ namespace BL
         public void removeQuestionnaire(int id)
         {
             repo.deleteQuestionnaire(id);
+        }
+
+        public void removeQuestionUser(int questionUserId)
+        {
+            repo.deleteQuestionUser(questionUserId);
         }
 
         public void removeOption(int optionId)

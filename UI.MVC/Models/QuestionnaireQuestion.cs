@@ -10,6 +10,5 @@ namespace D.UI.MVC.Models
         public Questionnaire questionnaire { get; set; }
         public Question question { get; set; }
         public IEnumerable<Question> questions { get; set; }
-        public Boolean confirmed { get; set; }
     }
 }

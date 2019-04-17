@@ -8,5 +8,6 @@ namespace Domain
         public Question Question { get; set; }
         public User User { get; set; }
         public String Answer { get; set; }
+        public Boolean Confirmed { get; set; }
     }
 }

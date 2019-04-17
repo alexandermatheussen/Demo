@@ -1,21 +1,20 @@
 ﻿@using Domain
-@model CombinedModel
+@model FillInQuestionnaireModel
 
-<h1>Questionnaire</h1>
+<h1>Complete a questionnaire</h1>
+<h4>The questionnaire is about: @Model.questionnaire.name</h4>
 @using (Html.BeginForm("CreateUserQuestion", "Questionnaire",
     new { userId=1 }, FormMethod.Post))
 {
     <table class="table">
         @foreach (var item in Model.questions)
         {
-            //Is het oke om de id zo mee te geven?
-            <input type="hidden" name="questionId" value="@item.id"/>
             if (item.questionType == QuestionType.MAILADDRESS)
             {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.question) <br>
-                        <input asp-for="questionUser.Answer" type="text">
+                        <input name="Answer-@item.id" type="text">
                     </td>
                 </tr>
             }
@@ -24,7 +23,7 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.question) <br>
-                        <select id="ddlOptions" asp-for="questionUser.Answer">
+                        <select id="ddlOptions" name="Answer-@item.id">
                             <option value="0">Please select</option>
                             @foreach (var option in item.options)
                             {
@@ -39,7 +38,7 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.question) <br>
-                        <textarea asp-for="questionUser.Answer" type="text"></textarea>
+                        <textarea name="Answer-@item.id" type="text"></textarea>
                     </td>
                 </tr>
             }
@@ -51,7 +50,7 @@
                             @Html.DisplayFor(modelItem => item.question) <br>
                             @foreach (var option in item.options)
                             {
-                                <input asp-for="questionUser.Answer" type="radio" value="@option.option" name="@item.id"/>
+                                <input type="radio" value="@option.option" name="Answer-@item.id"/>
                                 @Html.DisplayFor(modelItem => option.option)<br>
                             }
                         </fieldset>
@@ -66,7 +65,7 @@
                             @Html.DisplayFor(modelItem => item.question) <br>
                             @foreach (var option in item.options)
                             {
-                                <input type="checkbox" value="@option.option" name="CheckBox @item.id"/>
+                                <input type="checkbox" value="@option.option" name="Answer-@item.id"/>
                                 @Html.DisplayFor(modelItem => option.option)<br>
                             }
                         </fieldset>
@@ -76,8 +75,6 @@
         }
     </table>
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Submit answers" class="btn btn-default"/>
-        </div>
+        <input type="submit" value="Submit answers" class="btn btn-default"/>
     </div>
 }
