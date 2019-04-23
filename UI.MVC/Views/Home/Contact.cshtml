@@ -1,17 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<body>
+    <h2 class="text-center"><b>Project "xxxxxxxxxxx"</b></h2>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="container">
+        <h2>Titel</h2>
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="centralevraag">Geef de centrale vraag in:</label>
+                <input type="text" class="form-control" id="centralevraag" placeholder="vul in">
+            </div>
+            <div class="form-group">
+                <label for="link">Geef een link naar meer achtergrondinfo:</label>
+                <input type="text" class="form-control" id="link" placeholder="vul in">
+            </div>
+            <div class="form-group">
+                <label for="dossier">Geef een korte omschrijving van het dossier:</label>
+                <input type="text" class="form-control" id="omschrijving" placeholder="vul in">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+
+
+</body>
