@@ -58,7 +58,7 @@ using D.UI.MVC.Models;
             WriteLiteral("    <meta charset=\"utf-8\">  \r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">  \r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"> \r\n    ");
             EndContext();
             BeginContext(347, 45, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "55ee622f9c44437587480222c6ee6674", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "db9b1748acf24f60b477ec8bf8c98438", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

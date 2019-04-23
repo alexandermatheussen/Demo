@@ -79,7 +79,7 @@ WriteAttributeValue("", 157, Url.Content("~/js/UploadScript.js"), 157, 36, false
             WriteLiteral("></script>\r\n\r\n<div class=\"text-center\">\r\n    <h1 class=\"display-4\">Welcome</h1>\r\n    <p>Learn about <a href=\"https://docs.microsoft.com/aspnet/core\">building Web apps with ASP.NET Core</a>.</p>\r\n</div>\r\n");
             EndContext();
             BeginContext(397, 184, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a46d3c6158a4cc299b7dc27add14685", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1d66e37e354441795c68ec7330f9b79", async() => {
                 BeginContext(476, 98, true);
                 WriteLiteral("\r\n    <input id=\"files\" name=\"files\" type=\"file\" multiple onchange=\"fileupload(\'files\');\"/>\r\n   \r\n");
                 EndContext();

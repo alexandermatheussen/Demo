@@ -58,7 +58,7 @@ using D.UI.MVC.Models;
             WriteLiteral("\r\n<script src=\"js/UploadScript.js\"></script>\r\n\r\n<div class=\"text-center\">\r\n    <h1 class=\"display-4\">Welcome</h1>\r\n    <p>Learn about <a href=\"https://docs.microsoft.com/aspnet/core\">building Web apps with ASP.NET Core</a>.</p>\r\n</div>\r\n");
             EndContext();
             BeginContext(237, 179, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d976a4b9544428a85378f23adc127c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04b8950d00644e14af198e5e541949da", async() => {
                 BeginContext(316, 93, true);
                 WriteLiteral("\r\n    <input id=\"files\" name=\"files\" type=\"file\" multiple onchange=\"fileupload(\'files\');\"/>\r\n");
                 EndContext();
