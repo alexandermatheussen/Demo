@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using BL.Managers;
 using DAL;
 using Domain;
@@ -34,9 +35,29 @@ namespace BL
             return  ideationRepo.readIdeationsQuestions(projectId);
         }
 
+
+        #region Ideas
         public IEnumerable<Idea> getIdeas(int ideationId)
         {
             return ideationRepo.readIdeas(ideationId);
         }
+
+        public void createIdea(Idea i)
+        {
+            ideationRepo.createIdea(i);        }
+
+        public void createIdea(ICollection<Field> fields)
+        {
+            ideationRepo.createIdea(fields);        }
+
+        public Idea getIdea(int id)
+        {
+           return ideationRepo.readIdea(id);
+        }
+
+        #endregion
+        
+        
+        
     }
 }

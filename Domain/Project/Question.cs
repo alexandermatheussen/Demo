@@ -13,8 +13,9 @@ namespace Domain
         public QuestionType questionType { get; set; }
         public String question { get; set; }
         public Questionnaire questionnaire { get; set; }
-        public IEnumerable<Option> options { get; set; }
-        public IEnumerable<QuestionUser> questionnaireAnswers { get; set; }
+        public ICollection<Option> options { get; set; }
+        public ICollection<QuestionUser> questionnaireAnswers { get; set; }
+     //  public ICollection<QuestionField> fields { get; set; }
         public IotSetup IotSetup { get; set; }
         public ICollection<IotVote> iotVotes { get; set; }
 

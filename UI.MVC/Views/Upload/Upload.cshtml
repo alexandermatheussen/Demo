@@ -1,0 +1,11 @@
+
+<script src="js/UploadScript.js"></script>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<form name="form" action="/Upload" enctype="multipart/form-data" method="post">
+    <input id="files" name="files" type="file" multiple onchange="fileupload('files');"/>
+</form>
+

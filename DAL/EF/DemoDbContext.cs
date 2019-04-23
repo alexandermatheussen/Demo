@@ -79,7 +79,7 @@ namespace DAL.EF
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Questionnaire>().Property<int>("ProjectId");
+          /*  modelBuilder.Entity<Questionnaire>().Property<int>("ProjectId");
             modelBuilder.Entity<Questionnaire>().HasOne<Project>(q => q.project).WithMany(p => p.questionnaires)
                 .HasForeignKey("ProjectId");
             
@@ -104,12 +104,19 @@ namespace DAL.EF
             
             // Fields
             modelBuilder.Entity<Field>().Property<int>("ideaId"); // shadow FK naar Idea
-            modelBuilder.Entity<Field>().HasOne<Idea>(i => i.Idea).WithMany(f => f.fields)
+            modelBuilder.Entity<Field>().HasOne<Idea>(i => i.idea).WithMany(f => f.fields)
                 .HasForeignKey("ideaId");
             
-            modelBuilder.Entity<Field>().Property<int>("ideationId"); // shadow FK naar Ideation
+              modelBuilder.Entity<Field>().Property<int>("ideationId"); // shadow FK naar Ideation
             modelBuilder.Entity<Field>().HasOne<Ideation>(i => i.ideation).WithMany(f => f.fields)
                 .HasForeignKey("ideationId");
+          
+            modelBuilder.Entity<QuestionField>().Property<int>("questionId"); // shadow FK naar Ideation
+            modelBuilder.Entity<QuestionField>().HasOne<Question>(q =>q.question).WithMany(f => f.fields)
+                .HasForeignKey("questionId");
+            
+            
+            
             // Likes 
             modelBuilder.Entity<IdeaLike>().Property<int>("ideaId"); // shadow FK naar Idea
             modelBuilder.Entity<IdeaLike>().HasOne<Idea>(i => i.Idea).WithMany(f => f.ideaLikes)
@@ -160,6 +167,8 @@ namespace DAL.EF
                 .HasForeignKey("ideaId");
             modelBuilder.Entity<Reaction>().HasOne<User>(u => u.user).WithMany(a=> a.reactions)
                 .HasForeignKey("userId");
+                
+                */
         }
 
         private readonly bool delaySave = false;

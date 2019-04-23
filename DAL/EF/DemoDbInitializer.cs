@@ -246,14 +246,24 @@ namespace DAL.EF
             IdeationQuestion iq1 = new IdeationQuestion(){ideation = it1, question = "What type of constructions do you want on the playground ? "};
             it1.questions = new List<IdeationQuestion>(){iq1};
             
+           
+         //   fields.Add(if1);
             //Ideas 
             
             Idea i1 = new Idea(){ideation = it1 , user = u1 };
             Idea i2 = new Idea(){ideation = it1 , user = u2 };
+
+           // it1.fields = null;
             
             it1.ideas = new List<Idea>(){ i1,i2};
-            
+            //Fields
+            ICollection<Field> fields = new List<Field>();
+            ImageField if1 = new ImageField(){imageName = "testimage",idea = i1};
+            i1.fields = new List<Field>(){if1};
+           
+           
             //answers 
+           // Reaction a3 = new Reaction(){content = "test",idea = null};
             
             Reaction a1 = new Reaction(){idea = i1, user = u3,content = " Great Idea !" };
             Reaction a2 = new Reaction(){idea = i2, user = u3,content = " Terrible Idea !" };
@@ -274,6 +284,8 @@ namespace DAL.EF
             context.ideations.Add(it1);
             context.ideationQuestions.Add(iq1);
             context.ideas.AddRange(i1,i2);
+            context.fields.Add(if1);
+
             context.answers.AddRange(a1,a2);
             context.options.AddRange(o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, option1, option2, option3, option4, option5, option6, option7);
             

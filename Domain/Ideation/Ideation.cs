@@ -12,10 +12,11 @@ namespace Domain
         public Boolean adminOnly { get; set; }
         public ICollection<IdeationQuestion> questions { get; set; }
         public ICollection<Idea> ideas { get; set; }
+        
         public ICollection<Field> fields { get; set; }
 
         
-        public IEnumerable<IotSetup> iotSetups { get; set; }
+        public ICollection<IotSetup> iotSetups { get; set; }
     }
 
 }

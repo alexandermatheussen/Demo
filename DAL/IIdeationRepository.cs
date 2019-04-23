@@ -30,7 +30,8 @@ namespace DAL
          #region Ideas
          IEnumerable<Idea> readIdeas(int ideationId);
          void createIdea(Idea i);
-         Ideation readIdea(int ideaId);
+         void createIdea(ICollection<Field> fields);
+         Idea readIdea(int ideaId);
          void updateIdea(Idea i);
          void deleteIdea(int ideaId);
 

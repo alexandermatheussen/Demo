@@ -78,14 +78,29 @@ namespace DAL
             return ctx.ideas.Include(i => i.ideation).Include(i => i.user).Where( i => i.ideation.ideationId == ideationId);
         }
 
+        #region Idea
         public void createIdea(Idea i)
         {
-            throw new NotImplementedException();
-        }
 
-        public Ideation readIdea(int ideaId)
+            ctx.ideas.Add(i);           
+            ctx.SaveChanges();
+            Console.WriteLine("Opslagen gelukt!");
+
+
+        }
+        public void createIdea(ICollection<Field> fields)
         {
-            throw new NotImplementedException();
+            Idea i = new Idea();
+            i.fields = fields;
+            ctx.ideas.Add(i);
+            ctx.SaveChanges();
+            Console.WriteLine("Opslagen gelukt!");
+        }
+        
+
+        public Idea readIdea(int ideaId)
+        {
+            return ctx.ideas.Include(i => i.fields).SingleOrDefault(i => i.ideaId == ideaId);
         }
 
         public void updateIdea(Idea i)
@@ -97,5 +112,9 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+        
+
+        #endregion
+       
     }
 }
