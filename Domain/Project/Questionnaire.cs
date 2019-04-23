@@ -11,10 +11,8 @@ namespace Domain
         
         public string name { get; set; }
         public int questionAmount { get; set; }
-        public Boolean confirmed { get; set; }
         public Project project { get; set; }
         public ICollection<Question> questions { get; set; }
-        //public User user { get; set; }
 
         public Questionnaire()
         {

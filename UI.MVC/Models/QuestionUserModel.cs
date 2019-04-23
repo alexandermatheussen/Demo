@@ -2,7 +2,7 @@ using System;
 
 namespace D.UI.MVC.Models
 {
-    public class QuestionUser
+    public class QuestionUserModel
     {
         public int userId { get; set; }
         public int questionId { get; set; }

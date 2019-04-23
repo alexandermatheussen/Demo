@@ -3,9 +3,9 @@ using Domain;
 
 namespace D.UI.MVC.Models
 {
-    public class CombinedModel
+    public class FillInQuestionnaireModel
     {
-        public QuestionUser questionUser { get; set; }
         public IEnumerable<Question> questions { get; set; }
+        public Questionnaire questionnaire { get; set; }
     }
 }

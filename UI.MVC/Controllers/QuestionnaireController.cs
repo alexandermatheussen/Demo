@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using BL;
 using D.UI.MVC.Models;
 using Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using QuestionUser = Domain.QuestionUser;
 
 namespace D.UI.MVC.Controllers
 {
@@ -29,15 +31,99 @@ namespace D.UI.MVC.Controllers
         
         public IActionResult Questionnaire(int questionnaireId)
         {
-            CombinedModel combinedModel = new CombinedModel();
-            combinedModel.questions = qmgr.getQuestions(questionnaireId);
-            return View(combinedModel);
+            FillInQuestionnaireModel fillInQuestionnaireModel = new FillInQuestionnaireModel();
+            fillInQuestionnaireModel.questions = qmgr.getQuestions(questionnaireId);
+            fillInQuestionnaireModel.questionnaire = qmgr.getQuestionnaire(questionnaireId);
+            return View(fillInQuestionnaireModel);
         }
 
         public IActionResult CreateQuestionnairePage(int projectId)
         {
             QuestionnaireQuestion combinedModel = new QuestionnaireQuestion();
             combinedModel.projectId = projectId;
+            return View(combinedModel);
+        }
+
+        public IActionResult ShowResultsPage(int questionnaireId)
+        {
+            QuestionResultModel combinedModel = new QuestionResultModel();
+            IList<QuestionUser> questionUsers = new List<QuestionUser>();
+            IList<string> answers = new List<string>();
+            IList<Question> ques = new List<Question>();
+            IList<OptionsAmount> optionsAmounts = new List<OptionsAmount>();
+            combinedModel.questionnaire = qmgr.getQuestionnaire(questionnaireId); 
+            
+            foreach (var qu in qmgr.getQuestionUsers(questionnaireId))
+            {
+                questionUsers.Add(qu);
+            }
+
+            if (questionUsers.Count == 0)
+            {
+                return View(combinedModel);
+            }
+            combinedModel.questionUsers = questionUsers;
+            var questionnaireAnswerCount = combinedModel.questionUsers.GroupBy(q => q.Question.id).ToList()[0].Count();
+            combinedModel.answeredQuestionAmount = questionnaireAnswerCount;
+
+            foreach (var qu in combinedModel.questionUsers)
+            {
+                Question q = qu.Question;
+                if (q.questionType == QuestionType.DROPDOWN || q.questionType == QuestionType.RADIO_BUTTON)
+                {
+                    IList<Option> op = qmgr.getOptions(q.id).ToList();
+                    foreach (var o in op)
+                    {
+                        if (o.option == qu.Answer)
+                        {
+                            answers.Add(o.id + "-" + o.question.id);
+                        }
+                    }
+                }
+                if (q.questionType == QuestionType.CHECK_BOX)
+                {
+                    IList<Option> op = qmgr.getOptions(q.id).ToList();
+                    foreach (var o in op)
+                    {
+                        var parts = qu.Answer.Split(",");
+                        foreach (var part in parts)
+                        {
+                            if (part == o.option)
+                            {
+                                answers.Add(o.id + "-" + o.question.id);
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (var q in qmgr.getQuestions(questionnaireId))
+            {
+                if (q.questionType == QuestionType.DROPDOWN || q.questionType == QuestionType.RADIO_BUTTON || q.questionType == QuestionType.CHECK_BOX)
+                {
+                    foreach (var o in q.options)
+                    {
+                        q.options.Append(o);
+                    }
+                    ques.Add(q);
+                }
+            }
+            var amountVotedPerQuestion = answers.GroupBy(o => o);
+            foreach (var o in amountVotedPerQuestion)
+            {
+                var parts = o.Key.Split("-");
+                OptionsAmount oa = new OptionsAmount()
+                {
+                    optionId = Convert.ToInt32(parts[0]),
+                    questionId = Convert.ToInt32(parts[1]),
+                    count = o.Count()
+                };
+                optionsAmounts.Add(oa);
+            }
+
+            combinedModel.optionsAmounts = optionsAmounts;
+            combinedModel.questions = ques;
+            
             return View(combinedModel);
         }
 
@@ -60,7 +146,6 @@ namespace D.UI.MVC.Controllers
         {
             var oldQuestionnaireId = 0;
             var oldQuestionnaireName = "";
-            var oldQuestionnaireConfirmed = true;
             ICollection<String> questionOptionKey = new List<string>();
             ICollection<String> questionOptionValue = new List<string>();
             
@@ -70,6 +155,11 @@ namespace D.UI.MVC.Controllers
                 {
                     oldQuestionnaireId = Convert.ToInt32(form[key]);
                 }
+            }
+            IList<QuestionUser> questionUsers = qmgr.getQuestionUsers(oldQuestionnaireId).ToList();
+            foreach (var qu in questionUsers)
+            {
+                qmgr.removeQuestionUser(qu.id);
             }
             
             ICollection<int> notRemovedQuestionIds = new List<int>();
@@ -133,13 +223,6 @@ namespace D.UI.MVC.Controllers
                 if (key == "questionnaire.name")
                 {
                     oldQuestionnaireName = form[key];
-                }
-                if (key == "confirmed")
-                {
-                    if (form[key] == "No")
-                    {
-                        oldQuestionnaireConfirmed = false;
-                    }
                 }
                 if (key.StartsWith("question-"))
                 {
@@ -210,7 +293,6 @@ namespace D.UI.MVC.Controllers
                 }
             }
             oldQuestionnaire.name = oldQuestionnaireName;
-            oldQuestionnaire.confirmed = oldQuestionnaireConfirmed;
             oldQuestionnaire.questionAmount = oldQuestions.Count;
             qmgr.changeQuestionnaire(oldQuestionnaire);
             foreach (var q in oldQuestions)
@@ -247,6 +329,11 @@ namespace D.UI.MVC.Controllers
                 {
                     int questionnaireId = Convert.ToInt32(form[key]);
                     IList<Question> questions = qmgr.getQuestions(questionnaireId).ToList();
+                    IList<QuestionUser> questionUsers = qmgr.getQuestionUsers(questionnaireId).ToList();
+                    foreach (var qu in questionUsers)
+                    {
+                        qmgr.removeQuestionUser(qu.id);
+                    }
                     foreach (var q in questions)
                     {
                         IList<Option> options = qmgr.getOptions(q.id).ToList();
@@ -267,7 +354,6 @@ namespace D.UI.MVC.Controllers
         {
             int projectId = 0;
             String questionnaireName = null;
-            Boolean questionnaireConfirmed = true;
             List<Question> questions = new List<Question>();
             var currentFieldset = 1;
             IList<String> fieldTypes = new List<String>();
@@ -315,21 +401,7 @@ namespace D.UI.MVC.Controllers
                         questionnaireName = name;
                     }
                 }
-                if (key == "confirmed")
-                {
-                    foreach (var confirmed in form[key])
-                    {
-                        if (confirmed == "Yes")
-                        {
-                            questionnaireConfirmed = true;
-                        } 
-                        else if (confirmed == "No")
-                        {
-                            questionnaireConfirmed = false;
-                        }
-                    }
-                }
-                if (key == "question.question")
+                if (key.StartsWith("question.question"))
                 {
                     foreach (var question in form[key])
                     {
@@ -361,37 +433,19 @@ namespace D.UI.MVC.Controllers
                     }
                 }
             }
-            qmgr.addQuestionnaire(questions, questionnaireName, questions.Count, questionnaireConfirmed, projectId);
+            qmgr.addQuestionnaire(questions, questionnaireName, questions.Count, projectId);
             return RedirectToAction("Projects","Project");
         }
 
         [HttpPost]
         public IActionResult CreateUserQuestion(int userId, IFormCollection form)
         {
-            List<int> currentQuestionIds = new List<int>();
-            var currentQuestion = 0;
-            
             foreach (var key in form.Keys)
             {
-                if (key == "questionId")
+                if (key.StartsWith("Answer-"))
                 {
-                    foreach (var answer in form[key])
-                    {
-                        currentQuestionIds.Add(Convert.ToInt32(answer));
-                    }
-                }
-                if (key != "__RequestVerificationToken" && key != "questionId" && !key.StartsWith("CheckBox"))
-                {
-                    foreach (var answer in form[key])
-                    {
-                        qmgr.addQuestionUser(userId, currentQuestionIds[currentQuestion], answer);
-                        currentQuestion++;
-                    }
-                }
-                if (key.StartsWith("CheckBox"))
-                {
-                    qmgr.addQuestionUser(userId, currentQuestionIds[currentQuestion], form[key]);
-                    currentQuestion++;
+                    var parts = key.Split("-");
+                    qmgr.addQuestionUser(userId, Convert.ToInt32(parts[1]), form[key]);
                 }
             }
             return RedirectToAction("Projects", "Project");

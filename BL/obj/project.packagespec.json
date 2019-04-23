@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\BL\\BL.csproj",
+    "projectUniqueName": "D:\\OneDrive\\Documenten\\Demo\\BL\\BL.csproj",
     "projectName": "BL",
-    "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\BL\\BL.csproj",
-    "outputPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\BL\\obj\\",
+    "projectPath": "D:\\OneDrive\\Documenten\\Demo\\BL\\BL.csproj",
+    "outputPath": "D:\\OneDrive\\Documenten\\Demo\\BL\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\DAL\\DAL.csproj": {
-            "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\DAL\\DAL.csproj"
+          "D:\\OneDrive\\Documenten\\Demo\\DAL\\DAL.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\Demo\\DAL\\DAL.csproj"
           },
-          "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj": {
-            "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj"
+          "D:\\OneDrive\\Documenten\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "D:\\OneDrive\\Documenten\\Demo\\Domain\\Domain.csproj"
           }
         }
       }

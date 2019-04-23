@@ -79,3 +79,15 @@ D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.Assembly
 D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
 D:\OneDrive\Documenten\Nieuwe map\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\OneDrive\Documenten\Demo\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\OneDrive\Documenten\Demo\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\OneDrive\Documenten\Demo\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\OneDrive\Documenten\Demo\DAL\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\DAL\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\OneDrive\Documenten\Demo\DAL\obj\Debug\netstandard2.0\DAL.pdb

@@ -34,6 +34,7 @@ namespace DAL
             ctx.questionUsers.Add(qu);
             ctx.SaveChanges();
         }
+
         public IEnumerable<Questionnaire> readQuestionnaires(int projectId)
         {
             return ctx.questionnaires
@@ -59,6 +60,19 @@ namespace DAL
         {
             return ctx.options
                 .Where(o => o.question.id == questionId);
+        }
+
+        public IEnumerable<QuestionUser> readQuestionUsers(int questionnaireId)
+        {
+            IList<QuestionUser> questionUsers = new List<QuestionUser>();
+            foreach (var q in ctx.questions.Where(q => q.questionnaire.id == questionnaireId))
+            {
+                foreach (var qu in ctx.questionUsers.Where(qu => qu.Question.id == q.id))
+                {
+                    questionUsers.Add(qu);
+                }
+            }
+            return questionUsers;
         }
 
         public void createQuestionnaire(Questionnaire q, int projectId)
@@ -93,6 +107,12 @@ namespace DAL
         public Question readQuestion(int questionId)
         {
             return ctx.questions.Find(questionId);
+        }
+        
+        public void deleteQuestionUser(int questionUserId)
+        {
+            ctx.questionUsers.Remove(ctx.questionUsers.Find(questionUserId));
+            ctx.SaveChanges();
         }
 
         public void updateQuestionnaire(Questionnaire q)

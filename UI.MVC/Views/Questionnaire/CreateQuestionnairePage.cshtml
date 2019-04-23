@@ -20,13 +20,6 @@
         </tr>
         <tr>
             <td>
-                <h4>Do users have to confirm this questionnaire?</h4>
-                <p><input asp-for="confirmed" type="radio" value="Yes"/> Yes</p>
-                <p><input asp-for="confirmed" type="radio" value="No"/> No</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 <h4>Add questions to your new questionnaire:</h4>
                 <button type="button" id="btnAddField">Add Question</button>
                 @Html.AntiForgeryToken()
@@ -35,8 +28,6 @@
         </tr>
     </table>
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create new questionnaire" class="btn btn-default"/>
-        </div>
+        <input type="submit" value="Create new questionnaire" class="btn btn-default"/>
     </div>
 }

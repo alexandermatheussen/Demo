@@ -60,7 +60,6 @@ namespace DAL.EF
                 name = "Safety",
                 questionAmount = 4,
                 project = p1,
-                confirmed = true,
                 questions = new List<Question>()
             };
             Questionnaire questionnaire2 = new Questionnaire()
@@ -68,7 +67,6 @@ namespace DAL.EF
                 name = "Noise",
                 questionAmount = 3,
                 project = p1,
-                confirmed = false,
                 questions = new List<Question>()
             };
             p1.questionnaires = new List<Questionnaire>() { questionnaire1, questionnaire2 };
@@ -174,7 +172,6 @@ namespace DAL.EF
                 name = "Budget",
                 questionAmount = 4,
                 project = p2,
-                confirmed = true,
                 questions = new List<Question>(),
             };
             p2.questionnaires = new List<Questionnaire>() { questionnaire3 };

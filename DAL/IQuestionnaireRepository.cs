@@ -13,6 +13,7 @@ namespace DAL
         IEnumerable<IotSetup> readIotSetups();
         IEnumerable<Question> readQuestions(int questionnaireId);
         IEnumerable<Option> readOptions(int questionId);
+        IEnumerable<QuestionUser> readQuestionUsers(int questionnaireId);
         void createQuestion(Question q);
         void createOption(Option o);
         void updateQuestionnaire(Questionnaire q);
@@ -22,5 +23,6 @@ namespace DAL
         void updateOption(Option o);
         void deleteOption(int optionId);
         void createQuestionUser(int userId, int questionId, String answer);
+        void deleteQuestionUser(int questionUserId);
     }
 }

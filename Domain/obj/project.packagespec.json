@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj",
+    "projectUniqueName": "D:\\OneDrive\\Documenten\\Demo\\Domain\\Domain.csproj",
     "projectName": "Domain",
-    "projectPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\Domain.csproj",
-    "outputPath": "D:\\OneDrive\\Documenten\\Nieuwe map\\Demo\\Domain\\obj\\",
+    "projectPath": "D:\\OneDrive\\Documenten\\Demo\\Domain\\Domain.csproj",
+    "outputPath": "D:\\OneDrive\\Documenten\\Demo\\Domain\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

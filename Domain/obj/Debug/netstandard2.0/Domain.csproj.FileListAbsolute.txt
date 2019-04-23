@@ -61,3 +61,12 @@ D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.As
 D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
 D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.dll
 D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.pdb

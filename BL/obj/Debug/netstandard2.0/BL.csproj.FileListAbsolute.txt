@@ -91,3 +91,17 @@ D:\OneDrive\Documenten\Nieuwe map\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyIn
 D:\OneDrive\Documenten\Nieuwe map\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 D:\OneDrive\Documenten\Nieuwe map\Demo\BL\obj\Debug\netstandard2.0\BL.dll
 D:\OneDrive\Documenten\Nieuwe map\Demo\BL\obj\Debug\netstandard2.0\BL.pdb
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\BL.deps.json
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\BL.dll
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\BL.pdb
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\DAL.dll
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\DAL.pdb
+D:\OneDrive\Documenten\Demo\BL\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.dll
+D:\OneDrive\Documenten\Demo\BL\obj\Debug\netstandard2.0\BL.pdb
