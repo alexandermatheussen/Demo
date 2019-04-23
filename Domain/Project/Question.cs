@@ -28,5 +28,11 @@ namespace Domain
         {
             this.question = question;
         }
+
+        public Question(QuestionType questionType, String question)
+        {
+            this.questionType = questionType;
+            this.question = question;
+        }
     }
 }

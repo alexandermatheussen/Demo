@@ -52,3 +52,21 @@ C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\Domain\obj\De
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\Users\Alex\Desktop\Stack\‌IntegratieProject 2019\GitRepo\Demo\Domain\obj\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Nieuwe map\Demo\Domain\obj\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\OneDrive\Documenten\Demo\Domain\obj\Debug\netstandard2.0\Domain.pdb
