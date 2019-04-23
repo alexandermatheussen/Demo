@@ -64,3 +64,36 @@ C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitRepo\Demo\UI.MVC\obj\D
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitRepo\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.dll
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitRepo\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.pdb
 C:\Users\alexa\Desktop\stack\‌IntegratieProject 2019\GitRepo\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csproj.CopyComplete
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.deps.json
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.runtimeconfig.json
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.runtimeconfig.dev.json
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.dll
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.pdb
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.Views.dll
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\UI.MVC.Views.pdb
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csprojAssemblyReference.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csproj.CoreCompileInputs.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.RazorAssemblyInfo.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.RazorAssemblyInfo.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.AssemblyInfoInputs.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.AssemblyInfo.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.TagHelpers.input.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.TagHelpers.output.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.RazorCoreGenerate.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Input.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.RazorTargetAssemblyInfo.cache
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.RazorTargetAssemblyInfo.cs
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.Views.pdb
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.dll
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.pdb
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csproj.CopyComplete
