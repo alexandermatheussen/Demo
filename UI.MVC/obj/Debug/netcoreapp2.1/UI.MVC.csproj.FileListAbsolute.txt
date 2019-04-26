@@ -272,3 +272,4 @@ C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.Views.p
 C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csproj.CopyComplete
 C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.dll
 C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.pdb
+C:\Users\Cem\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.g.cshtml.cs
