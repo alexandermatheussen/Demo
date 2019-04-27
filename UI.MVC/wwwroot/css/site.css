@@ -5,6 +5,26 @@ for details on configuring this project to bundle and minify static web assets. 
     box-sizing: border-box;
 }
 
+.carousel-item{
+    height: 385px;
+   
+}
+
+.carousel-image-1{
+    background: url(/images/image1.jpg);
+    background-size:cover;
+}
+
+.carousel-image-2 {
+    background: url(/images/image2.jpg);
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url(/images/image3.jpg);
+    background-size: cover;
+}
+
 
 body {
     /*padding top & bottom aangepast*/
