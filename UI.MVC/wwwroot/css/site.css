@@ -5,6 +5,7 @@ for details on configuring this project to bundle and minify static web assets. 
     box-sizing: border-box;
 }
 
+
 .carousel-item{
     height: 385px;
    
@@ -20,17 +21,23 @@ for details on configuring this project to bundle and minify static web assets. 
     background-size: cover;
 }
 
+
 .carousel-image-3 {
     background: url(/images/image3.jpg);
     background-size: cover;
 }
 
-
 body {
-    /*padding top & bottom aangepast*/
-    background-color: #252525;
-    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+    background-color: rgba(25, 23, 23, 0.94);
+    background-image: url("../images/bgcity.jpg");
+    height: 10px;
+    background-repeat: no-repeat;
+    
 }
+
+/* body {padding top & bottom aangepast background-color: #252525; background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;} */
+
+
 
 
 
