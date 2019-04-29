@@ -17,10 +17,7 @@
     {
         <tr>
             <td>
-           @item.user.firstName.Substring(0,1).@Html.DisplayFor(modelItem => item.user.lastName)
-            
-           
-                          
+                @item.user.firstName.Substring(0,1).@Html.DisplayFor(modelItem => item.user.lastName)    
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.title)
@@ -29,6 +26,84 @@
             <td>
                 @Html.DisplayFor(modelItem => item.content)
             </td>
+            <td><button onclick="showPopup(@item.ideaId)">Report</button></td>
         </tr>
     }
 </table>
+
+<div style="top: 0; bottom: 0; left: 0; right: 0; position: fixed; background-color: lightgrey; opacity: 0.7; display: none" id="blur" name="blur">
+</div>
+<div style="position: absolute; left: 50%; top: 50%; background-color: whitesmoke; width: 53%; height: 40%; transform: translate(-50%, -50%); display: none" id="popup" name="popup">
+    <div name="popupContent" id="popupContent" style="height: 80%">
+        <div name="inputArea" id="inputArea" style="width: 100%; height: 100%">
+            <p style="text-align: center; padding: 10px; margin: 0px">Why do you want to report this post?</p>
+            <div style="text-align: center; height: 70%">
+                <textarea style="width: 90%; height: 100%; resize: none" id="reportText" name="reportText"></textarea>
+            </div>
+        </div>
+        <div name="successMessage" id="successMessage" style="text-align: center; width: 100%; height: 100%; padding-top: 80px">
+            <img src="/images/green_check.png" style="width: 50px; height: 50px"/>
+            <p>Your report has been successfully submitted.</p>
+        </div>
+        <div name="failureMessage" id="failureMessage" style="text-align: center; width: 100%; height: 100%; padding-top: 80px">
+            <img src="/images/red_cross.jpg" style="width: 50px; height: 50px"/>
+            <p>Something went wrong, please try again later.</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-bottom: 5px; height: 20%">
+        <button style="margin-right: 10px" onclick="submitReport()" id="submitButton">Submit</button><button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var ideaId = 0;
+    function showPopup(id) {
+        ideaId = id;
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("blur").style.display = "block";
+        document.getElementById("inputArea").style.display = "block";
+        document.getElementById("submitButton").style.display = "inline";
+        closeSubmissionMessage();
+    }
+    
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("blur").style.display = "none";
+        document.getElementById("reportText").value = "";
+        closeSubmissionMessage();
+    }
+    
+    function submitReport() {
+        var reportMessage = $('#reportText').val();
+        
+        if (reportMessage) {
+            var newReport = { Idea: ideaId, Message: reportMessage}
+            
+            $.ajax('/api/Reports',
+                    {
+                        type: 'POST',
+                        data: JSON.stringify(newReport),
+                        contentType: 'application/json',
+                        datatType: 'json'
+                    })
+                .done(function(data) {
+                    closeInputArea();
+                    document.getElementById("successMessage").style.display = "block";
+                })
+                .fail(function() {
+                    closeInputArea();
+                    document.getElementById("failureMessage").style.display = "block";
+                });
+        }
+    }
+    
+    function closeInputArea() {
+        document.getElementById("reportText").value = "";
+        document.getElementById("inputArea").style.display = "none";
+        document.getElementById("submitButton").style.display = "none";
+    }
+    function closeSubmissionMessage() {
+        document.getElementById("successMessage").style.display = "none";
+        document.getElementById("failureMessage").style.display = "none";
+    }
+</script>

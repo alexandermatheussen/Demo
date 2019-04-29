@@ -33,6 +33,7 @@ namespace DAL.EF
         public DbSet<IdeationQuestion> ideationQuestions { get; set; }
         public DbSet<Idea> ideas { get; set; }
         public DbSet<Answer> answers { get; set; }
+        public DbSet<Report> reports { get; set; }
         
 
         #endregion
@@ -90,10 +91,18 @@ namespace DAL.EF
             modelBuilder.Entity<Answer>().Property<int>("ideaId"); // shadow FK naar Idea
             modelBuilder.Entity<Answer>().Property<int>("userId"); // shadow FK naar User
             
-            modelBuilder.Entity<Answer>().HasOne<Idea>(i => i.idea).WithMany(a => a.answers)
+            modelBuilder.Entity<Answer>().HasOne(i => i.idea).WithMany(a => a.answers)
                 .HasForeignKey("ideaId");
-            modelBuilder.Entity<Answer>().HasOne<User>(u => u.user).WithMany(a=> a.answers)
+            modelBuilder.Entity<Answer>().HasOne(u => u.user).WithMany(a=> a.answers)
                 .HasForeignKey("userId");
+
+            modelBuilder.Entity<Report>().Property<int>("IdeaFK");
+            modelBuilder.Entity<Report>().HasOne(i => i.idea).WithMany(r => r.reports)
+                .HasForeignKey("IdeaFK");
+            
+            /*modelBuilder.Entity<Report>().Property<int>("UserFK");
+            modelBuilder.Entity<Report>().HasOne(u => u.user).WithMany(r => r.reports)
+                .HasForeignKey("UserFK");*/
         }
 
         private readonly bool delaySave = false;

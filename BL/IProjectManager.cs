@@ -11,5 +11,8 @@ namespace BL
         void addProject(Project p);
         void changeProject(Project p);
         void removeProject(int id);
+        Idea getIdea(int ideaId);
+        Report addReport(int ideaId, string reportMessage);
+        IEnumerable<Report> getReports(int ideaId);
     }
 }

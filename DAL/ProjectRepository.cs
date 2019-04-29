@@ -65,5 +65,29 @@ namespace DAL
             ctx.SaveChanges();
         }
         #endregion
+
+        public Idea readIdea(int id)
+        {
+            return ctx.ideas.Find(id);
+        }
+
+        public void updateIdea(Idea idea)
+        {
+            ctx.ideas.Update(idea);
+            ctx.SaveChanges();
+        }
+
+        public IEnumerable<Report> readReportsOfIdea(int ideaId)
+        {
+            IEnumerable<Report> reports = ctx.reports.Where(r => r.idea.ideaId == ideaId).AsEnumerable();
+            return reports;
+        }
+
+        public Report createReport(Report report)
+        {
+            ctx.reports.Add(report);
+            ctx.SaveChanges();
+            return report;
+        }
     }
 }

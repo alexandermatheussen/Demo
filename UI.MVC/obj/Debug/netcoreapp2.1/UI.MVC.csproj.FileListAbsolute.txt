@@ -198,4 +198,4 @@ C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\bin\Debug\netcoreapp2.1\DAL.pdb
 C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.Views.pdb
 C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\UI.MVC.csproj.CopyComplete
 C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\User\Edit.g.cshtml.cs
-C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\User\EditPassword.g.cshtml.cs
+C:\Users\Lukas\Documents\GitHub\Demo\UI.MVC\obj\Debug\netcoreapp2.1\Razor\Views\User\Password.g.cshtml.cs

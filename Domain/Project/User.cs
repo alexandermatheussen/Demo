@@ -25,5 +25,6 @@ namespace Domain
         //public Questionnaire questionnaire { get; set; }
         public ICollection<Idea> ideas { get; set; }
         public ICollection<Answer> answers { get; set; }
+        public ICollection<Report> reports { get; set; }
     }
 }

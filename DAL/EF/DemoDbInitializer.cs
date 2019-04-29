@@ -68,8 +68,8 @@ namespace DAL.EF
                 address = address1,
                 questionnaireAnswer = new List<QuestionUser>()
             };
-            User u2 = new User(){ firstName = "Peter", lastName = "Smet", address = addres2};
-            User u3 = new User(){ firstName = "Dirk", lastName = "Bakker", address = address1};
+            User u2 = new User(){ firstName = "Peter", lastName = "Smet", eMailAddress = "persoon1@gmail.com", password = "passwoord123", age = 20,address = addres2};
+            User u3 = new User(){ firstName = "Dirk", lastName = "Bakker", eMailAddress = "persson2@hotmail.com", password = "hallo1234", age = 35, address = address1};
             #endregion
             
             #region TestProject 1
