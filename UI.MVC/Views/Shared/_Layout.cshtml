@@ -3,21 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - UI.MVC</title>
+    <title>@ViewData["Title"] - City of Ideas</title> @*--aangepast--*@
+
+
 
     <environment include="Development">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        @*--aangepast--
+            <a class="navbar-brand" href="#">
+
+                <img src="~/images/ideeLogo.jpg" alt="Logo" style="width:35px;" height="30" />
+            </a> *@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,26 +41,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">UI.MVC</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><i class="far fa-lightbulb"></i><b> City Of Ideas</b></></a> @*--aangepast--*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Project" asp-action="Projects">Projects</a></li>
+                <ul class="nav navbar-nav mr-auto">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index"><p><i class="fas fa-home"></i><b> Home |</b></p></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About"><p><i class="fas fa-project-diagram"></i><b> General Projects |</b></p></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"><p><i class="fas fa-question"></i><b> Form elements |</b></p></a></li>
+                    <li><a asp-area="" asp-controller="Project" asp-action="Projects"><p><i class="fas fa-project-diagram"></i><b> Projects |</b></p></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Privacy"><p><i class="fas fa-sliders-h"></i><b> Admin page |</b></p></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Login"><p><i class="far fa-user"></i><b> Inloggen</b></p></a></li>
+
                 </ul>
+
             </div>
         </div>
     </nav>
 
+
+
+
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container body-content text-center text-white ">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - UI.MVC</p>
+            <p>&copy; 2019 - City Of Ideas</p>
+
         </footer>
     </div>
 
@@ -70,6 +93,8 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
+
+    @RenderSection("styles", false);
     @RenderSection("Scripts", required: false)
 </body>
 </html>
