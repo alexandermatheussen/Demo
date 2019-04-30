@@ -19,9 +19,10 @@ namespace D.UI.MVC.Controllers
         {
             ideationMgr = new IdeationManager();
         }
-        public IActionResult CreateIdeaPage(int id =1)
+        public IActionResult CreateIdeaPage(int ideationId)
         {
-            IdeationQuestion[] ideationQuestions = ideationMgr.GetIdeationQuestions(id).ToArray();
+            
+            IdeationQuestion[] ideationQuestions = ideationMgr.GetIdeationQuestions(ideationId).ToArray();
             IdeaViewModel ideaViewModel = new IdeaViewModel();
 
 
@@ -34,6 +35,7 @@ namespace D.UI.MVC.Controllers
             }
 
             ideaViewModel.ideationQuestion = questions;
+            ideaViewModel.ideationId = ideationId;
                 
       
           
@@ -86,20 +88,23 @@ namespace D.UI.MVC.Controllers
                 }    
                                         
             }
-            
+
+            Ideation ideation = ideationMgr.getIdeation(ideaViewModel.ideationId);
+
+            idea.ideation = ideation;
             fields.Add(textField);
             fields.Add(imageField);
             fields.Add(videoField);
             fields.Add(mapField);
             idea.fields = fields;
             ideationMgr.createIdea(idea);
-            
-            
+
+            var projectId = ideationMgr.getIdeation(ideaViewModel.ideationId).project.projectId;
             
             
 
 
-            return RedirectToAction("");
+            return RedirectToAction("Project" , "Project" , new { id= projectId });
         }
         
 

@@ -25,6 +25,7 @@ namespace D.UI.MVC.Models.Ideas
     }*/
     public class IdeaViewModel
     {
+        public int ideationId { get; set; }
         public String[] ideationQuestion { get; set; }
         
         public int ideaViewModelId { get; set; }
@@ -100,6 +101,14 @@ namespace D.UI.MVC.Models.Ideas
         public double latitude { get; set; }
         public double longitude { get; set; }
     }
+
+    public class QuestionFieldViewModel : ImageFieldViewModel
+    {
+        
+        
+        
+    }
+    
     
         
 }

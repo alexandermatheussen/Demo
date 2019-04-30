@@ -25,6 +25,11 @@ namespace BL
             ideationRepo = new IdeationRepository(unitOfWorkManager.UnitOfWork);
         }
 
+        public Ideation getIdeation(int ideationId)
+        {
+            return ideationRepo.readIdeation(ideationId);
+        }
+
         public IEnumerable<Ideation> getIdeations(int projectId)
         {
            return  ideationRepo.readIdeations(projectId);

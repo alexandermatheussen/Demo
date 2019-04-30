@@ -89,14 +89,16 @@
         </e>
         <e p="Project" t="Include">
           <e p="IotSetup.cs" t="Include" />
-          <e p="Option.cs" t="Include" />
           <e p="Phase.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Project.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="Questionnaire" t="Include">
+          <e p="Option.cs" t="Include" />
           <e p="Question.cs" t="Include" />
           <e p="Questionnaire.cs" t="Include" />
           <e p="QuestionUser.cs" t="Include" />
-          <e p="User.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
@@ -158,6 +160,7 @@
             <e p="Index.cshtml" t="Include" />
             <e p="Input.cshtml" t="Include" />
             <e p="Input.cshtml.cs" t="Include" />
+            <e p="Login.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="Idea" t="Include">
@@ -170,6 +173,7 @@
             <e p="EditorTemplates" t="Include">
               <e p="ImageFieldViewModel.cshtml" t="Include" />
               <e p="MapFieldViewModel.cshtml" t="Include" />
+              <e p="QuestionFieldViewModel.cshtml" t="Include" />
               <e p="TextFieldViewModel.cshtml" t="Include" />
               <e p="VideoFieldViewModel.cshtml" t="Include" />
             </e>
@@ -206,9 +210,27 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
+            <e p="antwerp.jpg" t="Include" />
             <e p="banner1.svg" t="Include" />
             <e p="banner2.svg" t="Include" />
             <e p="banner3.svg" t="Include" />
+            <e p="bgcity.jpg" t="Include" />
+            <e p="building3.jpg" t="Include" />
+            <e p="comments.png" t="Include" />
+            <e p="delen.jpg" t="Include" />
+            <e p="ideeLogo.jpg" t="Include" />
+            <e p="image1.jpg" t="Include" />
+            <e p="image2.jpg" t="Include" />
+            <e p="image3.jpg" t="Include" />
+            <e p="leuk.jpg" t="Include" />
+            <e p="park1.jpg" t="Include" />
+            <e p="park2.jpg" t="Include" />
+            <e p="park3.jpg" t="Include" />
+            <e p="park4.jpg" t="Include" />
+            <e p="person.png" t="Include" />
+            <e p="ryoji-iwata-543189-unsplash.jpg" t="Include" />
+            <e p="straat2.jpg" t="Include" />
+            <e p="straat3.jpg" t="Include" />
           </e>
           <e p="js" t="Include">
             <e p="dynamicForm.js" t="Include" />

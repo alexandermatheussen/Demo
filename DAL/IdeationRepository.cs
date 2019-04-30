@@ -34,7 +34,8 @@ namespace DAL
 
         public Ideation readIdeation(int id)
         {
-            throw new System.NotImplementedException();
+            return ctx.ideations.Include(p => p.project).SingleOrDefault(i => i.ideationId == id);
+
         }
 
         public void updateIdeation(Ideation i)

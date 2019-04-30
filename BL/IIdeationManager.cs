@@ -5,6 +5,7 @@ namespace BL
 {
     public interface IIdeationManager
     {
+        Ideation getIdeation(int ideationId);
         IEnumerable<Ideation> getIdeations(int projectId);
         IEnumerable<IdeationQuestion> GetIdeationQuestionsForProject(int projectId);
 

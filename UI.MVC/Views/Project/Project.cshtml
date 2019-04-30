@@ -27,6 +27,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.question)
             </td>
+            <td>
+                @Html.ActionLink("Create Idea", "CreateIdeaPage", "Idea"
+                    , new { ideationId=item.ideation.ideationId })
+            </td>
             
             <td>
                 @Html.ActionLink("Ideas", "Ideas", "Project"
