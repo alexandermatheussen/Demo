@@ -47,10 +47,15 @@ namespace DAL
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<IdeationQuestion> readIdeationsQuestions(int ProjectId)
+        public IEnumerable<IdeationQuestion> ReadIdeationQuestionsForProject(int ProjectId)
         {
             return ctx.ideationQuestions.Include(i => i.ideation).Where(i => i.ideation.project.projectId == ProjectId);
 
+        }
+
+        public IEnumerable<IdeationQuestion> ReadIdeationQuestions(int ideationId)
+        {
+            return ctx.ideationQuestions.Where(i => i.ideation.ideationId == ideationId);
         }
 
         public void createIdeationQuestion(IdeationQuestion i)

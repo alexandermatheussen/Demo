@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "e78f0f588ddca77de42a5218d416eade992e3823"
+    "signature": "d08adcc8fe4e71f2767b60ebac58cbada9abda3c"
   },
   "compilationOptions": {},
   "targets": {
@@ -19,6 +19,14 @@
         },
         "runtime": {
           "BL.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Mvc.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.11128.0"
+          }
         }
       },
       "Microsoft.Data.Sqlite.Core/2.1.0": {
@@ -603,6 +611,7 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.Mvc.Futures": "5.1.0-rc1",
           "Microsoft.EntityFrameworkCore": "2.1.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.4",
           "Microsoft.Extensions.Logging.Debug": "2.1.1",
@@ -619,6 +628,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7aTKRXX6cyE1cLU02+QZQTC0L3xVi9VgGLDwFJ0ZkDTx+/bq2b9O8Fk44fHtIk+KGOf5HQrelNgDmV4XGegvmg==",
+      "path": "microsoft.aspnet.mvc.futures/5.1.0-rc1",
+      "hashPath": "microsoft.aspnet.mvc.futures.5.1.0-rc1.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/2.1.0": {
       "type": "package",

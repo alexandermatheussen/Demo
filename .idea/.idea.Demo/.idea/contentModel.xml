@@ -60,11 +60,9 @@
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Field" t="Include">
           <e p="Field.cs" t="Include" />
-          <e p="IdeaField.cs" t="Include" />
           <e p="ImageField.cs" t="Include" />
           <e p="MapField.cs" t="Include" />
           <e p="QuestionField.cs" t="Include" />
-          <e p="TemplateField.cs" t="Include" />
           <e p="TextField.cs" t="Include" />
           <e p="VideoField.cs" t="Include" />
         </e>
@@ -121,21 +119,22 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
           <e p="IdeaController.cs" t="Include" />
-          <e p="ImageController.cs" t="Include" />
           <e p="ProjectController.cs" t="Include" />
           <e p="QuestionnaireController.cs" t="Include" />
-          <e p="UploadController.cs" t="Include" />
         </e>
         <e p="Demo_EF.db" t="Include" />
         <e p="Models" t="Include">
-          <e p="CombinedModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="FillInQuestionnaireModel.cs" t="Include" />
           <e p="Ideas" t="Include">
             <e p="IdeaViewModel.cs" t="Include" />
           </e>
           <e p="Idee.cs" t="Include" />
+          <e p="OptionsAmount.cs" t="Include" />
           <e p="ProjectAndQuestions.cs" t="Include" />
-          <e p="QuestionUser.cs" t="Include" />
+          <e p="QuestionnaireQuestion.cs" t="Include" />
+          <e p="QuestionResultModel.cs" t="Include" />
+          <e p="QuestionUserModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -162,8 +161,11 @@
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="Idea" t="Include">
+            <e p="CreateIdeaPage.cshtml" t="Include" />
             <e p="DisplayTemplates" t="Include">
               <e p="ImageFieldViewModel.cshtml" t="Include" />
+              <e p="MapFieldViewModel.cshtml" t="Include" />
+              <e p="TextFieldViewModel.cshtml" t="Include" />
             </e>
             <e p="EditorTemplates" t="Include">
               <e p="ImageFieldViewModel.cshtml" t="Include" />
@@ -171,11 +173,7 @@
               <e p="TextFieldViewModel.cshtml" t="Include" />
               <e p="VideoFieldViewModel.cshtml" t="Include" />
             </e>
-            <e p="Idea.cshtml" t="Include" />
             <e p="MapInput.cshtml" t="Include" />
-          </e>
-          <e p="Image" t="Include">
-            <e p="ImageTest.cshtml" t="Include" />
           </e>
           <e p="Project" t="Include">
             <e p="_ImagePreview.cshtml" t="Include" />
@@ -186,17 +184,18 @@
             <e p="Projects.cshtml" t="Include" />
           </e>
           <e p="Questionnaire" t="Include">
+            <e p="CreateQuestionnairePage.cshtml" t="Include" />
+            <e p="DeleteQuestionnairePage.cshtml" t="Include" />
+            <e p="EditQuestionnairePage.cshtml" t="Include" />
             <e p="Questionnaire.cshtml" t="Include" />
             <e p="Questionnaires.cshtml" t="Include" />
+            <e p="ShowResultsPage.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
-          </e>
-          <e p="Upload" t="Include">
-            <e p="Upload.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">
@@ -212,6 +211,7 @@
             <e p="banner3.svg" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="dynamicForm.js" t="Include" />
             <e p="ImageUpload.js" t="Include" />
             <e p="Maps.js" t="Include" />
             <e p="site.js" t="Include" />

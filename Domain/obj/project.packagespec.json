@@ -26,6 +26,10 @@
   "frameworks": {
     "netstandard2.0": {
       "dependencies": {
+        "Microsoft.AspNet.Mvc.Futures": {
+          "target": "Package",
+          "version": "[5.1.0-rc1, )"
+        },
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
           "version": "[2.1.4, )"

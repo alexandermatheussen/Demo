@@ -29,7 +29,7 @@ namespace D.UI.MVC.Controllers
         public IActionResult Project(int id)
         {
             Project p1 = projectMgr.getProject(id);
-            IEnumerable<IdeationQuestion> ideationQuestions1 = ideationMgr.getIdeationQuestions(id);
+            IEnumerable<IdeationQuestion> ideationQuestions1 = ideationMgr.GetIdeationQuestionsForProject(id);
             var model = new ProjectAndQuestions() {ideationQuestions = ideationQuestions1, project = p1};
 
             return View(model);
@@ -45,11 +45,7 @@ namespace D.UI.MVC.Controllers
         {
             return View();
         }
-     /*   public IActionResult ImageTest()
-        {
-            ImageField x = new ImageField();
-            return View(x);
-        }*/
+     
         
         
         
@@ -64,15 +60,7 @@ namespace D.UI.MVC.Controllers
            {
              imageFields.Add((ImageField)imagefield);
            }
-           //ImageField imageField =  (ImageField)fields[0];
-       
-                     
-            
-            
-          //  var base64 = Convert.ToBase64String(imageField.data);
-         //   var imgSrc = String.Format("data:image/png;base64,{0}", base64);
-
-         //   ViewBag.ImageData = imgSrc;
+          
             return View(imageFields);
         }
     }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "13f2af3248b7bc855a12b848eed848ac4ac086d2"
+    "signature": "6a52d288c845db1558ba3db7c59a6ccd767528b2"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
         "dependencies": {
           "BL": "1.0.0",
           "Domain": "1.0.0",
+          "Microsoft.AspNet.Mvc.Futures": "5.1.0-rc1",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.EntityFrameworkCore": "2.1.4",
@@ -39,6 +40,17 @@
         },
         "compile": {
           "UI.MVC.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Mvc.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.11128.0"
+          }
+        },
+        "compile": {
+          "lib/net40/Microsoft.Web.Mvc.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -389,6 +401,7 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.Mvc.Futures": "5.1.0-rc1",
           "Microsoft.EntityFrameworkCore": "2.1.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.4",
           "Microsoft.Extensions.Logging.Debug": "2.1.1",
@@ -3442,6 +3455,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7aTKRXX6cyE1cLU02+QZQTC0L3xVi9VgGLDwFJ0ZkDTx+/bq2b9O8Fk44fHtIk+KGOf5HQrelNgDmV4XGegvmg==",
+      "path": "microsoft.aspnet.mvc.futures/5.1.0-rc1",
+      "hashPath": "microsoft.aspnet.mvc.futures.5.1.0-rc1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

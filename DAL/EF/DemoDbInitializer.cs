@@ -255,8 +255,6 @@ namespace DAL.EF
             it1.ideas = new List<Idea>(){ i1,i2};
             //Fields
             ICollection<Field> fields = new List<Field>();
-            ImageField if1 = new ImageField(){imageName = "testimage",idea = i1};
-            i1.fields = new List<Field>(){if1};
            
            
             //answers 
@@ -281,7 +279,6 @@ namespace DAL.EF
             context.ideations.Add(it1);
             context.ideationQuestions.Add(iq1);
             context.ideas.AddRange(i1,i2);
-            context.fields.Add(if1);
 
             context.answers.AddRange(a1,a2);
             context.options.AddRange(o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, option1, option2, option3, option4, option5, option6, option7);

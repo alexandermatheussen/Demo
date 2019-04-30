@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.Mvc.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -693,6 +702,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.AspNet.Mvc.Futures": "5.1.0-rc1",
           "Microsoft.EntityFrameworkCore": "2.1.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.4",
           "Microsoft.Extensions.Logging.Debug": "2.1.1",
@@ -708,6 +718,19 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNet.Mvc.Futures/5.1.0-rc1": {
+      "sha512": "7aTKRXX6cyE1cLU02+QZQTC0L3xVi9VgGLDwFJ0ZkDTx+/bq2b9O8Fk44fHtIk+KGOf5HQrelNgDmV4XGegvmg==",
+      "type": "package",
+      "path": "microsoft.aspnet.mvc.futures/5.1.0-rc1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.Mvc.dll",
+        "license.txt",
+        "microsoft.aspnet.mvc.futures.5.1.0-rc1.nupkg.sha512",
+        "microsoft.aspnet.mvc.futures.nuspec"
+      ]
+    },
     "Microsoft.Data.Sqlite.Core/2.1.0": {
       "sha512": "lsdb0TeHY10QcIJtOtzsFHCnbEwWXA2n38b/adUKz0tULwO0luQv5GoWw2yT5WQqxehEGhIKCv21DbzXZTWZZA==",
       "type": "package",
@@ -2959,5 +2982,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc.Futures 5.1.0-rc1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc.Futures",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

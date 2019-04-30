@@ -1,3 +1,48 @@
+
+function initAutocomplete() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: {lat: -34.397, lng: 150.644}
+    });
+    var geocoder = new google.maps.Geocoder();
+
+    document.getElementById('submit').addEventListener('click', function() {
+        geocodeAddress(geocoder, map);
+    });
+}
+function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('address').value;
+    var lat = document.getElementById("latitude");
+    geocoder.geocode({'address': address}, function(results, status) {
+        if (status === 'OK') {
+           // console.log(results[0].geometry.location.lat());
+            //console.log(results[0].lat);
+          //  console.log(results.getfrom);
+           // var lat = double.parse( results[0].geometry.location.lat();
+            var lat = results[0].geometry.location.lat().toString().replace('.', ',');
+            var lng = results[0].geometry.location.lng().toString().replace('.', ',');
+
+           // console.log(lat);
+
+
+            $('input[name="mapFieldViewModel.latitude"]').attr('value',lat);
+            $('input[name="mapFieldViewModel.longitude"]').attr('value',lng);
+
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: resultsMap,
+                position: results[0].geometry.location
+            });
+   
+            
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+
+/*
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 51.2171918, lng: 4.4212529},
@@ -64,3 +109,4 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
+*/

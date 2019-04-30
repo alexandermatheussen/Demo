@@ -18,7 +18,9 @@ namespace DAL
          #endregion
 
          #region IdeationQuestions
-         IEnumerable<IdeationQuestion> readIdeationsQuestions(int ideationId);
+         IEnumerable<IdeationQuestion> ReadIdeationQuestionsForProject(int projectId);
+         IEnumerable<IdeationQuestion> ReadIdeationQuestions(int ideationId);
+         
          void createIdeationQuestion(IdeationQuestion i);
          IdeationQuestion readIdeationQuestion(int id);
          void updateIdeationQuestion(IdeationQuestion i);

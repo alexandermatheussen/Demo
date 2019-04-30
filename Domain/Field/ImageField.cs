@@ -10,7 +10,7 @@ namespace Domain
     public class ImageField : Field
     {
        public string imageName { get; set; }
-       public byte[] data { get; set; }
+       public byte[] imageData { get; set; }
       
     
         
