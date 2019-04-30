@@ -110,6 +110,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="api" t="Include">
+            <e p="ProjectsController.cs" t="Include" />
             <e p="ReportsController.cs" t="Include" />
           </e>
           <e p="HomeController.cs" t="Include" />

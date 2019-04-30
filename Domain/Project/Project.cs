@@ -19,4 +19,4 @@ namespace Domain
         public ICollection<Questionnaire> questionnaires { get; set; }
         public ICollection<Phase> phases { get; set; }
     }
-}    
+}

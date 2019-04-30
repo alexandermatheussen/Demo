@@ -33,6 +33,7 @@ namespace DAL
         {
             return ctx.projects
                 .Include(p => p.questionnaires)
+                .Include(p => p.phases)
                 .SingleOrDefault(p => p.id == id);
         }
 
