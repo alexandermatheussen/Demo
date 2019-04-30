@@ -129,11 +129,14 @@
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="FillInQuestionnaireModel.cs" t="Include" />
           <e p="Ideas" t="Include">
-            <e p="IdeaViewModel.cs" t="Include" />
+            <e p="IdeaVM.cs" t="Include" />
           </e>
           <e p="Idee.cs" t="Include" />
           <e p="OptionsAmount.cs" t="Include" />
           <e p="ProjectAndQuestions.cs" t="Include" />
+          <e p="Projects" t="Include">
+            <e p="ProjectVM.cs" t="Include" />
+          </e>
           <e p="QuestionnaireQuestion.cs" t="Include" />
           <e p="QuestionResultModel.cs" t="Include" />
           <e p="QuestionUserModel.cs" t="Include" />
@@ -166,21 +169,21 @@
           <e p="Idea" t="Include">
             <e p="CreateIdeaPage.cshtml" t="Include" />
             <e p="DisplayTemplates" t="Include">
-              <e p="ImageFieldViewModel.cshtml" t="Include" />
-              <e p="MapFieldViewModel.cshtml" t="Include" />
-              <e p="TextFieldViewModel.cshtml" t="Include" />
+              <e p="ImageFieldVM.cshtml" t="Include" />
+              <e p="MapFieldVM.cshtml" t="Include" />
+              <e p="TextFieldVM.cshtml" t="Include" />
             </e>
             <e p="EditorTemplates" t="Include">
-              <e p="ImageFieldViewModel.cshtml" t="Include" />
-              <e p="MapFieldViewModel.cshtml" t="Include" />
-              <e p="QuestionFieldViewModel.cshtml" t="Include" />
-              <e p="TextFieldViewModel.cshtml" t="Include" />
-              <e p="VideoFieldViewModel.cshtml" t="Include" />
+              <e p="ImageFieldVM.cshtml" t="Include" />
+              <e p="MapFieldVM.cshtml" t="Include" />
+              <e p="QuestionFieldVM.cshtml" t="Include" />
+              <e p="TextFieldVM.cshtml" t="Include" />
+              <e p="VideoFieldVM.cshtml" t="Include" />
             </e>
             <e p="MapInput.cshtml" t="Include" />
           </e>
           <e p="Project" t="Include">
-            <e p="_ImagePreview.cshtml" t="Include" />
+            <e p="CreateProjectPage.cshtml" t="Include" />
             <e p="Ideas.cshtml" t="Include" />
             <e p="ImageTest.cshtml" t="Include" />
             <e p="Maptest.cshtml" t="Include" />

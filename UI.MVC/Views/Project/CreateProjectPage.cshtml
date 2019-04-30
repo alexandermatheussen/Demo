@@ -1,0 +1,45 @@
+@model  D.UI.MVC.Models.Projects.ProjectVM
+
+<form asp-controller="Project" asp-action="CreateProjectPage" method="post" enctype="multipart/form-data">
+    <label>Title: </label>
+    <input asp-for="name" type="text"/>
+    <label>Description:</label>
+    @Html.TextAreaFor(x => x.description)
+    <label>Project Image:</label>
+    <input asp-for="projectImage" type="file"
+           class="form-control"
+           onchange="readImage(this)"
+           multiple
+           accept="image/*">
+    <img id="image_preview" src="#" alt="your image" width="200" height="200" hidden=""/>
+    <label>Start date: </label>
+    <input asp-for="startDate" type="date"/>
+    <label>End date: </label>
+    <input asp-for="endDate" type="date"/>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+<script type="text/javascript">        
+    function readImage(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#image_preview').attr('src', e.target.result);
+                $('#image_preview').attr('hidden', false);
+
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

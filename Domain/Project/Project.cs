@@ -13,6 +13,8 @@ namespace Domain
         public String description { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
+        
+        public byte[] projectImage { get; set; }
         public Place place { get; set; }
         public ICollection<Ideation> ideations { get; set; }
         public ICollection<Questionnaire> questionnaires { get; set; }

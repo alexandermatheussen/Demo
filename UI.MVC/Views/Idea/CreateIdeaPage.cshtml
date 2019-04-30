@@ -2,7 +2,7 @@
 @using System.Xml.Linq
 @using D.UI.MVC.Models.Ideas
 @using Domain
-@model D.UI.MVC.Models.Ideas.IdeaViewModel
+@model D.UI.MVC.Models.Ideas.IdeaVM
 
 @foreach (var item in Model.ideationQuestion)
 {
@@ -16,10 +16,10 @@
    
     
    <input asp-for="ideationId" value="@Model.ideationId" type="hidden"/>
-   @Html.EditorFor(x => x.textFieldViewModel)    
-   @Html.EditorFor(x => x.imageFieldViewModel)
-   @Html.EditorFor(x => x.videoFieldViewModel)
-   @Html.EditorFor(x => x.mapFieldViewModel)
+   @Html.EditorFor(x => x.textFieldVm)    
+   @Html.EditorFor(x => x.imageFieldVm)
+   @Html.EditorFor(x => x.videoFieldVm)
+   @Html.EditorFor(x => x.mapFieldVm)
      
 
    

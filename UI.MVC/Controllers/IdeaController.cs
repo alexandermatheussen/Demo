@@ -23,7 +23,7 @@ namespace D.UI.MVC.Controllers
         {
             
             IdeationQuestion[] ideationQuestions = ideationMgr.GetIdeationQuestions(ideationId).ToArray();
-            IdeaViewModel ideaViewModel = new IdeaViewModel();
+            IdeaVM ideaVm = new IdeaVM();
 
 
             String[] questions = new string[ideationQuestions.Length];
@@ -34,13 +34,13 @@ namespace D.UI.MVC.Controllers
 
             }
 
-            ideaViewModel.ideationQuestion = questions;
-            ideaViewModel.ideationId = ideationId;
+            ideaVm.ideationQuestion = questions;
+            ideaVm.ideationId = ideationId;
                 
       
           
             
-            return View(ideaViewModel);
+            return View(ideaVm);
         }
 
         public IActionResult MapInput()
@@ -50,7 +50,7 @@ namespace D.UI.MVC.Controllers
             
 
 
-        public IActionResult CreateIdea(IdeaViewModel ideaViewModel)
+        public IActionResult CreateIdea(IdeaVM ideaVm)
         {
             Idea idea = new Idea();
             ICollection<Field> fields = new List<Field>();
@@ -59,16 +59,16 @@ namespace D.UI.MVC.Controllers
             VideoField videoField = new VideoField();
             MapField mapField = new MapField();
 
-            textField.text = Convert.ToString(ideaViewModel.textFieldViewModel.text);
-            mapField.latitude = ideaViewModel.mapFieldViewModel.latitude;
-            mapField.longitude = ideaViewModel.mapFieldViewModel.longitude;
+            textField.text = Convert.ToString(ideaVm.textFieldVm.text);
+            mapField.latitude = ideaVm.mapFieldVm.latitude;
+            mapField.longitude = ideaVm.mapFieldVm.longitude;
 
             using (MemoryStream memoryStream = new MemoryStream())
             {
-                ideaViewModel.imageFieldViewModel.imageFile.CopyTo(memoryStream);
+                ideaVm.imageFieldVm.imageFile.CopyTo(memoryStream);
                 imageField.imageData = memoryStream.ToArray();
             }
-            using (var reader = ideaViewModel.imageFieldViewModel.imageFile.OpenReadStream())
+            using (var reader = ideaVm.imageFieldVm.imageFile.OpenReadStream())
             using (var stream = new MemoryStream())
             {
                 {    
@@ -78,7 +78,7 @@ namespace D.UI.MVC.Controllers
                 }    
                                         
             }
-            using (var reader = ideaViewModel.videoFieldViewModel.videoFile.OpenReadStream())
+            using (var reader = ideaVm.videoFieldVm.videoFile.OpenReadStream())
             using (var stream = new MemoryStream())
             {
                 {    
@@ -89,7 +89,7 @@ namespace D.UI.MVC.Controllers
                                         
             }
 
-            Ideation ideation = ideationMgr.getIdeation(ideaViewModel.ideationId);
+            Ideation ideation = ideationMgr.getIdeation(ideaVm.ideationId);
 
             idea.ideation = ideation;
             fields.Add(textField);
@@ -99,7 +99,7 @@ namespace D.UI.MVC.Controllers
             idea.fields = fields;
             ideationMgr.createIdea(idea);
 
-            var projectId = ideationMgr.getIdeation(ideaViewModel.ideationId).project.projectId;
+            var projectId = ideationMgr.getIdeation(ideaVm.ideationId).project.projectId;
             
             
 

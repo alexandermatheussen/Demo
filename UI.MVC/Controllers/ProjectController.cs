@@ -45,11 +45,21 @@ namespace D.UI.MVC.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateProjectPage()
+        {
+            return View();
+        }
+
+        public IActionResult CreateProject()
+        {
+            return RedirectToAction("Project", "Project", new {id = 1});
+        }
      
         
         
         
-        public ActionResult ImageTest()
+        /*public ActionResult ImageTest()
         {
             Idea idea = ideationMgr.getIdea(19);
            // Field[] fields = idea.fields.ToArray();
@@ -62,6 +72,6 @@ namespace D.UI.MVC.Controllers
            }
           
             return View(imageFields);
-        }
+        }*/
     }
 }

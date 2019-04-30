@@ -23,7 +23,7 @@ namespace D.UI.MVC.Models.Ideas
             };
         }
     }*/
-    public class IdeaViewModel
+    public class IdeaVM
     {
         public int ideationId { get; set; }
         public String[] ideationQuestion { get; set; }
@@ -31,10 +31,10 @@ namespace D.UI.MVC.Models.Ideas
         public int ideaViewModelId { get; set; }
         public string name { get; set; }
       //  public ICollection<FieldViewModel> fields { get; set; }
-        public TextFieldViewModel textFieldViewModel { get; set; }
-        public ImageFieldViewModel imageFieldViewModel { get; set; }
-        public VideoFieldViewModel videoFieldViewModel { get; set; }
-        public MapFieldViewModel    mapFieldViewModel { get; set; }
+        public TextFieldVm textFieldVm { get; set; }
+        public ImageFieldVm imageFieldVm { get; set; }
+        public VideoFieldVm videoFieldVm { get; set; }
+        public MapFieldVm    mapFieldVm { get; set; }
         
 
         
@@ -45,14 +45,14 @@ namespace D.UI.MVC.Models.Ideas
         
     }
 
-    public class FieldViewModel
+    public class FieldVM
     {
         public int fieldViewModelId { get; set; }
         public Boolean isRequired { get; set; }
 
     }
 
-    public class TextFieldViewModel : FieldViewModel
+    public class TextFieldVm : FieldVM
     {
         public String text { get; set; }
         public bool IsAnswered => !string.IsNullOrWhiteSpace(text);
@@ -60,7 +60,7 @@ namespace D.UI.MVC.Models.Ideas
         
     }
 
-    public class ImageFieldViewModel : FieldViewModel
+    public class ImageFieldVm : FieldVM
     {
         //public string imageName { get; set; }
        // [Required, Microsoft.Web.Mvc.FileExtensions(Extensions = "jpeg",ErrorMessage = "Specify a jpeg file.")]
@@ -90,19 +90,19 @@ namespace D.UI.MVC.Models.Ideas
         
     }
 
-    public class VideoFieldViewModel : FieldViewModel
+    public class VideoFieldVm : FieldVM
     {
         public string videoName { get; set; }
         public IFormFile videoFile { get; set; }
     }
 
-    public class MapFieldViewModel : FieldViewModel
+    public class MapFieldVm : FieldVM
     {
         public double latitude { get; set; }
         public double longitude { get; set; }
     }
 
-    public class QuestionFieldViewModel : ImageFieldViewModel
+    public class QuestionFieldVm : ImageFieldVm
     {
         
         
