@@ -317,7 +317,7 @@ namespace D.UI.MVC.Controllers
             }
             oldQuestionnaire.questionAmount = qmgr.getQuestions(oldQuestionnaire.id).Count();
             qmgr.changeQuestionnaire(oldQuestionnaire);
-            return RedirectToAction("Projects","Project");
+            return RedirectToAction("Index","Project");
         }
 
         [HttpPost]
@@ -346,7 +346,7 @@ namespace D.UI.MVC.Controllers
                     qmgr.removeQuestionnaire(questionnaireId);
                 }
             }
-            return RedirectToAction("Projects","Project");
+            return RedirectToAction("Index","Project");
         }
         
         [HttpPost]
@@ -434,7 +434,7 @@ namespace D.UI.MVC.Controllers
                 }
             }
             qmgr.addQuestionnaire(questions, questionnaireName, questions.Count, projectId);
-            return RedirectToAction("Projects","Project");
+            return RedirectToAction("Index","Project");
         }
 
         [HttpPost]
@@ -448,7 +448,7 @@ namespace D.UI.MVC.Controllers
                     qmgr.addQuestionUser(userId, Convert.ToInt32(parts[1]), form[key]);
                 }
             }
-            return RedirectToAction("Projects", "Project");
+            return RedirectToAction("Index", "Project");
         }
     }
 }

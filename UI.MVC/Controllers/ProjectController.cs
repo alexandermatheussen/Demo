@@ -20,7 +20,7 @@ namespace D.UI.MVC.Controllers
             ideationMgr = new IdeationManager();
         }
        
-        public IActionResult Projects()
+        public IActionResult Index()
         {
             IEnumerable<Project> allProjects = projectMgr.getProjects();
             return View(allProjects);
@@ -37,7 +37,7 @@ namespace D.UI.MVC.Controllers
 
         public IActionResult Ideas(int id)
         {
-            IEnumerable <Idea>  ideas = ideationMgr.getIdeas(id);
+            IEnumerable<Idea> ideas = ideationMgr.getIdeas(id);
             return View(ideas);
         }
 

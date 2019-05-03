@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.CA\\UI.CA.csproj",
+    "projectUniqueName": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
     "projectName": "UI.CA",
-    "projectPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.CA\\UI.CA.csproj",
-    "outputPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\UI.CA\\obj\\",
+    "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\UI.CA.csproj",
+    "outputPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\UI.CA\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\BL\\BL.csproj": {
-            "projectPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\BL\\BL.csproj"
+          "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\BL\\BL.csproj": {
+            "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\BL\\BL.csproj"
           },
-          "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\Alex\\Desktop\\Stack\\‌IntegratieProject 2019\\GitRepo\\Demo\\Domain\\Domain.csproj"
+          "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\Demo\\Domain\\Domain.csproj"
           }
         }
       }
