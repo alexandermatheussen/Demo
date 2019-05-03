@@ -54,7 +54,7 @@ using D.UI.MVC.Models;
             WriteLiteral("\r\n<div>\r\n    <label>Text:</label>\r\n    ");
             EndContext();
             BeginContext(82, 35, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e479c6d239e54a8db01d0bd427fed46b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a64dbd078e504543b5d2fc993830f3cf", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using BL;
 using D.UI.MVC.Models;
+using D.UI.MVC.Models.Fields;
 using D.UI.MVC.Models.Projects;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +50,14 @@ namespace D.UI.MVC.Controllers
             return View();
         }
 
+        public IActionResult ProjectImageDisplay()
+        {
+            Project p = projectMgr.getProject(3);
+
+            return View(p);
+
+        }
+        
         public IActionResult CreateProjectPage()
         {
             ProjectVM projectVm = new ProjectVM();
