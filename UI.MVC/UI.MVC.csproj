@@ -28,6 +28,19 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Upload\Upload.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Image\ImageTest.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\EditorTemplates\ImageFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\EditorTemplates\MapFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\EditorTemplates\QuestionFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\EditorTemplates\TextFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\EditorTemplates\VideoFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\EditorTemplates\ImageFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\EditorTemplates\MapFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\EditorTemplates\QuestionFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\EditorTemplates\TextFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\EditorTemplates\VideoFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\DisplayTemplates\ImageFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\DisplayTemplates\MapFieldVM.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Idea\DisplayTemplates\TextFieldVM.cshtml" />
     </ItemGroup>
 
 </Project>

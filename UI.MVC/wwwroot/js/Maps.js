@@ -22,11 +22,11 @@ function geocodeAddress(geocoder, resultsMap) {
             var lat = results[0].geometry.location.lat().toString().replace('.', ',');
             var lng = results[0].geometry.location.lng().toString().replace('.', ',');
 
-           // console.log(lat);
+            console.log(lat);
 
 
-            $('input[name="mapFieldViewModel.latitude"]').attr('value',lat);
-            $('input[name="mapFieldViewModel.longitude"]').attr('value',lng);
+            $('input[name="mapFieldVM.latitude"]').attr('value',lat);
+            $('input[name="mapFieldVM.longitude"]').attr('value',lng);
 
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({

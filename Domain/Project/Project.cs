@@ -14,7 +14,9 @@ namespace Domain
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         
-        public byte[] projectImage { get; set; }
+        public ImageField imageField { get; set; }
+        
+        public MapField mapField { get; set; }
         public Place place { get; set; }
         public ICollection<Ideation> ideations { get; set; }
         public ICollection<Questionnaire> questionnaires { get; set; }

@@ -59,16 +59,16 @@ namespace D.UI.MVC.Controllers
             VideoField videoField = new VideoField();
             MapField mapField = new MapField();
 
-            textField.text = Convert.ToString(ideaVm.textFieldVm.text);
-            mapField.latitude = ideaVm.mapFieldVm.latitude;
-            mapField.longitude = ideaVm.mapFieldVm.longitude;
+            textField.text = Convert.ToString(ideaVm.textFieldVM.text);
+            mapField.latitude = ideaVm.mapFieldVM.latitude;
+            mapField.longitude = ideaVm.mapFieldVM.longitude;
 
             using (MemoryStream memoryStream = new MemoryStream())
             {
-                ideaVm.imageFieldVm.imageFile.CopyTo(memoryStream);
+                ideaVm.imageFieldVM.imageFile.CopyTo(memoryStream);
                 imageField.imageData = memoryStream.ToArray();
             }
-            using (var reader = ideaVm.imageFieldVm.imageFile.OpenReadStream())
+            using (var reader = ideaVm.imageFieldVM.imageFile.OpenReadStream())
             using (var stream = new MemoryStream())
             {
                 {    
@@ -78,7 +78,7 @@ namespace D.UI.MVC.Controllers
                 }    
                                         
             }
-            using (var reader = ideaVm.videoFieldVm.videoFile.OpenReadStream())
+            using (var reader = ideaVm.videoFieldVM.videoFile.OpenReadStream())
             using (var stream = new MemoryStream())
             {
                 {    
