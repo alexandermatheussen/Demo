@@ -14,6 +14,8 @@ namespace D.UI.MVC.Controllers
 {
     public class HomeController : Controller
     {
+
+
         public IActionResult Input()
         {
             return View();
@@ -46,6 +48,12 @@ namespace D.UI.MVC.Controllers
         {
             return View();
         }
+
+        public IActionResult AboutPage()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
