@@ -317,7 +317,7 @@ namespace DAL.EF
             p8.name = "Art gallery in Antwerp";
             p8.description = "From june 6 to june 11, school of art in Antwerp is organizing an art gallery";
             p8.startDate = new DateTime(2019,6,6);
-            p8.endDate = new DateTime(20196,6,11);
+            p8.endDate = new DateTime(2019,6,11);
             p8.phases = new List<Phase>{
                 new Phase{name = "Brainstorming",description = "A period where we get the input of the people.",startDate =  new DateTime(2019,5,20),endDate =  new DateTime(2019,5,25)},
                 new Phase{name = "Deployment",description = "Implementing the idea's we've received ",startDate =  new DateTime(2019,6,3),endDate =  new DateTime(2019,6,6)},
@@ -365,7 +365,7 @@ namespace DAL.EF
             p11.name = "Parking lot movie";
             p11.description = "The people of the harbour will organize a parking lot movie weekend for everyone!";
             p11.startDate = new DateTime(2019, 8, 3);
-            p11.endDate = new DateTime(20198, 8, 5);
+            p11.endDate = new DateTime(2019, 8, 5);
             p11.phases = new List<Phase>{
                 new Phase{name = "Brainstorming",description = "A period where we get the input of the people.",startDate =  new DateTime(2019,8,1),endDate =  new DateTime(2019,6,15)},
                 new Phase{name = "Deployment",description = "Implementing the idea's we've received ",startDate =  new DateTime(2019,8,20),endDate =  new DateTime(2019,6,30)},
@@ -456,7 +456,7 @@ namespace DAL.EF
             u2.ideas = new List<Idea>(){i2};
             u3.reactions = new List<Reaction>(){a1,a2};
 
-            context.projects.AddRange(p1, p2,p3);
+            context.projects.AddRange(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13);
             context.questionnaires.AddRange(questionnaire1, questionnaire2, questionnaire3);
             context.questions.AddRange(q1, question1, q2, q3, q4, q5, question2, q6, q7, q8, q9);
             context.iotSetups.AddRange(iot1);
