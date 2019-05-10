@@ -144,7 +144,7 @@ using Domain;
             WriteLiteral("</td>\r\n            <td>");
             EndContext();
             BeginContext(632, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06f9053840e747d18bcb99cb57ff8151", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "179d6847bb214700bab8de60e4ced872", async() => {
                 BeginContext(677, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -179,7 +179,7 @@ using Domain;
             WriteLiteral("</td>\r\n            <td>");
             EndContext();
             BeginContext(708, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4198cc73af334ab58fa8b0eb7f017ca6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "717caa7da4e54c11a8f69e3c92b566ae", async() => {
                 BeginContext(757, 15, true);
                 WriteLiteral("Change password");
                 EndContext();

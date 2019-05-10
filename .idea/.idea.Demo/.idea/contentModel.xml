@@ -125,6 +125,7 @@
           <e p="Idee.cs" t="Include" />
           <e p="NewReportDTO.cs" t="Include" />
           <e p="ProjectAndQuestions.cs" t="Include" />
+          <e p="ProjectRESTModel.cs" t="Include" />
           <e p="QuestionUser.cs" t="Include" />
           <e p="ReportDTO.cs" t="Include" />
         </e>

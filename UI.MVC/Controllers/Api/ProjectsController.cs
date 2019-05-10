@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using BL;
+using D.UI.MVC.Models;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,17 @@ namespace D.UI.MVC.Controllers.Api
         public IActionResult GetProjects()
         {
             IEnumerable<Project> projects = mgr.getProjects();
-            return Ok(projects);
+            List<ProjectRESTModel> newProjects = new List<ProjectRESTModel>();
+            foreach (var project in projects)
+            {
+                ProjectRESTModel newProject = new ProjectRESTModel()
+                {
+                    projectId = project.id,
+                    name = project.name
+                };
+                newProjects.Add(newProject);
+            }
+            return Ok(newProjects);
         }
         
         [HttpGet("/api/Projects/{id}")]
